@@ -1,0 +1,16 @@
+# Ignore the div structure details file
+classes-and-ids.txt
+
+# Logs
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
