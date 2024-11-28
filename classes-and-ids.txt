@@ -1,1 +1,4 @@
 Info on classes and ids used in code
+
+div class "socials" used to link instagram, etc
+
