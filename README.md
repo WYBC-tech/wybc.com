@@ -1,10 +1,5 @@
 # wybc.com
 ---------------
-source code for wybc.com
+Hello! This is the source code for wybc.com! As we work on it, do not push your code straight to the main branch please. Instead make  a separate branch under dev for each feature/project you're working on! Then when its done we'll push it to the dev branch and then review and push it to main, which is what gets automatically fed to digitalocean where we host wybc.com.
 
-we register the domain through GoDaddy
-
-we host the domain as an app platform on Digital Ocean
-
-I will update this with more precise info
-Finn, November 2024
+This will get updated with better info soon. - Finn december 2024
