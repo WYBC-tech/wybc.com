@@ -1,0 +1,52 @@
+/*STYLES FOR HEADER*/
+
+.headerdiv{
+    height: fit-content;
+    width: fit-content;
+    margin: 7px;
+}
+  
+.logodiv{
+    display: flex;
+    justify-content: space-between;
+    width: 600;
+    height: 100%;
+    border-radius: 7px;
+}
+  
+a.homelink {
+    color: var(--oxford);
+    text-decoration: none;
+}
+  
+a.homelink:active {
+    background-color: var(--sandy);
+    color: var(--oxford);
+}
+  
+a.homelink:visited {
+    color: var(--oxford);
+}
+  
+.titlediv{
+    margin-right: 20px;
+    width: 150;
+    height: 50; 
+}
+  
+#logo{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+  
+#title_heading{
+    font-size: 19px;
+    margin-bottom: 0px;
+}
+  
+#subtitle_heading{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-right: 10px;
+}

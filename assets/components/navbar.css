@@ -1,0 +1,23 @@
+/*navbar*/
+
+.navdiv{
+    align-items: center;
+    height: 100%; 
+    width: fit-content;
+}
+  
+.navbar{
+    font-size: 20px;
+    display: flex;
+}
+  
+.navlist > li{
+    list-style: none; 
+    display: block; 
+    margin: 0px;
+    padding: 10px;
+}
+
+.navlist > a{
+    color: var(--oxford);
+}
