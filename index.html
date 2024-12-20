@@ -4,47 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WYBCx | Yale Radio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <script src="./assets/components/header-homepage.js" type="text/javascript" defer></script>
+    <script src="./assets/components/navbar-homepage.js" type="text/javascript" defer></script>
   </head>
-<body>
-  <header id="site-header">
-    <div class="headerdiv">
-      <div class="logo">WYBC x</div>
-      <div class="navdiv">
-        <nav class="navbar">
-          <ul class="navlist">
-            <li><a href="#">home</a></li>
-            <li><a href="/about">about</a></li>
-            <li><a href="/join">join</a></li>
-            <li><a href="/shows">shows</a></li>
-            <li><a href="/sports">sports</a></li>
-            <li><a href="#">podcast</a></li>
-            <li><a href="#">moon</a></li>
-            <li><a href="#">zine</a></li>
-            <li><a href="#">web</a></li>
-          </ul>
-        </nav>
+
+  <body class="body_div">
+    <div class="columns_container">
+      <div class="column_left">
+        <site-header></site-header>
+        <site-nav></site-nav>
+      </div>
+
+      <div class="spacer-left">
+        <!--empty; this is just to ensure the center column is spaced properly-->
+      </div>
+
+      <div class="column_center">
+        <h1 id="title_column_center">WARNING: site under heavy construction</h1>
+        <div id="content_column_center">
+          <div class="content_main">
+            <p>Dear listeners and WYBC community, expect the website to change dramatically in the coming weeks.
+              Thank you for your patience as we update our look and digital content. For now, the stream is back up and shows are running as scheduled <3</p>
+            
+              <h2>Listen to WYBCx, Yale's internet-based radio station!</h2>
+            
+              <script src="https://embed.radio.co/player/95c2306.js"></script>
+
+              <footer>
+                <div class="socials">
+                  <a href="https://www.instagram.com/wybcyale/" target="_blank">INSTAGRAM @WYBCYALE</a>
+                  <!--youtube? twitter?-->
+                  <a href="https://www.facebook.com/yaleradio/" target="_blank">FACEBOOK @YALERADIO</a>
+                </div>
+              </footer>
+          </div>
+        </div>
+      </div>
+
+      <div class="column_right">
+        <!--blank-->
       </div>
     </div>
-  <h1>WYBC - Yale Broadcasting Company</h1>
-
-  </header>
-  <h4>WARNING: site under heavy construction</h1>
-<p>Dear listeners and WYBC community, expect the website to change dramatically in the coming weeks.
-   Thank you for your patience as we update our look and digital content. For now, the stream is back up and shows are running as scheduled <3</p>
-
-  <h2>Listen to WYBCx, Yale's internet-based radio station!</h2>
- 
-  <script src="https://embed.radio.co/player/95c2306.js"></script>
-
-  <footer>
-    <div class="socials">
-      <a href="https://www.instagram.com/wybcyale/" target="_blank">INSTAGRAM @WYBCYALE</a>
-      <!--youtube? twitter?-->
-      <a href="https://www.facebook.com/yaleradio/" target="_blank">FACEBOOK @YALERADIO</a>
-    </div>
-  </footer>
-
-</body>
+  </body>
 </html>
