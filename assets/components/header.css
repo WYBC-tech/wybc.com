@@ -1,43 +1,33 @@
 /*STYLES FOR HEADER*/
 
 .headerdiv{
-    height: fit-content;
+    height: 100px;
     width: fit-content;
-    margin: 7px;
+    margin: 0px;
 }
   
 .logodiv{
     display: flex;
-    justify-content: space-between;
-    width: 600;
-    height: 100%;
-    border-radius: 7px;
+    padding: 10px;
 }
   
-a.homelink {
-    color: var(--oxford);
+.homelink {
     text-decoration: none;
 }
   
-a.homelink:active {
-    background-color: var(--sandy);
-    color: var(--oxford);
-}
-  
-a.homelink:visited {
-    color: var(--oxford);
-}
-  
 .titlediv{
-    margin-right: 20px;
-    width: 150;
-    height: 50; 
+    display: inline-block;
+    margin-right: 0px;
+    width: 50%;
+    height: 100px; 
+    color: var(--oxford);
 }
   
 #logo{
-    width: 60px;
+    display: inline-block;
+    width: 60px !important;
     height: 60px;
-    margin: 10px;
+    margin-right: 10px;
 }
   
 #title_heading{
@@ -48,5 +38,10 @@ a.homelink:visited {
 #subtitle_heading{
     font-size: 12px;
     margin-top: 0px;
-    margin-right: 10px;
+}
+
+@media ( max-width: 800px ) {
+    .titlediv {
+        display: none !important;
+    }
 }

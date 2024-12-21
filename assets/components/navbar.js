@@ -8,11 +8,11 @@ class Navbar extends HTMLElement {
         <div class="navdiv">
         <nav class="navbar">
             <ul class="navlist">
-            <li><a href="../shows">shows</a></li>
-            <li><a href="../media">media</a></li>
-            <li><a href="../about">about</a></li>
-            <li><a href="../join">join</a></li>
-            <li><a href="../shop">shop</a></li>
+            <li><a id="nav_link" href="../shows">shows</a></li>
+            <li><a id="nav_link" href="../media">media</a></li>
+            <li><a id="nav_link" href="../about">about</a></li>
+            <li><a id="nav_link" href="../join">join</a></li>
+            <li><a id="nav_link" href="../shop">shop</a></li>
             </ul>
         </nav>
         </div>

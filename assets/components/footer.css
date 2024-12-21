@@ -1,0 +1,19 @@
+/*STYLES FOR FOOTER*/
+
+.footerdiv {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--cinnabar);
+    color: var(--vanilla);
+    margin-top: 20px;
+}
+
+#social_link{
+    color: var(--oxford);
+    text-decoration: none;
+}
+
+#socials_icon {
+    width: 15px;
+    height: 15px;
+}

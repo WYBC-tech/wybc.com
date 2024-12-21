@@ -1,4 +1,4 @@
-/*navbar*/
+/*STYLES FOR NAVBAR*/
 
 .navdiv{
     align-items: center;
@@ -18,6 +18,13 @@
     padding: 10px;
 }
 
-.navlist > a{
-    color: var(--oxford);
+#nav_link {
+    color: var(--flax);
+    text-decoration: none;
+}
+
+@media ( max-width: 800px ) {
+    #nav_link {
+        display: none;
+    }
 }

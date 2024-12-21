@@ -5,6 +5,7 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, LEFT AND RIGHT BLOCKS*/
 
 @import url("./components/navbar.css");
 @import url("./components/header.css");
+@import url("./components/footer.css");
 
 @font-face {
   font-family: 'Cooper';
@@ -22,57 +23,63 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, LEFT AND RIGHT BLOCKS*/
   --vanilla: #F2F3AE;
 
   background-color: var(--vanilla);
-}
-
-body {
-    color: var(--oxford);
-    font-family: 'Cooper';
+  font-family: 'Cooper';
+  color: var(--oxford);
 }
 
 /*structural elements*/
 .body_div {
-  width: 100%;
-  height: 100%;
+  margin: 0;
 }
 
 .columns_container {
-  width: 100%;
-  height: 100%;
+  height: fit-content;
   display: flex;
-  justify-content: space-between;
+  margin: 0;
 }
 
 .column_left {
-  flex-direction: column;
-  height: 100%;
-  width: 20%;
-  position: fixed;
-  display: inline-block;
-  background: var(--cinnabar);
-}
-
-.spacer-left {
-  flex-direction: column;
-  height: 100%;
-  width: 20%; 
-  display: inline-block;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: var(--cinnabar); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden;
+  padding-top: 20px;
 }
 
 .column_center {
-  width: 50%;
-  height: 100%;
-  display: inline-block;
-  background-color: var(--flax);
-  padding: 10px;
+  margin-left: 180px; /* Same as the width of the sidebar */
+  width: 80%;
+  padding: 0px 10px;
 }
 
 .column_right {
   flex-direction: column;
-  width: 25%;
-  height: 100%;
+  width: 20%;
+  height: 1000px;
   display: inline-block;
-  margin: 10px;
-  background-color: var(--oxford);
+  margin: 0;
+  background-color: var(--cinerous);
+}
+
+/*MOBILE LAYOUT CHANGES*/
+
+@media ( max-width: 800px ) {
+  .column_left {
+    width: 80px;
+  }
+  .column_center {
+    width: 80%;
+    margin-left: 80px;
+  }
+
+  .column_right {
+    display: none;
+  }
 }
 
 /*Link Styles */
