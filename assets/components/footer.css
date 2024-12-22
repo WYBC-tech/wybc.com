@@ -4,11 +4,35 @@
     height: fit-content;
     background-color: var(--cinnabar);
     color: var(--vanilla);
+
+    display: flex;
+
     margin-top: 20px;
+
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
+}
+
+.socials {
+    flex: 50%;
+    display: inline-block;
+    width: fit-content;
+    background-color: red;
+}
+
+.contacts {
+    flex: 50%;
+    display: inline-block;
+    width: fit-content;
+    height: 37;
+    font-size: 18;
+    background-color: green;
+}
+
+#social {
+    display: none;
 }
 
 #social_link{
@@ -19,4 +43,8 @@
 #socials_icon {
     width: 15px;
     height: 15px;
+}
+
+#contact_link {
+    color: var(--oxford);
 }

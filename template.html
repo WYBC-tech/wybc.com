@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WYBCx | <!--Page subtitle-->></title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  </head>
-<body>
-  <header id="site-header">
-    <div class="headerdiv">
-      <div class="logo">WYBC x</div>
-      <div class="navdiv">
-        <nav class="navbar">
-          <ul class="navlist">
-            <li><a href="../">home</a></li>
-            <li><a href="../about">about</a></li>
-            <li><a href="../join">join</a></li>
-            <li><a href="../shows">shows</a></li>
-            <li><a href="../sports">sports</a></li>
-            <li><a href="#">podcast</a></li>
-            <li><a href="#">moon</a></li>
-            <li><a href="#">zine</a></li>
-            <li><a href="#">web</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  <h1>WYBC - Yale Broadcasting Company</h1>
-  </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYBCx | <!--Page subtitle-->></title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
+  <script src="../assets/components/header.js" type="text/javascript" defer></script>
+  <script src="../assets/components/navbar.js" type="text/javascript" defer></script>
+  <script src="../assets/components/footer.js" type="text/javascript" defer></script>
+  <!--THESE LINKS TO INSERT THE HEADER, NAVBAR, and FOOTER WILL ONLY WORK IF THIS 
+      PAGE HTML IS IN ITS OWN PAGE FOLDER-->
+</head>
 
-<!--page content here!-->
-
-
-<footer>
-  <div class="socials">
-    <a href="https://www.instagram.com/wybcyale/" target="_blank">INSTAGRAM @WYBCYALE</a>
-    <!--youtube? twitter? facebook?-->
+<body class="body_div">
+<div class="columns_container">
+  <div class="column_left">
+    <site-header></site-header>
+    <site-nav></site-nav>
   </div>
-</footer>
 
+  <div class="spacer-left">
+    <!--empty; this is just to ensure the center column is spaced properly-->
+  </div>
 
+  <div class="column_center">
+    <h1 id="title_column_center">
+      <!--page title goes here-->
+    </h1>
+
+    <div id="content_column_center">
+      <!--page content goes here-->
+    </div>
+
+    <site-footer></site-footer>
+  </div>
+
+  <div class="column_right">
+    <!--blank-->
+  </div>
+</div>
 </body>
 </html>
