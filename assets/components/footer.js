@@ -20,7 +20,7 @@ class Footer extends HTMLElement {
 
             <div class="contacts">
                 <div id="contact">
-                <a id="contact_link" href="../contact/">Contact</a>
+                <a id="contact_link" href="../contact/">Get in touch!</a>
                 </div>
             </div>
         </footer>

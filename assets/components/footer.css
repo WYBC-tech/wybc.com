@@ -17,22 +17,18 @@
 
 .socials {
     flex: 50%;
-    display: inline-block;
     width: fit-content;
-    background-color: red;
 }
 
 .contacts {
     flex: 50%;
-    display: inline-block;
+    float: center;
     width: fit-content;
-    height: 37;
-    font-size: 18;
-    background-color: green;
+    height: fit-content;
 }
 
 #social {
-    display: none;
+    width: fit-content;
 }
 
 #social_link{
@@ -47,4 +43,7 @@
 
 #contact_link {
     color: var(--oxford);
+    float: right;
+    text-decoration: none;
+    font-size: 28px;
 }

@@ -1,5 +1,11 @@
 /*GLOBAL CSS STYLES, USED ACROSS THE ENTIRE WEBSITE*/
 /*FOR ALL PAGE-LOCAL CSS EDIT IN PAGE FOLDER*/
+/*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
+COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
+
+@import url("./components/header.css");
+@import url("./components/footer.css");
+@import url("./components/navbar.css");
 
 @font-face {
   font-family: 'Cooper';
@@ -39,7 +45,7 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: var(--cinnabar); /* Black */
+  background-color: var(--cinnabar);
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: hidden;
   padding-top: 20px;
@@ -76,132 +82,19 @@
   }
 }
 
-/*STYLES FOR HEADER*//*//////////////////////////////////////////////////////*/
+/*Link Styles */
 
-.headerdiv{
-  height: 100px;
-  width: fit-content;
-  margin: 0px;
+/* visited link */
+a:visited {
+  color: var(--cinerous);
 }
 
-.logodiv{
-  display: flex;
-  padding: 10px;
-}
-
-.homelink {
-  text-decoration: none;
-}
-
-.titlediv{
-  display: inline-block;
-  margin-right: 0px;
-  width: 50%;
-  height: 100px; 
+/* mouse over link */
+a:hover {
   color: var(--oxford);
 }
 
-#logo{
-  display: inline-block;
-  width: 60px !important;
-  height: 60px;
-  margin-right: 10px;
-}
-
-#title_heading{
-  font-size: 19px;
-  margin-bottom: 0px;
-}
-
-#subtitle_heading{
-  font-size: 12px;
-  margin-top: 0px;
-}
-
-@media ( max-width: 800px ) {
-  .titlediv {
-      display: none !important;
-  }
-}
-
-/*STYLES FOR NAVBAR*//*//////////////////////////////////////////////////////*/
-
-.navdiv{
-  align-items: center;
-  height: 100%; 
-  width: fit-content;
-}
-
-.navbar{
-  font-size: 20px;
-  display: flex;
-}
-
-.navlist > li{
-  list-style: none; 
-  display: block; 
-  margin: 0px;
-  padding: 10px;
-}
-
-#nav_link {
-  color: var(--flax);
-  text-decoration: none;
-}
-
-@media ( max-width: 800px ) {
-  #nav_link {
-      display: none;
-  }
-}
-
-/*STYLES FOR FOOTER*//*//////////////////////////////////////////////////////*/
-
-.footerdiv {
-  height: fit-content;
-  background-color: var(--cinnabar);
-  color: var(--vanilla);
-
-  display: flex;
-
-  margin-top: 20px;
-
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 20px;
-}
-
-.socials {
-  flex: 50%;
-  display: inline-block;
-  width: fit-content;
-  background-color: red;
-}
-
-.contacts {
-  flex: 50%;
-  display: inline-block;
-  width: fit-content;
-  height: 37;
-  font-size: 18;
-  background-color: green;
-}
-
-#social {
-  display: none;
-}
-
-#social_link{
-  color: var(--oxford);
-  text-decoration: none;
-}
-
-#socials_icon {
-  width: 15px;
-  height: 15px;
-}
-
-#contact_link {
-  color: var(--oxford);
+/* selected link */
+a:active {
+  color: var(--cinerous);
 }
