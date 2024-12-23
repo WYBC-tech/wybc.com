@@ -1,11 +1,8 @@
 /*STYLES FOR FOOTER*/
 
 .footerdiv {
-    height: fit-content;
-    background-color: var(--cinnabar);
-    color: var(--vanilla);
-
     display: flex;
+    background-color: var(--cinnabar);
 
     margin-top: 20px;
 
@@ -17,18 +14,10 @@
 
 .socials {
     flex: 50%;
-    width: fit-content;
 }
 
 .contacts {
     flex: 50%;
-    float: center;
-    width: fit-content;
-    height: fit-content;
-}
-
-#social {
-    width: fit-content;
 }
 
 #social_link{

@@ -3,9 +3,9 @@
 /*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
 COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
 
-@import url("./components/header.css");
-@import url("./components/footer.css");
-@import url("./components/navbar.css");
+@import url("../components/header.css");
+@import url("../components/footer.css");
+@import url("../components/navbar.css");
 
 @font-face {
   font-family: 'Cooper';
@@ -45,10 +45,12 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: var(--cinnabar);
+  
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: hidden;
   padding-top: 20px;
+
+  background-color: var(--cinnabar);
 }
 
 .column_center {
@@ -58,11 +60,10 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
 }
 
 .column_right {
-  flex-direction: column;
   width: 20%;
-  height: 1000px;
+  height: 1175px;
   display: inline-block;
-  margin: 0;
+
   background-color: var(--cinerous);
 }
 

@@ -17,3 +17,6 @@ Thumbs.db
 
 #template for new pages
 .template
+
+#unused content folder
+..unused-content
