@@ -17,6 +17,12 @@ class Footer extends HTMLElement {
                 <a id="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">@YALERADIO</a>
                 </div>
             </div>
+
+            <div class="contacts">
+                <div id="contact">
+                <a id="contact_link" href="../about/">Get in touch!</a>
+                </div>
+            </div>
         </footer>
         `;
     }
