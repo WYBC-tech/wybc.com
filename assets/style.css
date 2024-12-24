@@ -4,8 +4,8 @@
 /*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
 COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
 @import url("../components/logo_block.css");
+@import url("../components/navlist.css");
 @import url("../components/footer.css");
-@import url("../components/navbar.css");
 
 /*FONTS*/
 
@@ -91,7 +91,10 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
   grid-area: center;
 
   min-height: 500px;
-  padding: 5px 15px 5px 10px;
+  padding: 5px 15px 5px 10px; /*IMPORTANT: behavior of the schedule object
+                                means that the 5px difference between left and
+                                right padding is necessary for the schedule to 
+                                look centered on the column*/
 
   background-color: var(--flax);
   border: 3px solid var(--sandy);

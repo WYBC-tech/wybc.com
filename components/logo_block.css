@@ -1,4 +1,9 @@
-/*STYLES FOR HEADER*/
+/*
+The styles used specifically for the logo block. Be sure to ensure that 
+background-color arguments are in the scope of page-specific CSS and not here;
+this is the file to organize structural elements that should be considered
+default across all instances of <logo-block>.
+*/
 
 .logo_blockdiv{
     height: 100px;

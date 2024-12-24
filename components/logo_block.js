@@ -1,3 +1,12 @@
+/**
+ * A modular block allowing quick + easy placement of the WYBC logo, title, 
+ * and tagline (currently: "Yale Student Radio") anywhere on the site.
+ * 
+ * @class JavaScript custom component
+ * @argument logo and tagline. Update needed only when either changes. Or if
+ *           the site gets renamed to something other than WYBCx.
+ */
+
 class LogoBlock extends HTMLElement {
     constructor() {
         super();

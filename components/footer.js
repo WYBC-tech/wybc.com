@@ -1,3 +1,12 @@
+/**
+ * A list of links connecting to external WYBC social media accounts.
+ * 
+ * @class JavaScript custom component
+ * @argument accounts for all WYBC social media presences. Be sure to update
+ *           the .socials div every time social media accounts are added or 
+ *           deleted. 
+ */
+
 class Footer extends HTMLElement {
     constructor() {
         super();

@@ -1,4 +1,14 @@
-class Navbar extends HTMLElement {
+/**
+ * A list of links that facilitate the modular addition of a navbar or navmenu
+ * anywhere in page code.
+ * 
+ * @class JavaScript custom component
+ * @argument pages currently in use. Be sure to update this list of links every
+ *           time a page is added or removed to the list of those currently in 
+ *           use. 
+ */
+
+class NavList extends HTMLElement {
     constructor() {
         super();
     }
@@ -19,4 +29,4 @@ class Navbar extends HTMLElement {
     }
 }
 
-customElements.define('site-nav', Navbar);
+customElements.define('site-nav', NavList);
