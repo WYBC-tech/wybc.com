@@ -29,7 +29,7 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
   /*background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;*/
-  background-image: url("./images/sparkly-eale.png");
+  background-image: url("./images/sparkly-yale.png");
   background-attachment: fixed;
 
   /*GENERAL TEXT OPTIONS*/
@@ -141,32 +141,27 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
   /*STRUCTURAL LAYOUT CHANGES*/
 
   .body_div {
-    width: 100%;
-    height: fit-content;
+    width: 95vw;
+    height: 100vh;
     max-height: auto;
     max-width: auto;
-    margin: 0px;
-    padding: 0px;
     position: auto;
+    margin: auto;
 
+    float: top;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  .columns_container {
-    width: 100%;
+  .layout-container {
     display: block;
 
-    padding: 0px;
-    margin: 0px;
+    padding: 10px;
   }
 
   /*CHANGES IN LAYOUT ELEMENTS*/
 
   .header {
     display: block;
-    height: fit-content;
 
     background-color: var(--cinnabar);
   }
