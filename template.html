@@ -3,43 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WYBCx | <!--Page subtitle-->></title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <title>WYBCx | Page-title</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
-  <script src="../assets/components/header.js" type="text/javascript" defer></script>
-  <script src="../assets/components/navbar.js" type="text/javascript" defer></script>
-  <script src="../assets/components/footer.js" type="text/javascript" defer></script>
-  <!--THESE LINKS TO INSERT THE HEADER, NAVBAR, and FOOTER WILL ONLY WORK IF 
-      THIS PAGE HTML IS IN ITS OWN PAGE FOLDER-->
+  <!--component script files: these .js files contain the code to create the 
+  logo block, navbar, and footer objects-->
+  <script src="../components/logo_block.js" type="text/javascript" defer></script>
+  <script src="../components/navbar.js" type="text/javascript" defer></script>
+  <script src="../components/footer.js" type="text/javascript" defer></script>
+
+  <!--command script files: these .js files contain the code to implement the
+  hamburger menu open/close functions-->
+  <script src="../components/mobile-menu.js" type="text/javascript" defer></script>
 </head>
-
+  
 <body class="body_div">
 <div class="columns_container">
-  <div class="column_left">
-    <!--left column contains header (link to root that redirects to /home/) and nav-->
-    <site-header></site-header>
-    <site-nav></site-nav>
+  <div class="header">
+    <div class="header-image">
+      <h1>CONTENT</h1>
+      <!--header image for use in PC mode-->
+    </div>
+
+    <div class="mobile-nav">
+      <!--code to set up the dropdown menu in mobile mode, 
+      nothing here gets changed from page to page-->
+
+      <div class="icon">
+        <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
+        <logo-block></logo-block>
+        </a>
+      </div>
+      
+      <div class="menu" id="mobile-nav-menu">
+        <site-nav></site-nav>
+      </div>
+    </div>
   </div>
 
-  <div class="spacer-left">
-    <!--empty; this is just to ensure the center column is spaced properly-->
+  <div class="column_left">
+    <!--left nav column; used as nav in PC mode-->
+    <logo-block></logo-block>
+    <site-nav></site-nav>
   </div>
 
   <div class="column_center">
     <h1 id="title_column_center">
-      <!--page title goes here-->
+      <!--title of the center column/page in general-->
     </h1>
 
     <div id="content_column_center">
-      <!--page content goes here-->
+      <!--content of the center column-->
     </div>
-
-    <site-footer></site-footer>
   </div>
 
   <div class="column_right">
-    <!--blank-->
+    <!--right column auxiliary content-->
+  </div>
+
+  <div class="footer">
+    <site-footer></site-footer>
   </div>
 </div>
 </body>

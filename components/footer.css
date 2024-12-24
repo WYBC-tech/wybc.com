@@ -3,30 +3,19 @@
 .footerdiv {
     display: flex;
 
-    padding: 10px;
+    padding: 20px;
 }
 
 .socials {
     flex: 50%;
 }
 
-.contacts {
-    flex: 50%;
-}
-
 #social_link{
-    color: var(--oxford);
     text-decoration: none;
+    color: var(--oxford);
 }
 
 #socials_icon {
     width: 15px;
     height: 15px;
-}
-
-#contact_link {
-    color: var(--oxford);
-    float: right;
-    text-decoration: none;
-    font-size: 28px;
 }
