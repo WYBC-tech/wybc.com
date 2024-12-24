@@ -10,12 +10,30 @@
     flex: 50%;
 }
 
+.contacts {
+    flex: 50%;
+    float: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+#social {
+    width: fit-content;
+}
+
 #social_link{
-    text-decoration: none;
     color: var(--oxford);
+    text-decoration: none;
 }
 
 #socials_icon {
     width: 15px;
     height: 15px;
+}
+
+#contact_link {
+    color: var(--oxford);
+    float: right;
+    text-decoration: none;
+    font-size: 28px;
 }
