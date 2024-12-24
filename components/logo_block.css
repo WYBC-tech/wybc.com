@@ -1,47 +1,46 @@
 /*STYLES FOR HEADER*/
 
-.headerdiv{
+.logo_blockdiv{
     height: 100px;
-    width: fit-content;
     margin: 0px;
+    padding: 0px;
+
+    color: var(--oxford);   
 }
   
 .logodiv{
     display: flex;
-    padding: 10px;
-}
-  
-.homelink {
-    text-decoration: none;
+    height: 100px;
+    margin: 0px;
+    padding: 5px;
 }
   
 .titlediv{
     display: inline-block;
     margin-right: 0px;
-    width: 50%;
-    height: 100px; 
-    color: var(--oxford);
+    margin-top: auto;
+    margin-bottom: auto;
+    width: fit-content;
+    height: fit-content; 
 }
   
 #logo{
     display: inline-block;
-    width: 60px !important;
+    width: 60px;
     height: 60px;
-    margin-right: 10px;
+    margin: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
   
 #title_heading{
+    display: block;
     font-size: 19px;
     margin-bottom: 0px;
 }
   
 #subtitle_heading{
+    display: block;
     font-size: 12px;
     margin-top: 0px;
-}
-
-@media ( max-width: 800px ) {
-    .titlediv {
-        display: none !important;
-    }
 }

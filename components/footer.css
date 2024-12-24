@@ -2,14 +2,8 @@
 
 .footerdiv {
     display: flex;
-    background-color: var(--cinnabar);
 
-    margin-top: 20px;
-
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
+    padding: 10px;
 }
 
 .socials {

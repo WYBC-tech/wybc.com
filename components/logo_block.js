@@ -1,12 +1,11 @@
-class Header extends HTMLElement {
+class LogoBlock extends HTMLElement {
     constructor() {
         super();
     }
 
     connectedCallback() {
         this.innerHTML = `
-        <header class="headerdiv">
-        <a href="../" class="homelink">
+        <header class="logo_blockdiv">
         <div class="logodiv">
             <img src="../assets/images/favicon.ico" id="logo"/>
 
@@ -15,10 +14,9 @@ class Header extends HTMLElement {
             <h2 id="subtitle_heading">Yale Student Radio</h2>
             </div>
         </div>
-        </a>
         </header>
         `;
     }
 }
 
-customElements.define('site-header', Header);
+customElements.define('logo-block', LogoBlock);

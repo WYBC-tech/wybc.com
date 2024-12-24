@@ -9,10 +9,9 @@ class Navbar extends HTMLElement {
         <nav class="navbar">
             <ul class="navlist">
             <li><a id="nav_link" href="../home">home</a></li>
-            <li><a id="nav_link" href="../shows">shows</a></li>
+            <li><a id="nav_link" href="../programs">programs</a></li>
             <li><a id="nav_link" href="../media">media</a></li>
             <li><a id="nav_link" href="../about">about</a></li>
-            <li><a id="nav_link" href="../shop">shop</a></li>
             </ul>
         </nav>
         </div>

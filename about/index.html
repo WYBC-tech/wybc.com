@@ -7,20 +7,37 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
-  <script src="../components/header.js" type="text/javascript" defer></script>
+  <script src="../components/logo_block.js" type="text/javascript" defer></script>
   <script src="../components/navbar.js" type="text/javascript" defer></script>
   <script src="../components/footer.js" type="text/javascript" defer></script>
+
+  <script src="../components/mobile-menu.js" type="text/javascript" defer></script>
 </head>
 
 <body class="body_div">
 <div class="columns_container">
-  <div class="column_left">
-    <site-header></site-header>
-    <site-nav></site-nav>
+  <div class="header">
+    <div class="header-image">
+      <h1>CONTENT</h1>
+      <!--empty, will have an image-->
+    </div>
+
+    <div class="mobile-nav">
+      <div class="icon">
+        <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
+        <logo-block></logo-block>
+        </a>
+      </div>
+      
+      <div class="menu" id="mobile-nav-menu">
+        <site-nav></site-nav>
+      </div>
+    </div>
   </div>
 
-  <div class="spacer-left">
-    <!--empty; this is just to ensure the center column is spaced properly-->
+  <div class="column_left">
+    <logo-block></logo-block>
+    <site-nav></site-nav>
   </div>
 
   <div class="column_center">
@@ -67,12 +84,15 @@
         </ul>
       </p>
     </div>
-
-    <site-footer></site-footer>
   </div>
 
   <div class="column_right">
+    <h1>CONTENT</h1>
     <!--blank-->
+  </div>
+
+  <div class="footer">
+    <site-footer></site-footer>
   </div>
 </div>
 </body>

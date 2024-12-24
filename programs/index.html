@@ -7,15 +7,36 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
-  <script src="../components/header.js" type="text/javascript" defer></script>
+  <script src="../components/logo_block.js" type="text/javascript" defer></script>
   <script src="../components/navbar.js" type="text/javascript" defer></script>
   <script src="../components/footer.js" type="text/javascript" defer></script>
+
+  <script src="../components/mobile-menu.js" type="text/javascript" defer></script>
 </head>
 
 <body class="body_div">
 <div class="columns_container">
+  <div class="header">
+    <div class="header-image">
+      <h1>CONTENT</h1>
+      <!--empty, will have an image-->
+    </div>
+
+    <div class="mobile-nav">
+      <div class="icon">
+        <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
+        <logo-block></logo-block>
+        </a>
+      </div>
+      
+      <div class="menu" id="mobile-nav-menu">
+        <site-nav></site-nav>
+      </div>
+    </div>
+  </div>
+
   <div class="column_left">
-    <site-header></site-header>
+    <logo-block></logo-block>
     <site-nav></site-nav>
   </div>
 
@@ -24,7 +45,7 @@
   </div>
 
   <div class="column_center">
-    <h1 id="title_column_center">Shows</h1>
+    <h1 id="title_column_center">Programs</h1>
 
     <div id="content_column_center">
       <div class="schedule">
@@ -33,12 +54,15 @@
       
       <!--eventually we will have dj+show profiles here too-->
     </div>
-
-    <site-footer></site-footer>
   </div>
 
   <div class="column_right">
+    <h1>CONTENT</h1>
     <!--blank-->
+  </div>
+
+  <div class="footer">
+    <site-footer></site-footer>
   </div>
 </div>
 </body>

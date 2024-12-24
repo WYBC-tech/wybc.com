@@ -22,9 +22,3 @@
     color: var(--flax);
     text-decoration: none;
 }
-
-@media ( max-width: 800px ) {
-    #nav_link {
-        display: none;
-    }
-}
