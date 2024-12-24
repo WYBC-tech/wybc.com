@@ -1,77 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WYBCx | <!--Page subtitle-->></title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  </head>
-<body>
-  <header id="site-header">
-    <div class="headerdiv">
-      <div class="logo">WYBC x</div>
-      <div class="navdiv">
-        <nav class="navbar">
-          <ul class="navlist">
-            <li><a href="../">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="../join">join</a></li>
-            <li><a href="../shows">shows</a></li>
-            <li><a href="../sports">sports</a></li>
-            <li><a href="#">podcast</a></li>
-            <li><a href="#">moon</a></li>
-            <li><a href="#">zine</a></li>
-            <li><a href="#">web</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYBCx | About</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
+
+  <script src="../components/logo_block.js" type="text/javascript" defer></script>
+  <script src="../components/navlist.js" type="text/javascript" defer></script>
+  <script src="../components/footer.js" type="text/javascript" defer></script>
+
+  <script src="../components/mobile-menu.js" type="text/javascript" defer></script>
+</head>
+
+<body class="body_div">
+<div class="layout-container">
+  <div class="header">
+    <div class="header-image">
+      <h1>CONTENT IN PRODUCTION</h1>
+      <!--empty, will have an image-->
+    </div>
+
+    <div class="mobile-nav">
+      <div class="icon">
+        <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
+        <logo-block></logo-block>
+        </a>
+      </div>
+      
+      <div class="menu" id="mobile-nav-menu">
+        <site-nav></site-nav>
       </div>
     </div>
-  <h1>WYBC - Yale Broadcasting Company</h1>
-  </header>
+  </div>
 
+  <div class="column_left">
+    <logo-block></logo-block>
+    <site-nav></site-nav>
+  </div>
 
+  <div class="column_center">
+    <h1 id="title_column_center">
+      About Us
+    </h1>
 
+    <div id="content_column_center">
+      <p>
+        People are always asking who we are, so we tell them&#8230; We are WYBC!
+      </p>
+      
+      <p>
+        WYBC is Yale Radio, a legion of students armed to protect and defend the good word at Yale. You didn&#8217;t know we had a radio station? Just as well&#8212;radio is dead, but long live radio!
+      </p>
+      
+      <p>
+        College radio exists outside the realm of commercial radio&#8217;s pigeonholed purpose of trite music and loveable talking heads, as it owes nothing to anyone. College radio takes the financial limitations of the commercial realm, obliterates them, and instead focuses on endeavors like effective content delivery and supporting local talent. Radio is solely a metonym for the YouTube and iTunes services of yesteryear. Go ahead and argue that radio is dead and we&#8217;ll agree with you. But is creativity and conversation dead at Yale? Have we run out of things to talk about? Yet where is that forum for sharing the good word? Long live radio.
+      </p>
+      
+      <p>
+        Until recently, there was a void in campus life from a lack of WYBC, causing untold chaos in the music scene and the recorded arts on campus. This is largely WYBC&#8217;s own fault. Our beloved FM station (now professionally-programmed and #1 in New Haven) didn&#8217;t change from its position as Yale Radio&#8217;s backbone, and consequently became irrelevant for the students who trained to become DJs. It didn&#8217;t help when we bought AM 1340 ten years ago to talk to students, as no students owned radios. Those stifled days are over.
+      </p>
+      
+      <p>In 2008, we launched WYBCX, our Internet-only and FCC-free stream. We want to be your home page, your college&#8217;s media hub for what matters. We want you to hear each other&#8217;s opinions and have a home to display it. We want you to meet our talented jocks that run the gamut from bluegrass to business talk to deep house. We want to give you more contests and more voice and more room to run your mouth about your own corrupted opinion.</p>
+        
+      <p>You want what matters now, and we&#8217;re here to give it to you 24/7 on WYBC.COM. Streaming live from downtown New Haven, we&#8217;re WYBC, baking the magic back into magic radio cake.</p>
+      
 
-  <h1>About Us</h1>
-<p>
-  People are always asking who we are, so we tell them&#8230; We are WYBC!
-</p>
+    </div>
+  </div>
 
-<p>
-  WYBC is Yale Radio, a legion of students armed to protect and defend the good word at Yale. You didn&#8217;t know we had a radio station? Just as well&#8212;radio is dead, but long live radio!
-</p>
+  <div class="column_right">
+    <h2>Get in touch!</h2>
+    <p>
+      <ul style="list-style-type: none;">
+        <li>General Manager: Joanna Ruiz </li>
+        <li class="email">&emsp;gm@wybc.com</li>
+        <br>
+        <li>Station Manager: Avery Wayne </li>
+        <li class="email">&emsp;sm@wybc.com</li>
+        <br>
+        <li>Program Director: Jules Morris </li>
+        <li class="email">&emsp;pd@wybc.com</li>
+        <br>
+        <li>Treasurer: Ronald Thorpe </li>
+        <li class="email">&emsp;treasurer@wybc.com</li>
+        <br>
+        <li>Office Manager: Elio Wentzel </li>
+        <li class="email">&emsp;om@wybc.com</li>
+      </ul>
+    </p>
+  </div>
 
-<p>
-  College radio exists outside the realm of commercial radio&#8217;s pigeonholed purpose of trite music and loveable talking heads, as it owes nothing to anyone. College radio takes the financial limitations of the commercial realm, obliterates them, and instead focuses on endeavors like effective content delivery and supporting local talent. Radio is solely a metonym for the YouTube and iTunes services of yesteryear. Go ahead and argue that radio is dead and we&#8217;ll agree with you. But is creativity and conversation dead at Yale? Have we run out of things to talk about? Yet where is that forum for sharing the good word? Long live radio.
-</p>
-
-<p>
-  Until recently, there was a void in campus life from a lack of WYBC, causing untold chaos in the music scene and the recorded arts on campus. This is largely WYBC&#8217;s own fault. Our beloved FM station (now professionally-programmed and #1 in New Haven) didn&#8217;t change from its position as Yale Radio&#8217;s backbone, and consequently became irrelevant for the students who trained to become DJs. It didn&#8217;t help when we bought AM 1340 ten years ago to talk to students, as no students owned radios. Those stifled days are over.
-</p>
-
-<p>In 2008, we launched WYBCX, our Internet-only and FCC-free stream. We want to be your home page, your college&#8217;s media hub for what matters. We want you to hear each other&#8217;s opinions and have a home to display it. We want you to meet our talented jocks that run the gamut from bluegrass to business talk to deep house. We want to give you more contests and more voice and more room to run your mouth about your own corrupted opinion.</p>
-  
-<p>You want what matters now, and we&#8217;re here to give it to you 24/7 on WYBC.COM. Streaming live from downtown New Haven, we&#8217;re WYBC, baking the magic back into magic radio cake.</p>
-
-<h2>Get in touch!</h2>
-<p>
-  <ul style="list-style-type: none;">
-    <li>General Manager: Joanna Ruiz </li>
-    <li class="email">&emsp;gm@wybc.com</li>
-    <br>
-    <li>Station Manager: Avery Wayne </li>
-    <li class="email">&emsp;sm@wybc.com</li>
-    <br>
-    <li>Program Director: Jules Morris </li>
-    <li class="email">&emsp;pd@wybc.com</li>
-    <br>
-    <li>Treasurer: Ronald Thorpe </li>
-    <li class="email">&emsp;treasurer@wybc.com</li>
-    <br>
-    <li>Office Manager: Elio Wentzel </li>
-    <li class="email">&emsp;om@wybc.com</li>
-  </ul>
-</p>
-
+  <div class="footer">
+    <site-footer></site-footer>
+  </div>
+</div>
 </body>
 </html>

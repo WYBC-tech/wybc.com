@@ -3,33 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WYBCx | page-title</title>
+  <title>WYBCx | Home</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
-  <!--component script files: these .js files contain the code to create the 
-  logo block, navbar, and footer objects-->
   <script src="../components/logo_block.js" type="text/javascript" defer></script>
-  <script src="../components/navbar.js" type="text/javascript" defer></script>
+  <script src="../components/navlist.js" type="text/javascript" defer></script>
   <script src="../components/footer.js" type="text/javascript" defer></script>
 
-  <!--command script files: these .js files contain the code to implement the
-  hamburger menu open/close functions-->
   <script src="../components/mobile-menu.js" type="text/javascript" defer></script>
 </head>
-  
+
 <body class="body_div">
 <div class="layout-container">
   <div class="header">
     <div class="header-image">
-      <h1>CONTENT</h1>
-      <!--header image for use in PC mode-->
+      <h1>CONTENT IN PRODUCTION</h1>
+      <!--empty, will have an image-->
     </div>
 
     <div class="mobile-nav">
-      <!--code to set up the dropdown menu in mobile mode, 
-      nothing here gets changed from page to page-->
-
       <div class="icon">
         <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
         <logo-block></logo-block>
@@ -43,28 +36,40 @@
   </div>
 
   <div class="column_left">
-    <!--left nav column; used as nav in PC mode-->
     <logo-block></logo-block>
     <site-nav></site-nav>
   </div>
 
   <div class="column_center">
-    <h1 id="title_column_center">
-      <!--title of the center column/page in general-->
-    </h1>
+    <h1 id="title_column_center">Welcome to WYBCx!</h1>
 
+    <div id="under-construction_warning">
+      <h2>
+        WARNING: site under heavy construction
+      </h2>
+
+      <p>
+        Dear listeners and WYBC community, expect the website to change dramatically in the coming weeks.
+        Thank you for your patience as we update our look and digital content. For now, the stream is back up and shows are running as scheduled <3
+      </p>  
+    </div>
+    
     <div id="content_column_center">
-      <!--content of the center column-->
+        <h2>Listen to WYBCx, Yale's internet-based radio station!</h2>
+      
+        <script src="https://embed.radio.co/player/95c2306.js"></script>
     </div>
   </div>
 
   <div class="column_right">
-    <!--right column auxiliary content-->
+    <h1>CONTENT</h1>
+    <!--blank-->
   </div>
 
   <div class="footer">
     <site-footer></site-footer>
   </div>
 </div>
+</body>
 </body>
 </html>

@@ -1,0 +1,209 @@
+/*GLOBAL CSS STYLES, USED ACROSS THE ENTIRE WEBSITE*/
+/*FOR ALL PAGE-LOCAL CSS EDIT IN PAGE FOLDER*/
+
+/*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
+COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
+@import url("../components/logo_block.css");
+@import url("../components/navlist.css");
+@import url("../components/footer.css");
+
+/*FONTS*/
+
+@font-face {
+  font-family: 'Cooper';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/COOPBL.woff');
+}
+
+:root {
+  /*COLOR VARIABLE DECLARATIONS*/
+  --cinerous: #958487;
+  --oxford: #020122;
+  --cinnabar: #F4442E;
+  --sandy: #FC9E4F;
+  --flax: #EDD382;
+  --vanilla: #F2F3AE;
+
+  /*SITE-WIDE BACKGROUND OPTIONS*/
+  /*background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;*/
+  background-image: url("./images/sparkly-eale.png");
+  background-attachment: fixed;
+
+  /*GENERAL TEXT OPTIONS*/
+  font-family: 'Cooper';
+  color: var(--oxford);
+}
+
+/*STRUCTURAL CONTAINERS*/
+
+.body_div {
+  /*confinement to 4:3 aspect ratio*/
+  width: 100vw;
+  height: 75vw;
+  max-height: 100vh;
+  max-width: 133.33vh;
+  
+  /*positioning in the top middle*/
+  position: static;
+
+  /*extras*/
+  margin: auto;
+}
+
+.layout-container {
+  /*holy grail layout setup*/
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  grid-template-rows: 180px 1fr 100px;
+
+  grid-template-areas:
+    "header header header"
+    "left center right"
+    "footer footer footer";
+  
+  /*spaces in the layout*/
+  padding: 10px;
+  gap: 2px;
+}
+
+/*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
+
+.header {
+  grid-area: header;
+
+  /*extras*/
+  padding: 10px;
+  background-color: var(--cinerous);
+  border: 3px solid var(--vanilla);
+}
+
+.column_left {
+  grid-area: left;
+
+  background-color: var(--cinnabar);
+  border: 3px solid var(--vanilla);
+}
+
+.column_center {
+  grid-area: center;
+
+  min-height: 500px;
+  padding: 5px 15px 5px 10px; /*IMPORTANT: behavior of the schedule object
+                                means that the 5px difference between left and
+                                right padding is necessary for the schedule to 
+                                look centered on the column*/
+
+  background-color: var(--flax);
+  border: 3px solid var(--sandy);
+}
+
+.column_right {
+  grid-area: right;
+  padding: 5px;
+
+  background-color: var(--cinerous);
+  border: 3px solid var(--vanilla);
+}
+
+.footer {
+  grid-area: footer;
+
+  background-color: var(--cinnabar);
+  border: 3px solid var(--vanilla);
+}
+
+/*GENERAL STYLE OPTIONS*/
+#title_column_center {
+  font-size: 36px; 
+}
+
+/*MOBILE DROPDOWN MENU HIDING IN PC MODE*/
+
+.mobile-nav {
+  display: none;
+}
+
+#mobile-menu-link {
+  text-decoration: none;
+}
+
+/*MOBILE LAYOUT CHANGES*/
+
+@media ( max-width: 900px ) {
+  :root {
+    background-image: none;
+    background-color: var(--oxford);
+  }
+
+  /*STRUCTURAL LAYOUT CHANGES*/
+
+  .body_div {
+    width: 100%;
+    height: fit-content;
+    max-height: auto;
+    max-width: auto;
+    margin: 0px;
+    padding: 0px;
+    position: auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .columns_container {
+    width: 100%;
+    display: block;
+
+    padding: 0px;
+    margin: 0px;
+  }
+
+  /*CHANGES IN LAYOUT ELEMENTS*/
+
+  .header {
+    display: block;
+    height: fit-content;
+
+    background-color: var(--cinnabar);
+  }
+
+  .column_center {
+    display: block;
+  }
+
+  .footer {
+    display: block;
+  }
+
+  /*MOBILE DROPDOWN HAMBURGER MENU SETUP*/
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .menu-show {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /*THINGS HIDING IN MOBILE LAYOUT*/
+
+  .column_left {
+    display: none;
+  }
+
+  .column_right {
+    display: none;
+  }
+
+  .header-image {
+    display: none;
+  }
+}

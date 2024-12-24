@@ -1,0 +1,44 @@
+/*
+The styles used specifically for the footer. Be sure to ensure that 
+background-color arguments are in the scope of page-specific CSS and not here;
+this is the file to organize structural elements that should be considered
+default across all instances of <site-footer>. And also link color. 
+*/
+
+.footerdiv {
+    display: flex;
+
+    padding: 20px;
+}
+
+.socials {
+    flex: 50%;
+}
+
+.contacts {
+    flex: 50%;
+    float: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+#social {
+    width: fit-content;
+}
+
+#social_link{
+    color: var(--oxford);
+    text-decoration: none;
+}
+
+#socials_icon {
+    width: 15px;
+    height: 15px;
+}
+
+#contact_link {
+    color: var(--oxford);
+    float: right;
+    text-decoration: none;
+    font-size: 28px;
+}
