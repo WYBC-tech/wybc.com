@@ -1,11 +1,13 @@
 /*GLOBAL CSS STYLES, USED ACROSS THE ENTIRE WEBSITE*/
 /*FOR ALL PAGE-LOCAL CSS EDIT IN PAGE FOLDER*/
-/*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
-COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
 
+/*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
+COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
 @import url("../components/logo_block.css");
 @import url("../components/footer.css");
 @import url("../components/navbar.css");
+
+/*FONTS*/
 
 @font-face {
   font-family: 'Cooper';
@@ -27,56 +29,66 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
   color: var(--oxford);
 }
 
-/*structural elements*/
+/*STRUCTURAL CONTAINERS*/
+
 .body_div {
+  /*confinement to 4:3 aspect ratio*/
   width: 100vw;
   height: 75vw;
   max-height: 100vh;
   max-width: 133.33vh;
-  margin: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  
+  /*positioning in the top middle*/
   position: absolute;
   top:0;bottom:0;
   left:0;right:0;
+
+  /*extras*/
+  margin: auto;
+  background-color: var(--flax);
 }
 
 .columns_container {
+  /*holy grail layout setup*/
   display: grid;
   grid-template-columns: 180px 1fr 180px;
   grid-template-rows: 180px 1fr 100px;
 
-  row-gap: 10px;
-  padding: 10px;
-
   grid-template-areas:
     "header header header"
-    "nav content side"
+    "left center right"
     "footer footer footer";
+  
+  /*spaces in the layout*/
+  row-gap: 10px;
+  padding: 10px;
 }
+
+/*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
 
 .header {
   grid-area: header;
-  padding: 10px;
 
+  /*extras*/
+  padding: 10px;
   background-color: var(--sandy);
 }
 
 .column_left {
-  grid-area: nav;
+  grid-area: left;
 
   background-color: var(--cinnabar);
 }
 
 .column_center {
-  grid-area: content;
-  min-height: 500px;
+  grid-area: center;
 
-  padding: 0px 10px;
+  min-height: 500px;
+  padding: 5px 10px;
 }
 
 .column_right {
-  grid-area: side;
+  grid-area: right;
   padding: 5px;
 
   background-color: var(--cinerous);
@@ -87,6 +99,8 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
 
   background-color: var(--cinnabar);
 }
+
+/*MOBILE DROPDOWN MENU HIDING IN PC MODE*/
 
 .mobile-nav {
   display: none;
@@ -99,6 +113,8 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
 /*MOBILE LAYOUT CHANGES*/
 
 @media ( max-width: 900px ) {
+  /*STRUCTURAL LAYOUT CHANGES*/
+
   .body_div {
     width: 100%;
     height: fit-content;
@@ -121,6 +137,8 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
     margin: 0px;
   }
 
+  /*CHANGES IN LAYOUT ELEMENTS*/
+
   .header {
     display: block;
     height: fit-content;
@@ -136,6 +154,8 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
     display: block;
   }
 
+  /*MOBILE DROPDOWN HAMBURGER MENU SETUP*/
+
   .mobile-nav {
     display: block;
   }
@@ -148,6 +168,8 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
     display: none;
   }
 
+  /*THINGS HIDING IN MOBILE LAYOUT*/
+
   .column_left {
     display: none;
   }
@@ -159,21 +181,4 @@ COMPONENT FOLDER - THIS MEANS HEADER, FOOTER, NAV*/
   .header-image {
     display: none;
   }
-}
-
-/*Link Styles */
-
-/* visited link */
-a:visited {
-  color: var(--cinerous);
-}
-
-/* mouse over link */
-a:hover {
-  color: var(--oxford);
-}
-
-/* selected link */
-a:active {
-  color: var(--cinerous);
 }
