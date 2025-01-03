@@ -17,7 +17,7 @@ class LeftDiv extends HTMLElement {
             <logo-block></logo-block>
             <div class="box">
                 <site-nav></site-nav>
-            </div
+            </div>
         `;
     }
 }
