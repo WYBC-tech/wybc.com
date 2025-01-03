@@ -16,7 +16,7 @@ class LeftDiv extends HTMLElement {
         this.innerHTML = `
             <logo-block></logo-block>
             <div class="box">
-                <navlist></navlist>
+                <site-nav></site-nav>
             </div
         `;
     }
