@@ -32,7 +32,7 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV, LEFT-DIV*/
   background-position: center center;*/
   background-image: url("./images/sparkly-yale.png");
   background-attachment: fixed;
-  background-size: 50%;
+  background-size: 10%;
 
   /*GENERAL TEXT OPTIONS*/
   font-family: 'Cooper';
