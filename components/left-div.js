@@ -14,7 +14,7 @@ class LeftDiv extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-        <div class="column-left">
+        <div class="column_left">
             <logo-block></logo-block>
             <div class="box">
                 <div class="navdiv">
