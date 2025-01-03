@@ -11,9 +11,7 @@ default across all instances of <nav-list>. And also link color.
     border: 3px solid var(--vanilla);
   }
 
-
-
-  /* Navlist CSS */
+/* Navlist CSS */
 .navdiv{
     align-items: center;
     height: 100%; 
