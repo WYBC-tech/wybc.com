@@ -2,10 +2,11 @@
 /*FOR ALL PAGE-LOCAL CSS EDIT IN PAGE FOLDER*/
 
 /*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
-COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
+COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV, LEFT-DIV*/
 @import url("../components/logo_block.css");
 @import url("../components/navlist.css");
 @import url("../components/footer.css");
+@import url("../components/left-div.css");
 
 /*FONTS*/
 
