@@ -154,12 +154,7 @@ html, body {
   .body_div {
     width: 95vw;
     height: 100vh;
-    max-height: auto;
-    max-width: auto;
-    position: auto;
     margin: auto;
-
-    float: top;
     display: block;
   }
 
