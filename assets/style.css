@@ -100,6 +100,9 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV, LEFT-DIV*/
 
   background-color: var(--flax);
   border: 3px solid var(--sandy);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .column_right {
