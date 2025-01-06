@@ -17,7 +17,7 @@ default across all instances of <site-footer>. And also link color.
 
 .contacts {
     flex: 50%;
-    float: center;
+    margin: 0 auto;
     width: fit-content;
     height: fit-content;
 }
