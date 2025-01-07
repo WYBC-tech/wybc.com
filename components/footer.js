@@ -14,7 +14,6 @@ class Footer extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-        <footer class="footerdiv">
             <div class="socials">
                 <div id="social">
                 <img src="../assets/images/icons/instagram.png" id="socials_icon">
@@ -32,7 +31,6 @@ class Footer extends HTMLElement {
                 <a id="contact_link" href="../about/">Get in touch!</a>
                 </div>
             </div>
-        </footer>
         `;
     }
 }

@@ -164,9 +164,10 @@ header {
 
 footer {
   grid-area: footer;
-
   background-color: var(--lavender);
   border: 3px solid var(--savoryblue);
+  display: flex;
+  padding: 20px;
 }
 
 /*GENERAL STYLE OPTIONS*/

@@ -32,10 +32,6 @@ default across all instances of <nav-list>. And also link color.
 .weather {
     background-color: var(--lavender);
     border: 3px solid var(--savoryblue);
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
-    max-height: 300px;
     aspect-ratio: 1 / 1; 
     margin: 10px; 
     box-sizing: border-box; 
