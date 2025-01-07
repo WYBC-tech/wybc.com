@@ -32,8 +32,10 @@ default across all instances of <nav-list>. And also link color.
 .box {
     background-color: var(--lavender);
     border: 3px solid var(--savoryblue);
-    width: 100%;
+    width: 200%;
     max-width: 300px;
+    height: 200px;
+    max-height: 300px;
     aspect-ratio: 1 / 1; 
     padding: 20px; 
     box-sizing: border-box; 
