@@ -34,7 +34,7 @@ default across all instances of <nav-list>. And also link color.
     background-color: var(--lavender);
     border: 3px solid var(--savoryblue);
 
-    width: 100%; /* Responsive: Fill the width of the parent */
+    width: 200%; /* Responsive: Fill the width of the parent */
     max-width: 300px; /* Prevent it from becoming too wide */
     aspect-ratio: 1 / 1; /* Maintain square shape */
     margin: 10px; /* Remove unnecessary padding */
