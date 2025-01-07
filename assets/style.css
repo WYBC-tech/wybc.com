@@ -35,10 +35,11 @@ html, body {
 
   /*Color palette 2*/
   --ultraviolet: #535B8D;
-  --vistablue: #8E9DCC;
+  --savoryblue: #566DB3;
   --lavender: #D9DBF1;
   --ivory: #F9F9ED;
   --mindaro: #DBF4A7;
+  --greenyellow: #B6E949;
 
   /*SITE-WIDE BACKGROUND OPTIONS*/
   /*background-size: cover;
@@ -93,14 +94,14 @@ html, body {
   /*extras*/
   padding: 10px;
   background-color: var(--lavender);
-  border: 3px solid var(--vistablue);
+  border: 3px solid var(--savoryblue);
 }
 
 .column_left {
   grid-area: left;
 
-  background-color: var(--mindaro);
-  border: 3px solid var(--vistablue);
+  background-color: var(--greenyellow);
+  border: 3px solid var(--savoryblue);
 }
 
 .column_center {
@@ -113,7 +114,7 @@ html, body {
                                 look centered on the column*/
 
   background-color: var(--ivory);
-  border: 3px solid var(--vistablue);
+  border: 3px solid var(--savoryblue);
 
   display: flex;
   flex-direction: column;
@@ -123,15 +124,15 @@ html, body {
   grid-area: right;
   padding: 5px;
 
-  background-color: var(--mindaro);
-  border: 3px solid var(--vistablue);
+  background-color: var(--greenyellow);
+  border: 3px solid var(--savoryblue);
 }
 
 .footer {
   grid-area: footer;
 
   background-color: var(--lavender);
-  border: 3px solid var(--vistablue);
+  border: 3px solid var(--savoryblue);
 }
 
 /*GENERAL STYLE OPTIONS*/
