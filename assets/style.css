@@ -134,7 +134,7 @@ html, body {
 .column_left {
   grid-area: left;
 
-  background-color: var(--creamygreen);
+  background-color: var(--ivory);
   border: 3px solid var(--savoryblue);
 }
 
@@ -158,7 +158,7 @@ html, body {
   grid-area: right;
   padding: 5px;
 
-  background-color: var(--creamygreen);
+  background-color: var(--ivory);
   border: 3px solid var(--savoryblue);
 }
 
