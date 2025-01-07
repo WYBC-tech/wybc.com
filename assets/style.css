@@ -194,14 +194,14 @@ footer {
 
   /*STRUCTURAL LAYOUT CHANGES*/
 
-  .body_div {
+  body {
     width: 95vw;
     height: 100vh;
     margin: auto;
     display: block;
   }
 
-  .layout-container {
+  .container {
     display: block;
 
     padding: 10px;
