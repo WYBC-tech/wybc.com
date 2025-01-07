@@ -31,5 +31,5 @@ default across all instances of <nav-list>. And also link color.
 
 .box {
     padding: 10px;
-    background-color: --ultraviolet;
+    background-color: var(--ultraviolet);
 }
