@@ -17,11 +17,9 @@ class LeftDiv extends HTMLElement {
             <logo-block></logo-block>
             <!--Weather widget-->
             <div class="weather">
-                <a class="weatherwidget-io" href="https://forecast7.com/en/41d31n72d93/new-haven/?unit=us" target=_blank data-label_1="NEW HAVEN" data-label_2="WEATHER" data-font="Verdana" data-mode="Current" data-theme="kiwi" >New Haven, CT</a>             
+                <div id="ww_15ffaf77290c5" v='1.3' loc='id' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl3490"],"font":"Arial","sl_ics":"one","sl_sot":"fahrenheit","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_wfc":3,"cl_odd":"#00000000"}'>More forecasts: <a href="https://forecast7.com/en/41d31n72d93/new-haven/?unit=us" id="ww_15ffaf77290c5_u" target="_blank">New Haven, CT Weather</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_15ffaf77290c5"></script>       
             </div>
-            <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-            </script>   
+
             <div class="box">
                 <div class="navdiv">
                     <nav class="navbar">
