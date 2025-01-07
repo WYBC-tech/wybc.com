@@ -29,3 +29,7 @@ default across all instances of <nav-list>. And also link color.
     text-decoration: none;
 }
 
+.box {
+    padding: 10px;
+    background-color: --ultraviolet;
+}
