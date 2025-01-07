@@ -25,11 +25,12 @@ default across all instances of <nav-list>. And also link color.
 }
 
 #nav_link {
-    color: var(--vistablue);
+    /*color: var(--savoryblue);*/
     text-decoration: none;
 }
 
 .box {
     padding: 10px;
-    background-color: var(--ultraviolet);
+    background-color: var(--lavender);
+    border: 3px solid var(--savoryblue);
 }

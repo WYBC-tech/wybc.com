@@ -90,7 +90,7 @@ html, body {
 
 /*STRUCTURAL CONTAINERS*/
 
-.body_div {
+body {
   /*confinement to 4:3 aspect ratio*/
   width: 100vw;
   height: 75vw;
@@ -104,7 +104,7 @@ html, body {
   margin: auto;
 }
 
-.layout-container {
+#container {
   /*holy grail layout setup*/
   display: grid;
   grid-template-columns: 180px 1fr 180px;
@@ -122,7 +122,7 @@ html, body {
 
 /*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
 
-.header {
+header {
   grid-area: header;
 
   /*extras*/
@@ -162,7 +162,7 @@ html, body {
   border: 3px solid var(--savoryblue);
 }
 
-.footer {
+footer {
   grid-area: footer;
 
   background-color: var(--lavender);
@@ -209,7 +209,7 @@ html, body {
 
   /*CHANGES IN LAYOUT ELEMENTS*/
 
-  .header {
+  header {
     display: block;
 
     background-color: var(--savoryblue);
@@ -219,7 +219,7 @@ html, body {
     display: block;
   }
 
-  .footer {
+  footer {
     display: block;
   }
 
