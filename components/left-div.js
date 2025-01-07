@@ -16,10 +16,6 @@ class LeftDiv extends HTMLElement {
         this.innerHTML = `
             <logo-block></logo-block>
             <!--Weather widget-->
-            <div class="weather">
-                <div id="ww_15ffaf77290c5" v='1.3' loc='id' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl3490"],"font":"Arial","sl_ics":"one","sl_sot":"fahrenheit","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_wfc":3,"cl_odd":"#00000000"}'>More forecasts: <a href="https://forecast7.com/en/41d31n72d93/new-haven/?unit=us" id="ww_15ffaf77290c5_u" target="_blank">New Haven, CT Weather</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_15ffaf77290c5"></script>       
-            </div>
-
             <div class="box">
                 <div class="navdiv">
                     <nav class="navbar">
