@@ -30,7 +30,7 @@ default across all instances of <nav-list>. And also link color.
 }
 
 .box {
-    padding: 10px;
+    padding: 20px;
     background-color: var(--lavender);
     border: 3px solid var(--savoryblue);
     width: fit-content;
