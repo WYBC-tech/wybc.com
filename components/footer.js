@@ -26,11 +26,11 @@ class Footer extends HTMLElement {
                 </div>
             </div>
 
-            <div class="contacts">
+            <!--<div class="contacts">
                 <div id="contact">
                 <a id="contact_link" href="../about/">Get in touch!</a>
                 </div>
-            </div>
+            </div>-->
         `;
     }
 }
