@@ -100,7 +100,7 @@ html, body {
 .column_left {
   grid-area: left;
 
-  background-color: var(--greenyellow);
+  background-color: var(--mindaro);
   border: 3px solid var(--savoryblue);
 }
 
@@ -124,7 +124,7 @@ html, body {
   grid-area: right;
   padding: 5px;
 
-  background-color: var(--greenyellow);
+  background-color: var(--mindaro);
   border: 3px solid var(--savoryblue);
 }
 
