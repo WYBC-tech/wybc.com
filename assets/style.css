@@ -91,11 +91,11 @@ html, body {
 /*STRUCTURAL CONTAINERS*/
 
 body {
-  /*confinement to 4:3 aspect ratio*/
+  /*confinement to 2:1 aspect ratio*/
   width: 100vw;
-  height: 75vw;
+  height: 50vw;
   max-height: 100vh;
-  max-width: 133.33vh;
+  max-width: 150vh;
   
   /*positioning in the top middle*/
   position: static;
