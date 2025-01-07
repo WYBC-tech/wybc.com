@@ -22,6 +22,40 @@ html, body {
   font-weight: normal;
   src: url('./fonts/COOPBL.woff');
 }
+/*Computer Modern Concrete*/
+/*normal text*/
+@font-face {
+  font-family: 'cmu_concreteroman';
+  font-weight: normal;
+  font-style: normal;
+  src: url('cmunorm-webfont.woff') format('woff');
+}
+
+
+/*italic*/
+@font-face {
+  font-family: 'cmu_concreteitalic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('cmunoti-webfont.woff') format('woff');
+}
+
+/*bold*/
+@font-face {
+  font-family: 'cmu_concretebold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/cmunobx-webfont.woff') format('woff');
+}
+
+/*bold italic*/
+@font-face {
+  font-family: 'cmu_concretebolditalic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/cmunobi-webfont.woff') format('woff');
+}
+
 
 :root {
   /*COLOR VARIABLE DECLARATIONS*/
@@ -50,7 +84,7 @@ html, body {
   background-size: 10%;
 
   /*GENERAL TEXT OPTIONS*/
-  font-family: 'Cooper';
+  font-family: 'cmu_concreteroman';
   color: var(--oxford);
 }
 
