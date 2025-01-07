@@ -14,7 +14,7 @@ class LogoBlock extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-        <header class="logo_blockdiv">
+        <div class="logo_blockdiv">
         <div class="logodiv">
             <img src="../assets/images/favicon.ico" id="logo"/>
 
@@ -23,7 +23,7 @@ class LogoBlock extends HTMLElement {
             <h2 id="subtitle_heading">Yale Student Radio</h2>
             </div>
         </div>
-        </header>
+        </div>
         `;
     }
 }

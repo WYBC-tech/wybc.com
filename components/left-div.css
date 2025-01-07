@@ -25,7 +25,7 @@ default across all instances of <nav-list>. And also link color.
 }
 
 #nav_link {
-    /*color: var(--savoryblue);*/
+    color: var(--savoryblue);
     text-decoration: none;
 }
 
@@ -33,4 +33,6 @@ default across all instances of <nav-list>. And also link color.
     padding: 10px;
     background-color: var(--lavender);
     border: 3px solid var(--savoryblue);
+    width: fit-content;
+    height: fit-content;
 }
