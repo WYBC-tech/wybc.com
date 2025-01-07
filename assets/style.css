@@ -25,12 +25,20 @@ html, body {
 
 :root {
   /*COLOR VARIABLE DECLARATIONS*/
+  /*Color palette 1*/
   --cinerous: #958487;
   --oxford: #020122;
   --cinnabar: #F4442E;
   --sandy: #FC9E4F;
   --flax: #EDD382;
   --vanilla: #F2F3AE;
+
+  /*Color palette 2*/
+  --ultraviolet: #535B8D;
+  --vistablue: #8E9DCC;
+  --lavender: #D9DBF1;
+  --ivory: #F9F9ED;
+  --mindaro: #DBF4A7;
 
   /*SITE-WIDE BACKGROUND OPTIONS*/
   /*background-size: cover;
@@ -42,7 +50,7 @@ html, body {
 
   /*GENERAL TEXT OPTIONS*/
   font-family: 'Cooper';
-  color: var(--oxford);
+  color: var(--ultraviolet);
 }
 
 /*STRUCTURAL CONTAINERS*/
@@ -84,15 +92,15 @@ html, body {
 
   /*extras*/
   padding: 10px;
-  background-color: var(--cinerous);
-  border: 3px solid var(--vanilla);
+  background-color: var(--lavender);
+  border: 3px solid var(--vistablue);
 }
 
 .column_left {
   grid-area: left;
 
-  background-color: var(--cinnabar);
-  border: 3px solid var(--vanilla);
+  background-color: var(--mindaro);
+  border: 3px solid var(--vistablue);
 }
 
 .column_center {
@@ -104,8 +112,8 @@ html, body {
                                 right padding is necessary for the schedule to 
                                 look centered on the column*/
 
-  background-color: var(--flax);
-  border: 3px solid var(--sandy);
+  background-color: var(--ivory);
+  border: 3px solid var(--vistablue);
 
   display: flex;
   flex-direction: column;
@@ -115,15 +123,15 @@ html, body {
   grid-area: right;
   padding: 5px;
 
-  background-color: var(--cinerous);
-  border: 3px solid var(--vanilla);
+  background-color: var(--mindaro);
+  border: 3px solid var(--vistablue);
 }
 
 .footer {
   grid-area: footer;
 
-  background-color: var(--cinnabar);
-  border: 3px solid var(--vanilla);
+  background-color: var(--lavender);
+  border: 3px solid var(--vistablue);
 }
 
 /*GENERAL STYLE OPTIONS*/
