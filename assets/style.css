@@ -39,7 +39,7 @@ html, body {
   --lavender: #D9DBF1;
   --ivory: #F9F9ED;
   --mindaro: #DBF4A7;
-  --greenyellow: #B6E949;
+  --creamygreen: #E9F5C4;
 
   /*SITE-WIDE BACKGROUND OPTIONS*/
   /*background-size: cover;
@@ -100,7 +100,7 @@ html, body {
 .column_left {
   grid-area: left;
 
-  background-color: var(--mindaro);
+  background-color: var(--creamygreen);
   border: 3px solid var(--savoryblue);
 }
 
@@ -124,7 +124,7 @@ html, body {
   grid-area: right;
   padding: 5px;
 
-  background-color: var(--mindaro);
+  background-color: var(--creamygreen);
   border: 3px solid var(--savoryblue);
 }
 
