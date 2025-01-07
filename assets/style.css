@@ -93,9 +93,9 @@ html, body {
 body {
   /*confinement to 2:1 aspect ratio*/
   width: 100vw;
-  height: 50vw;
+  height: 60vw;
   max-height: 100vh;
-  max-width: 150vh;
+  max-width: 140vh;
   
   /*positioning in the top middle*/
   position: static;
@@ -116,7 +116,7 @@ body {
     "footer footer footer";
   
   /*spaces in the layout*/
-  padding: 20px;
+  padding: 10px;
   gap: 10px;
 }
 
