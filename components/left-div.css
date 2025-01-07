@@ -25,7 +25,7 @@ default across all instances of <nav-list>. And also link color.
 }
 
 #nav_link {
-    color: var(--flax);
+    color: var(--vistablue);
     text-decoration: none;
 }
 
