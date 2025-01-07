@@ -28,7 +28,7 @@ html, body {
   font-family: 'cmu_concreteroman';
   font-weight: normal;
   font-style: normal;
-  src: url('cmunorm-webfont.woff') format('woff');
+  src: url('./fonts/cmunorm-webfont.woff') format('woff');
 }
 
 
@@ -37,7 +37,7 @@ html, body {
   font-family: 'cmu_concreteitalic';
   font-weight: normal;
   font-style: normal;
-  src: url('cmunoti-webfont.woff') format('woff');
+  src: url('./fonts/cmunoti-webfont.woff') format('woff');
 }
 
 /*bold*/
