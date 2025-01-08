@@ -15,6 +15,9 @@
   <script src="../components/footer.js" defer></script>
   <script src="../components/left-div.js" defer></script>
   <script src="../components/mobile-menu.js" defer></script>
+
+  <!--CHAT WIDGET-->
+  <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
 </head>
 
 <body>
@@ -62,6 +65,14 @@
         <h2>Listen to WYBCx, Yale's internet-based radio station!</h2>
       
         <script src="https://embed.radio.co/player/95c2306.js"></script>
+    </div>
+    <div id="chatbox">
+      <iframe src='https://iframe.chat/embed?chat=13614539' id='chattable' frameborder='none'></iframe>
+      <script>
+        chattable.initialize({
+          theme : "Windows XP"
+        });
+      </script>
     </div>
   </div>
 
