@@ -12,6 +12,5 @@
 #chatbox{
     margin-top: 10px;
     margin-bottom: 10px;
-    height: fit-content;
-    min-height: 300px;
+    width: fit-content;
 }
