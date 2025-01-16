@@ -91,7 +91,7 @@ html, body {
 /*STRUCTURAL CONTAINERS*/
 
 body {
-  /*confinement to 2:1 aspect ratio*/
+  /*confinement to 5:3 aspect ratio*/
   width: 100vw;
   height: 60vw;
   max-height: 100vh;
@@ -108,7 +108,7 @@ body {
   /*holy grail layout setup*/
   display: grid;
   grid-template-columns: 180px 1fr 180px;
-  grid-template-rows: 180px 1fr 100px;
+  grid-template-rows: 80px 1fr 100px;
 
   grid-template-areas:
     "header header header"
@@ -168,6 +168,7 @@ footer {
   border: 3px solid var(--savoryblue);
   display: flex;
   padding: 20px;
+  height: fit-content;
 }
 
 /*GENERAL STYLE OPTIONS*/

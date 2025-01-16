@@ -8,10 +8,18 @@ default across all instances of <site-footer>. And also link color.
 
 #socials {
     flex: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
 }
 
 .social {
     width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
 }
 
 .social_link{
