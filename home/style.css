@@ -15,7 +15,7 @@
 
 #chatbox{
     display: flex;
-    width: 70%;
+    width: 100%;
     height: fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -23,6 +23,6 @@
 
 #chattable {
     display: flex;
-    min-width: 400px;
+    width: 100%;
     min-height: 300px;
 }
