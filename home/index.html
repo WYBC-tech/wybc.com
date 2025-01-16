@@ -14,6 +14,7 @@
   <script src="../components/navlist.js" defer></script>
   <script src="../components/footer.js" defer></script>
   <script src="../components/left-div.js" defer></script>
+
   <script src="../components/mobile-menu.js" defer></script>
 
   <!--CHAT WIDGET-->
@@ -23,11 +24,11 @@
 <body>
 <div id="container">
   <header>
-    <div class="header-image">
+    <div id="header-image">
       <!--empty, will have an image-->
     </div>
 
-    <div class="mobile-nav">
+    <div id="mobile-nav">
       <div class="icon">
         <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
         <logo-block></logo-block>
@@ -40,14 +41,14 @@
     </div>
   </header>
 
-<div class="column_left">
+<div id="left_column">
   <left-div></left-div>
 </div>
 
-  <div class="column_center">
-    <h1 id="title_column_center">Welcome to WYBCx!</h1>
+  <div id="center_column">
+    <h1 id="center_title">Welcome to WYBCx!</h1>
 
-    <div id="under-construction_warning">
+    <div id="under_construction_warning">
       <h2>
         WARNING: site under heavy construction
       </h2>
@@ -61,7 +62,7 @@
       </p> 
     </div>
 
-    <div id="content_column_center">
+    <div class="content">
         <h2>Listen to WYBCx, Yale's internet-based radio station!</h2>
       
         <script src="https://embed.radio.co/player/95c2306.js"></script>
@@ -76,7 +77,7 @@
     </div>
   </div>
 
-  <div class="column_right">
+  <div id="right_column">
 
   </div>
 

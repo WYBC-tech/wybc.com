@@ -6,25 +6,25 @@ default across all instances of <nav-list>. And also link color.
 */
 
 /* Navlist CSS */
-.navdiv{
+#navdiv{
     align-items: center;
     height: 100%; 
     width: fit-content;
 }
   
-.navbar{
+nav {
     font-size: 20px;
     display: flex;
 }
   
-.navlist > li{
+nav li {
     list-style: none; 
     display: block; 
     margin: 0px;
     padding: 10px;
 }
 
-#nav_link {
+nav a {
     color: var(--savoryblue);
     text-decoration: none;
 }

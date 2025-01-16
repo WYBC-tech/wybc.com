@@ -6,34 +6,20 @@ default across all instances of <site-footer>. And also link color.
 */
 
 
-.socials {
+#socials {
     flex: 50%;
 }
 
-.contacts {
-    flex: 50%;
-    margin: 0 auto;
-    width: fit-content;
-    height: fit-content;
-}
-
-#social {
+.social {
     width: fit-content;
 }
 
-#social_link{
+.social_link{
     color: var(--oxford);
     text-decoration: none;
 }
 
-#socials_icon {
+.social_icon {
     width: 15px;
     height: 15px;
-}
-
-#contact_link {
-    color: var(--oxford);
-    float: right;
-    text-decoration: none;
-    font-size: 28px;
 }

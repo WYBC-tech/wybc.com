@@ -1,6 +1,6 @@
 @import url("../assets/style.css");
 
-#under-construction_warning {
+#under_construction_warning {
     height: fit-content;
     background-color: var(--lavender);
 
@@ -12,4 +12,6 @@
 #chatbox{
     margin-top: 10px;
     margin-bottom: 10px;
+    height: fit-content;
+    min-height: 300px;
 }

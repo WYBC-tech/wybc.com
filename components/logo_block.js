@@ -14,11 +14,10 @@ class LogoBlock extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-        <div class="logo_blockdiv">
-        <div class="logodiv">
+        <div id="logo_blockdiv">
+        <div id="logodiv">
             <img src="../assets/images/favicon.ico" id="logo"/>
-
-            <div class="titlediv">
+            <div id="titlediv">
             <h1 id="title_heading">WYBCx</h1>
             <h2 id="subtitle_heading">Yale Student Radio</h2>
             </div>

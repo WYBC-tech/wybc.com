@@ -131,14 +131,14 @@ header {
   border: 3px solid var(--savoryblue);
 }
 
-.column_left {
+#left_column {
   grid-area: left;
 
   background-color: var(--ivory);
   border: 3px solid var(--savoryblue);
 }
 
-.column_center {
+#center_column {
   grid-area: center;
 
   min-height: 500px;
@@ -154,7 +154,7 @@ header {
   flex-direction: column;
 }
 
-.column_right {
+#right_column {
   grid-area: right;
   padding: 5px;
 
@@ -171,13 +171,13 @@ footer {
 }
 
 /*GENERAL STYLE OPTIONS*/
-#title_column_center {
+#center_title {
   font-size: 36px; 
 }
 
 /*MOBILE DROPDOWN MENU HIDING IN PC MODE*/
 
-.mobile-nav {
+#mobile-nav {
   display: none;
 }
 
@@ -202,7 +202,7 @@ footer {
     display: block;
   }
 
-  .container {
+  #container {
     display: block;
 
     padding: 10px;
@@ -216,7 +216,7 @@ footer {
     background-color: var(--savoryblue);
   }
 
-  .column_center {
+  #center_column {
     display: block;
   }
 
@@ -226,7 +226,7 @@ footer {
 
   /*MOBILE DROPDOWN HAMBURGER MENU SETUP*/
 
-  .mobile-nav {
+  #mobile-nav {
     display: block;
   }
 
@@ -240,15 +240,15 @@ footer {
 
   /*THINGS HIDING IN MOBILE LAYOUT*/
 
-  .column_left {
+  #left_column {
     display: none;
   }
 
-  .column_right {
+  #right_column {
     display: none;
   }
 
-  .header-image {
+  #header-image {
     display: none;
   }
 }
