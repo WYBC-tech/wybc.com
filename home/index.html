@@ -70,7 +70,7 @@
         
     </div>
     <div id="chatbox">
-      <iframe src='https://iframe.chat/embed?chat=WYBC_chat' id='chattable' frameborder='none'></iframe>
+      <iframe src='https://iframe.chat/embed?chat=WYBC_chat' id="chatframe" frameborder='none'></iframe>
       <script>
         chattable.initialize({
           theme : "Windows XP"
@@ -82,10 +82,14 @@
   <div id="right_column">
     <!--Boxes containing embeddings from radio.co for stream status, recently played,-->
     <div class="box">
-      <script src="https://embed.radio.co/embed/s2af1cfe0c/status.js"></script>
-    </div>
-    <div class="box"></div>
-      <script src="https://embed.radio.co/embed/s2af1cfe0c/history.js?l=5"></script>
+      <p>
+        Stream Status: <script src="https://embed.radio.co/embed/s2af1cfe0c/status.js"></script>
+      </p>
+      <p>
+        Recently Played: <br>
+        <script src="https://embed.radio.co/embed/s2af1cfe0c/history.js?l=5"></script>
+      </p>
+      
     </div>
   </div>
 

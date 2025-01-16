@@ -15,9 +15,12 @@
 
 #chatbox{
     display: flex;
-
+    width: 70%;
+    height: fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
+}
 
-
+#chatframe {
+    min-width: 400px;
 }
