@@ -34,6 +34,9 @@ HOME/STYLE.CSS (home page unique styles)
 #under_construction_warning (<div> id):
     temporary box warning about the sites current status. temporary
 
+#webplayer (<div> id):
+    used to position the webplayer
+
 #chatbox (<div> id):
     contains the chat!
 
