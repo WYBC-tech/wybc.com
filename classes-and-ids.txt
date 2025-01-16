@@ -37,8 +37,8 @@ HOME/STYLE.CSS (home page unique styles)
 #webplayer (<div> id):
     used to position the webplayer
 
-#chatbox (<div> id):
-    contains the chat!
+#chattable (<div> id):
+    contains the chat widget!
 
 -----------------------------------------
 PROGRAMS/STYLE.CSS (programs page unique styles)
