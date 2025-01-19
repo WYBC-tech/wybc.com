@@ -8,9 +8,9 @@
 	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>  <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
-  <!--Content Security Policy, allows embeddings and script-->
+  <!--Content Security Policy, allows embeddings and script
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://embed.radio.co https://chattable.neocities.org https://iframe.chat 'unsafe-inline';">
-
+-->
 
   <script src="../components/logo_block.js" defer></script>
   <script src="../components/navlist.js" defer></script>
@@ -19,8 +19,10 @@
 
   <script src="../components/mobile-menu.js" defer></script>
 
-  <!--CHAT WIDGET-->
+  <!--CHAT WIDGET
   <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+-->
+<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
 
 
 </head>
@@ -74,10 +76,16 @@
         
     </div>
     <div id="chatbox">
-      <iframe src='https://iframe.chat/embed?chat=WYBC_chat' id='chattable' frameborder='none' sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+      <!--<iframe src='https://iframe.chat/embed?chat=WYBC_chat' id='chattable' frameborder='none' sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
       <script>
         chattable.initialize({
           theme : "Retrowave Red" // use the name of your preferred demo
+        });
+      </script>-->
+      <iframe src='https://iframe.chat/embed?chat=WYBCxChat' id='chattable' frameborder='none'></iframe>
+      <script>
+        chattable.initialize({
+          theme : "Retrowave Red"
         });
       </script>
     </div>
