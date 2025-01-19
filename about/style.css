@@ -1,6 +1,6 @@
 @import url("../assets/style.css");
 
-#email {
+.email {
     font-size: 14px;
-    color: var(--flax);
+    /*color: var(--flax);*/
 }

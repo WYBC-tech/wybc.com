@@ -1,4 +1,115 @@
-Info on classes and ids used in code
+Info on classes and ids used in code. Note that classes should be used to consistently style MULTIPLE elements,
+whereas ids should be used for a UNIQUE element on that page/html file.
 
-div class "socials" used to link instagram, etc
+Reminder: classes use . and ids use # and their names are case-sensitive
 
+-------------------------------------
+ASSETS/STYLE.CSS (sitewide CSS)
+
+#container (<div> id):
+    contains all of the content of <body>
+
+#header-image (<div> id):
+    contains the header image
+
+#mobile-nav (<div> id):
+    contains the mobile navigation list
+    Hidden in desktop view
+
+.icon (<div> class):
+    currently does nothing
+
+#mobile-menu-link (<a> id):
+    used to toggle mobile hamburger navigation menu
+
+.menu (<div> class):
+    hamburger navigation menu
+
+.menu-show (<div> class):
+    hamburger navigation menu
+
+-----------------------------------------
+HOME/STYLE.CSS (home page unique styles)
+
+#under_construction_warning (<div> id):
+    temporary box warning about the sites current status. temporary
+
+#webplayer (<div> id):
+    used to position the webplayer
+
+#chattable (<div> id):
+    contains the chat widget!
+
+-----------------------------------------
+PROGRAMS/STYLE.CSS (programs page unique styles)
+
+#schedule (<div> id):
+    contains information about the program schedule
+
+-----------------------------------------
+SPORTS/STYLE.CSS (sports page unique styles)
+
+#sports-stream-box (<div> id):
+    contains the box that links to the sports stream
+
+-----------------------------------------
+MEDIA/STYLE.CSS (media page unique styles)
+
+
+-----------------------------------------
+ABOUT/STYLE.CSS (about page unique styles)
+
+.email (<div> class):
+    used to style the emails that appear in the right div
+
+-----------------------------------------
+COMPONENTS/FOOTER.CSS (footer styles)
+#socials (<div> id):
+    used to group all socials together
+
+.social (<div> class):
+    used to style each social media link
+    each div should contain one link (eg instagram, facebook)
+
+.social_icon (<img> class):
+    used to style each social media icon (eg facebook icon)
+
+.social_link (<a> class):
+    used to style each social media link
+
+-----------------------------------------
+COMPONENTS/LEFT-DIV.CSS (left column styles)
+
+.box (<div> class):
+    currently does nothing
+    will be used to separate different parts of the left div
+
+#navdiv (<div> id):
+    contains the navbar (note: navbar styles are done directly to the <nav> tag)
+
+-----------------------------------------
+COMPONENTS/LOGO_BLOCK.CSS (logo block styles, for mobile menu)
+
+#logo_blockdiv (<div> id):
+  
+#logodiv (<div> id):
+  
+#titlediv (<div> id):
+  
+#logo (<img> id):
+    styles the logo
+  
+#title_heading (<h1> id):
+
+#subtitle_heading (<h2> id):
+
+-----------------------------------------
+COMPONENTS/NAVLIST.CSS (mobile navlist styles, currently kept consistent with the nav styles in left-div)
+
+#navdiv (<div> id):
+    contains the navbar (note: navbar styles are done directly to the <nav> tag)
+
+#navlist (<ul> id):
+    contains the navlist, needed to style mobile navlist differently
+
+-----------------------------------------

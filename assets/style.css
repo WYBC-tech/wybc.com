@@ -2,10 +2,17 @@
 /*FOR ALL PAGE-LOCAL CSS EDIT IN PAGE FOLDER*/
 
 /*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
-COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
+COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV, LEFT-DIV*/
 @import url("../components/logo_block.css");
 @import url("../components/navlist.css");
 @import url("../components/footer.css");
+@import url("../components/left-div.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Make sure the entire viewport is used */
+}
 
 /*FONTS*/
 
@@ -15,9 +22,44 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
   font-weight: normal;
   src: url('./fonts/COOPBL.woff');
 }
+/*Computer Modern Concrete*/
+/*normal text*/
+@font-face {
+  font-family: 'cmu_concreteroman';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/cmunorm-webfont.woff') format('woff');
+}
+
+
+/*italic*/
+@font-face {
+  font-family: 'cmu_concreteitalic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/cmunoti-webfont.woff') format('woff');
+}
+
+/*bold*/
+@font-face {
+  font-family: 'cmu_concretebold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/cmunobx-webfont.woff') format('woff');
+}
+
+/*bold italic*/
+@font-face {
+  font-family: 'cmu_concretebolditalic';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/cmunobi-webfont.woff') format('woff');
+}
+
 
 :root {
   /*COLOR VARIABLE DECLARATIONS*/
+  /*Color palette 1*/
   --cinerous: #958487;
   --oxford: #020122;
   --cinnabar: #F4442E;
@@ -25,26 +67,35 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
   --flax: #EDD382;
   --vanilla: #F2F3AE;
 
+  /*Color palette 2*/
+  --ultraviolet: #535B8D;
+  --savoryblue: #566DB3;
+  --lavender: #D9DBF1;
+  --ivory: #F9F9ED;
+  --mindaro: #DBF4A7;
+  --creamygreen: #E9F5C4;
+
   /*SITE-WIDE BACKGROUND OPTIONS*/
   /*background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;*/
-  background-image: url("./images/sparkly-yale.png");
+  background-image: url("./images/bg.png");
   background-attachment: fixed;
+  background-size: 10%;
 
   /*GENERAL TEXT OPTIONS*/
-  font-family: 'Cooper';
+  font-family: 'cmu_concreteroman';
   color: var(--oxford);
 }
 
 /*STRUCTURAL CONTAINERS*/
 
-.body_div {
-  /*confinement to 4:3 aspect ratio*/
+body {
+  /*confinement to 5:3 aspect ratio*/
   width: 100vw;
-  height: 75vw;
+  height: 60vw;
   max-height: 100vh;
-  max-width: 133.33vh;
+  max-width: 140vh;
   
   /*positioning in the top middle*/
   position: static;
@@ -53,11 +104,11 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
   margin: auto;
 }
 
-.layout-container {
+#container {
   /*holy grail layout setup*/
   display: grid;
   grid-template-columns: 180px 1fr 180px;
-  grid-template-rows: 180px 1fr 100px;
+  grid-template-rows: 80px 1fr 100px;
 
   grid-template-areas:
     "header header header"
@@ -66,28 +117,28 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
   
   /*spaces in the layout*/
   padding: 10px;
-  gap: 2px;
+  gap: 10px;
 }
 
 /*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
 
-.header {
+header {
   grid-area: header;
 
   /*extras*/
   padding: 10px;
-  background-color: var(--cinerous);
-  border: 3px solid var(--vanilla);
+  background-color: var(--lavender);
+  border: 3px solid var(--savoryblue);
 }
 
-.column_left {
+#left_column {
   grid-area: left;
 
-  background-color: var(--cinnabar);
-  border: 3px solid var(--vanilla);
+  background-color: var(--ivory);
+  border: 3px solid var(--savoryblue);
 }
 
-.column_center {
+#center_column {
   grid-area: center;
 
   min-height: 500px;
@@ -96,33 +147,38 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
                                 right padding is necessary for the schedule to 
                                 look centered on the column*/
 
-  background-color: var(--flax);
-  border: 3px solid var(--sandy);
+  background-color: var(--ivory);
+  border: 3px solid var(--savoryblue);
+
+  display: flex;
+  flex-direction: column;
 }
 
-.column_right {
+#right_column {
   grid-area: right;
   padding: 5px;
 
-  background-color: var(--cinerous);
-  border: 3px solid var(--vanilla);
+  background-color: var(--ivory);
+  border: 3px solid var(--savoryblue);
 }
 
-.footer {
+footer {
   grid-area: footer;
-
-  background-color: var(--cinnabar);
-  border: 3px solid var(--vanilla);
+  background-color: var(--lavender);
+  border: 3px solid var(--savoryblue);
+  display: flex;
+  padding: 20px;
+  height: fit-content;
 }
 
 /*GENERAL STYLE OPTIONS*/
-#title_column_center {
+#center_title {
   font-size: 36px; 
 }
 
 /*MOBILE DROPDOWN MENU HIDING IN PC MODE*/
 
-.mobile-nav {
+#mobile-nav {
   display: none;
 }
 
@@ -140,19 +196,14 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
 
   /*STRUCTURAL LAYOUT CHANGES*/
 
-  .body_div {
+  body {
     width: 95vw;
     height: 100vh;
-    max-height: auto;
-    max-width: auto;
-    position: auto;
     margin: auto;
-
-    float: top;
     display: block;
   }
 
-  .layout-container {
+  #container {
     display: block;
 
     padding: 10px;
@@ -160,23 +211,23 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
 
   /*CHANGES IN LAYOUT ELEMENTS*/
 
-  .header {
+  header {
     display: block;
 
-    background-color: var(--cinnabar);
+    background-color: var(--savoryblue);
   }
 
-  .column_center {
+  #center_column {
     display: block;
   }
 
-  .footer {
+  footer {
     display: block;
   }
 
   /*MOBILE DROPDOWN HAMBURGER MENU SETUP*/
 
-  .mobile-nav {
+  #mobile-nav {
     display: block;
   }
 
@@ -190,15 +241,15 @@ COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV*/
 
   /*THINGS HIDING IN MOBILE LAYOUT*/
 
-  .column_left {
+  #left_column {
     display: none;
   }
 
-  .column_right {
+  #right_column {
     display: none;
   }
 
-  .header-image {
+  #header-image {
     display: none;
   }
 }

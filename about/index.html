@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WYBCx | About</title>
+  <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
+	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
-  <script src="../components/logo_block.js" type="text/javascript" defer></script>
-  <script src="../components/navlist.js" type="text/javascript" defer></script>
-  <script src="../components/footer.js" type="text/javascript" defer></script>
-
-  <script src="../components/mobile-menu.js" type="text/javascript" defer></script>
+  <script src="../components/logo_block.js" defer></script>
+  <script src="../components/navlist.js" defer></script>
+  <script src="../components/footer.js" defer></script>
+  <script src="../components/left-div.js" defer></script>
+  <script src="../components/mobile-menu.js" defer></script>
 </head>
 
-<body class="body_div">
-<div class="layout-container">
-  <div class="header">
-    <div class="header-image">
-      <h1>CONTENT IN PRODUCTION</h1>
+<body>
+<div id="container">
+  <header>
+    <div id="header-image">
       <!--empty, will have an image-->
     </div>
 
-    <div class="mobile-nav">
+    <div id="mobile-nav">
       <div class="icon">
         <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
         <logo-block></logo-block>
@@ -33,19 +34,18 @@
         <site-nav></site-nav>
       </div>
     </div>
+  </header>
+
+  <div id="left_column">
+    <left-div></left-div>
   </div>
 
-  <div class="column_left">
-    <logo-block></logo-block>
-    <site-nav></site-nav>
-  </div>
-
-  <div class="column_center">
-    <h1 id="title_column_center">
+  <div id="center_column">
+    <h1 id="center_title">
       About Us
     </h1>
 
-    <div id="content_column_center">
+    <div class="content">
       <p>
         People are always asking who we are, so we tell them&#8230; We are WYBC!
       </p>
@@ -70,34 +70,34 @@
     </div>
   </div>
 
-  <div class="column_right">
+  <div id="right_column">
     <h2>Get in touch!</h2>
 
-      <br />
-      General Manager: <br />
+      <br>
+      General Manager: <br>
       Joanna Ruiz
-      <div id="email">gm@wybc.com</div><br /><br />
+      <div class="email"><a href="mailto:gm@wybc.com">gm@wybc.com</a></div><br><br>
 
-      Station Manager: <br /> 
+      Station Manager: <br> 
       Avery Wayne
-      <div id="email">sm@wybc.com</div><br /><br />
+      <div class="email"><a href="mailto:sm@wybc.com">sm@wybc.com</a></div><br><br>
 
-      Program Director: <br />
+      Program Director: <br>
       Jules Morris
-      <div id="email">pd@wybc.com</div><br /><br />
+      <div class="email"><a href="mailto:pd@wybc.com">pd@wybc.com</a></div><br><br>
 
-      Treasurer: <br />
+      Treasurer: <br>
       Ronald Thorpe
-      <div id="email">treasurer@wybc.com</div><br /><br />
+      <div class="email"><a href="mailto:treasurer@wybc.com">treasurer@wybc.com</a></div><br><br>
 
-      Office Manager: <br />
+      Office Manager: <br>
       Elio Wentzel
-      <div id="email">om@wybc.com</div><br /><br />
+      <div class="email"><a href="mailto:om@wybc.com">om@wybc.com</a></div><br><br>
   </div>
 
-  <div class="footer">
+  <footer>
     <site-footer></site-footer>
-  </div>
+  </footer>
 </div>
 </body>
 </html>
