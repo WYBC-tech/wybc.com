@@ -6,7 +6,22 @@ default across all instances of <nav-list>. And also link color.
 */
 
 /* Navlist CSS */
+#leftDivStructure {
+    display: grid;
+    grid-template-rows: 100px 180px 1fr;
+    width: 100%;
+    padding: 0px;
+    grid-template-areas: "logo-block"
+                         "weather"
+                         "nav";
+}
+
+#logo-block{
+    grid-area: "logo-block";
+}
+
 #navdiv{
+    grid-area: nav;
     align-items: center;
     height: 100%; 
     width: fit-content;
@@ -27,6 +42,15 @@ nav li {
 nav a {
     color: var(--savoryblue);
     text-decoration: none;
+}
+
+#weatherframe {
+    grid-area: weather;
+    height: 100%; margin: 5px; overflow: hidden;
+}
+
+#weather {
+    width: 100%; scrollbar-width: 0px; height: 100%;
 }
 
 
