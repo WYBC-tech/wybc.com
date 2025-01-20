@@ -43,9 +43,9 @@
     </div>
   </header>
 
-<div id="left_column">
-  <left-div></left-div>
-</div>
+  <div id="left_column">
+    <left-div></left-div>
+  </div>
 
   <div id="center_column">
     <h1 id="center_title">Welcome to WYBCx!</h1>
@@ -69,22 +69,17 @@
         <div id="webplayer">
           <script src="https://embed.radio.co/player/95c2306.js"></script>
         </div>
-        
     </div>
+
     <div id="chatbox">
-      <!--<iframe src='https://iframe.chat/embed?chat=WYBC_chat' id='chattable' frameborder='none' sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
-      <script>
-        chattable.initialize({
-          theme : "Retrowave Red" // use the name of your preferred demo
-        });
-      </script>-->
       <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="none"></iframe>
       <script>
         chattable.initialize({
-          stylesheet : "chattable.css"
+          stylesheet : "./components/chattable.css"
         });
       </script>
     </div>
+    
   </div>
 
   <div id="right_column">
