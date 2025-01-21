@@ -108,7 +108,7 @@ body {
   /*holy grail layout setup*/
   display: grid;
   grid-template-columns: 180px 1fr 180px;
-  grid-template-rows: 80px 1fr 100px;
+  grid-template-rows: 200px 1fr 100px;
 
   grid-template-areas:
     "header header header"
@@ -126,9 +126,19 @@ header {
   grid-area: header;
 
   /*extras*/
-  padding: 10px;
   background-color: var(--lavender);
   border: 3px solid var(--savoryblue);
+  overflow: hidden;
+}
+
+#header-image {
+  /*KEEP THESE PARAMS ALWAYS*/
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+
+  /*CHANGE THIS TO REPOSITION THE HEADER IMAGE*/
+  transform: translate(0, -100px)
 }
 
 #left_column {
