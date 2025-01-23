@@ -30,6 +30,16 @@ class LeftDiv extends HTMLElement {
                     </nav>
                 </div>
             </div>
+            <!--Boxes containing embeddings from radio.co for stream status, recently played,-->
+            <div class="box">
+                <p>
+                    Stream Status: <script src="https://embed.radio.co/embed/s2af1cfe0c/status.js"></script>
+                </p>
+                <p>
+                    Recently Played: <br>
+                    <script src="https://embed.radio.co/embed/s2af1cfe0c/history.js?l=5"></script>
+                </p>
+            </div>
         `;
     }
 }

@@ -178,6 +178,12 @@ header {
   border: 3px solid var(--savoryblue);
 }
 
+.box {
+  padding: 5px;
+  margin: 10px;
+  
+}
+
 footer {
   grid-area: footer;
   background-color: var(--lavender);
