@@ -16,12 +16,6 @@ html, body {
 
 /*FONTS*/
 
-@font-face {
-  font-family: 'Cooper';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./fonts/COOPBL.woff');
-}
 /*Computer Modern Concrete*/
 /*normal text*/
 @font-face {
@@ -31,19 +25,18 @@ html, body {
   src: url('./fonts/cmunorm-webfont.woff') format('woff');
 }
 
-
 /*italic*/
 @font-face {
   font-family: 'cmu_concreteitalic';
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
   src: url('./fonts/cmunoti-webfont.woff') format('woff');
 }
 
 /*bold*/
 @font-face {
   font-family: 'cmu_concretebold';
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
   src: url('./fonts/cmunobx-webfont.woff') format('woff');
 }
@@ -51,8 +44,8 @@ html, body {
 /*bold italic*/
 @font-face {
   font-family: 'cmu_concretebolditalic';
-  font-weight: normal;
-  font-style: normal;
+  font-weight: bold;
+  font-style: italic;
   src: url('./fonts/cmunobi-webfont.woff') format('woff');
 }
 
@@ -87,6 +80,29 @@ html, body {
   font-family: 'cmu_concreteroman';
   color: var(--oxford);
 }
+
+/*LINK STYLES */
+
+/* visited link 
+a:visited {
+  color: #2E801F;
+}
+
+ mouse over link 
+a:hover {
+color: hotpink;
+}
+
+ selected link 
+a:active {
+color: #FB6107;
+}
+
+ unvisited link 
+a:link {
+color: #FF2D22;
+}
+*/
 
 /*STRUCTURAL CONTAINERS*/
 
@@ -170,6 +186,12 @@ header {
 
   background-color: var(--ivory);
   border: 3px solid var(--savoryblue);
+}
+
+.box {
+  padding: 5px;
+  margin: 10px;
+  
 }
 
 footer {

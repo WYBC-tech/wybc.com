@@ -9,6 +9,12 @@
     padding: 10px;
 }
 
+#training_info {
+    background-color: #a1f2de;
+    padding: 10px;
+    height: fit-content;
+}
+
 #chatbox{
     display: flex;
     width: 100%;
