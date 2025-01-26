@@ -18,10 +18,7 @@ class LeftDiv extends HTMLElement {
             <logo-block id="logo-block"></logo-block>
             
             <div id="weatherframe">
-                <a class="weatherwidget-io" href="https://forecast7.com/en/41d31n72d93/new-haven/?unit=us" data-label_1="New Haven, CT" data-font="Roboto Slab" data-mode="Current" data-theme="weather_one" >New Haven, CT</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+                <iframe src="https://widgets.commoninja.com/iframe/0d1bc720-20fa-4c68-8bd5-b30ebc76b598" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
             </div>
 
             <div class="box">
