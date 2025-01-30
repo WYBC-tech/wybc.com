@@ -167,7 +167,7 @@ header {
 #center_column {
   grid-area: center;
 
-  min-height: 500px;
+  min-height: 100vh;
   padding: 5px 15px 5px 10px; /*IMPORTANT: behavior of the schedule object
                                 means that the 5px difference between left and
                                 right padding is necessary for the schedule to 
