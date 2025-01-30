@@ -26,7 +26,7 @@ class Footer extends HTMLElement {
                 </div>
 
                 <div class="social"
-                <a href="tel:+1203-800-4620"> Call in at +1 (203) 800-4620</a>
+                <a href="tel:+12038004620"> Call in at +1 (203) 800-4620</a>
 
                 <div class="social">
                 <a href="https://wybc.creek.fm">Old Website</a>
