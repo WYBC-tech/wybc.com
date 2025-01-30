@@ -24,6 +24,12 @@ class Footer extends HTMLElement {
                 <img src="../assets/images/icons/facebook.png" class="social_icon">
                 <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">@YALERADIO</a>
                 </div>
+
+                <div class="social"
+                <a href="tel:+1203-800-4620"> Call in at +1 (203) 800-4620</a>
+
+                <div class="social">
+                <a href="https://wybc.creek.fm">Old Website</a>
             </div>
         `;
     }
