@@ -124,7 +124,7 @@ body {
   /*holy grail layout setup*/
   display: grid;
   grid-template-columns: 180px 1fr 180px;
-  grid-template-rows: 200px 1fr 100px;
+  grid-template-rows: 100px 1fr 100px;
 
   grid-template-areas:
     "header header header"
