@@ -75,14 +75,6 @@ html, body {
   --mindaro: #DBF4A7;
   --creamygreen: #E9F5C4;
 
-  /*SITE-WIDE BACKGROUND OPTIONS*/
-  /*background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;*/
-  background-image: url("./images/bg.png");
-  background-attachment: fixed;
-  background-size: 10%;
-
   /*GENERAL TEXT OPTIONS*/
   font-family: 'cmu_concreteroman';
   color: var(--oxford);
@@ -91,33 +83,18 @@ html, body {
 /*STRUCTURAL CONTAINERS*/
 
 body {
-  /*confinement to 5:3 aspect ratio*/
-  width: 100vw;
-  height: 60vw;
-  max-height: 100vh;
-  max-width: 140vh;
-  
-  /*positioning in the top middle*/
-  position: static;
+  /*layout setup*/
+  grid-template-rows: 100px 1fr 180px;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: 
+    "header" "header"
+    "main" "main"
+    "footer" "footer";
+
+  gap: 10px;
 
   /*extras*/
   margin: auto;
-}
-
-#container {
-  /*holy grail layout setup*/
-  display: grid;
-  grid-template-columns: 180px 1fr 180px;
-  grid-template-rows: 200px 1fr 100px;
-
-  grid-template-areas:
-    "header header header"
-    "left center right"
-    "footer footer footer";
-  
-  /*spaces in the layout*/
-  padding: 10px;
-  gap: 10px;
 }
 
 /*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
@@ -127,25 +104,18 @@ header {
 
   /*extras*/
   background-color: var(--lavender);
-  border: 3px solid var(--savoryblue);
+  height: 100px;
+  border: 1px solid red;
   overflow: hidden;
 }
 
-#header-image {
-  /*KEEP THESE PARAMS ALWAYS*/
-  width: 100%;
-  height: auto;
-  object-fit: scale-down;
-
-  /*CHANGE THIS TO REPOSITION THE HEADER IMAGE*/
-  transform: translate(0, -100px)
-}
-
 #left_column {
-  grid-area: left;
+  grid-row-start: 1;
+  grid-row-end:   2;
+  grid-column: 1;
 
   background-color: var(--ivory);
-  border: 3px solid var(--savoryblue);
+  border: 1 solid green;
 }
 
 #center_column {
