@@ -1,0 +1,177 @@
+:root {
+    --notification-sfx: //xobyte.org/files/WinXPNotify.mp3;
+ }
+  *::selection {
+    color: #EEE;
+    background-color: #55E;
+    opacity: 1;
+ }
+  @font-face {
+    font-family: "WinXP";
+    src: url('https://xobyte.neocities.org/files/fonts/win.woff');
+ }
+ body {
+   background-color: rgb(236, 233, 216);
+ }
+  .allMessages {
+    background: transparent;
+    border: 1px solid rgb(208, 208, 191);
+    font-family: WinXP, sans-serif;
+    border-radius: 3px;
+    margin: 10px;
+    line-height: 12px;
+    position: relative;
+ }
+  .allMessages:hover:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+ }
+  .sent {
+ }
+  .recieved {
+ }
+  #background {
+    scrollbar-color: #CCF #FFF;
+ }
+  .msgBody {
+    cursor: text;
+ }
+  #input {
+    background-color: #FFF;
+    border: inset 2px rgb(208, 208, 191);
+    font-family: WinXP, Tahoma, sans-serif;
+    padding: 5px;
+    width: calc(100% - 14px);
+    border-radius: 0;
+ }
+  #input::placeholder {
+    font-family: WinXP, Tahoma, sans-serif;
+ }
+  #input:focus {
+    outline: dotted 1px #000;
+ }
+  a {
+    font-family: inherit;
+    color: inherit !important;
+ }
+  #timestamp {
+    color: #555;
+    font-size: 10pt;
+ }
+  #top_banner {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background: rgb(0, 85, 234);
+    border-radius: 2px 2px 0px 0px;
+    box-shadow: rgb(43, 144, 255) 0px 2px 2px inset, rgb(51, 51, 51) 0px -1px 2px inset;
+    font-family: WinXP;
+ }
+  #top_banner:before {
+    display: inline-block;
+    width: 12pt;
+    height: 12pt;
+    content: ' ';
+    background-image: url('https://xobyte.neocities.org/files/win-min.png');
+    background-size: 100% 100%;
+    margin-right: 5px;
+ }
+  #settings {
+    filter: invert(100%);
+    opacity: 0.75;
+ }
+  #textInput {
+    background-color: rgb(236, 233, 216);
+ }
+  blockquote {
+    border: 1px solid rgb(208, 208, 191);
+    font-family: WinXP, sans-serif;
+    border-radius: 3px;
+    line-height: 12px;
+    position: relative;
+ }
+ .mod, .owner {
+   background-color: transparent;
+   background-image: url('/media/crown.png');
+   background-size: 100% 100%;
+   border-radius: 0;
+ }
+ .owner {
+    filter: hue-rotate(-60deg);
+ }
+ .mod {
+    filter: hue-rotate(-180deg);
+ }
+ #emojiTray {
+   background-color: rgb(236, 233, 216);
+   color: #222;
+ }
+ #settingsMenu {
+   padding: 0;
+   width: 100%;
+ }
+ #settingsMenu p {
+   padding: 3px 10px 3px 10px;
+ }
+ #settingsMenu h2 {
+   margin: 0;
+   color: rgb(255, 255, 255);
+   font-weight: bolder;
+   background: rgb(0, 85, 234);
+   border-radius: 2px 2px 0px 0px;
+   box-shadow: rgb(43, 144, 255) 0px 2px 2px inset, rgb(51, 51, 51) 0px -1px 2px inset;
+   font-family: WinXP;
+ }
+ #save {
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #111;
+   padding: 3px 6px 3px 6px;
+   font-size: 10pt;
+   font-family: "WinXP", Helvetica;
+   position: relative;
+   border: outset 2px #6982EE;
+   border-radius: 3px;
+   text-transform: uppercase;
+   cursor: pointer;
+ }
+ #save:hover::after {
+   content: " ";
+   display: block;
+   width: 95%;
+   height: 80%;
+   border: dotted 1px #000;
+   position: absolute;
+   left: 2%;
+   top: 10%;
+   border-radius: 6px;
+ }
+ #save:hover {
+   border-color: #C50;
+ }
+ #is_typing {
+   display: block;
+   background-color: transparent;
+   border-radius: 0;
+   overflow: visible;
+   width: auto;
+ }
+ #is_typing:before {
+   font-family: MS Gothic, "WinXP", monospace;
+   content: "Typing";
+   font-size: 8pt;
+ }
+ #is_typing > span {
+    background-color: #000;
+    height: 2px;
+    width: 2px;
+    border-radius: 0;
+ }

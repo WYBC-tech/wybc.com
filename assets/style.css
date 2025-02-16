@@ -1,0 +1,287 @@
+/*GLOBAL CSS STYLES, USED ACROSS THE ENTIRE WEBSITE*/
+/*FOR ALL PAGE-LOCAL CSS EDIT IN PAGE FOLDER*/
+
+/*FOR ALL COMPONENT-LOCAL CSS EDIT IN 
+COMPONENT FOLDER - THIS MEANS LOGO BLOCK, FOOTER, NAV, LEFT-DIV*/
+@import url("../components/logo_block.css");
+@import url("../components/navlist.css");
+@import url("../components/footer.css");
+@import url("../components/left-div.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Make sure the entire viewport is used */
+}
+
+/*FONTS*/
+
+/*Computer Modern Concrete*/
+/*normal text*/
+@font-face {
+  font-family: 'cmu_concreteroman';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/cmunorm-webfont.woff') format('woff');
+}
+
+/*italic*/
+@font-face {
+  font-family: 'cmu_concreteitalic';
+  font-weight: normal;
+  font-style: italic;
+  src: url('./fonts/cmunoti-webfont.woff') format('woff');
+}
+
+/*bold*/
+@font-face {
+  font-family: 'cmu_concretebold';
+  font-weight: bold;
+  font-style: normal;
+  src: url('./fonts/cmunobx-webfont.woff') format('woff');
+}
+
+/*bold italic*/
+@font-face {
+  font-family: 'cmu_concretebolditalic';
+  font-weight: bold;
+  font-style: italic;
+  src: url('./fonts/cmunobi-webfont.woff') format('woff');
+}
+
+
+:root {
+  /*COLOR VARIABLE DECLARATIONS*/
+  /*Color palette 1*/
+  --cinerous: #958487;
+  --oxford: #020122;
+  --cinnabar: #F4442E;
+  --sandy: #FC9E4F;
+  --flax: #EDD382;
+  --vanilla: #F2F3AE;
+
+  /*Color palette 2*/
+  --ultraviolet: #535B8D;
+  --savoryblue: #566DB3;
+  --lavender: #D9DBF1;
+  --ivory: #F9F9ED;
+  --mindaro: #DBF4A7;
+  --creamygreen: #E9F5C4;
+
+  /*SITE-WIDE BACKGROUND OPTIONS*/
+  /*background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;*/
+  background-image: url("./images/bg.png");
+  background-attachment: fixed;
+  background-size: 10%;
+
+  /*GENERAL TEXT OPTIONS*/
+  font-family: 'cmu_concreteroman';
+  color: var(--oxford);
+}
+
+/*LINK STYLES */
+
+/* visited link 
+a:visited {
+  color: #2E801F;
+}
+
+ mouse over link 
+a:hover {
+color: hotpink;
+}
+
+ selected link 
+a:active {
+color: #FB6107;
+}
+
+ unvisited link 
+a:link {
+color: #FF2D22;
+}
+*/
+
+/*STRUCTURAL CONTAINERS*/
+
+body {
+  /*confinement to 5:3 aspect ratio*/
+  width: 100vw;
+  height: 60vw;
+  max-height: 100vh;
+  max-width: 140vh;
+  
+  /*positioning in the top middle*/
+  position: static;
+
+  /*extras*/
+  margin: auto;
+}
+
+#container {
+  /*holy grail layout setup*/
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  grid-template-rows: 100px 1fr 100px;
+
+  grid-template-areas:
+    "header header header"
+    "left center right"
+    "footer footer footer";
+  
+  /*spaces in the layout*/
+  padding: 10px;
+  gap: 10px;
+}
+
+/*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
+
+header {
+  grid-area: header;
+
+  /*extras*/
+  background-color: var(--lavender);
+  border: 3px solid var(--savoryblue);
+  overflow: hidden;
+}
+
+#header-image {
+  /*KEEP THESE PARAMS ALWAYS*/
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+
+  /*CHANGE THIS TO REPOSITION THE HEADER IMAGE*/
+  transform: translate(0, -100px)
+}
+
+#left_column {
+  grid-area: left;
+
+  background-color: var(--ivory);
+  border: 3px solid var(--savoryblue);
+}
+
+#center_column {
+  grid-area: center;
+
+  min-height: 100vh;
+  padding: 5px 15px 5px 10px; /*IMPORTANT: behavior of the schedule object
+                                means that the 5px difference between left and
+                                right padding is necessary for the schedule to 
+                                look centered on the column*/
+
+  background-color: var(--ivory);
+  border: 3px solid var(--savoryblue);
+
+  display: flex;
+  flex-direction: column;
+}
+
+#right_column {
+  grid-area: right;
+  padding: 5px;
+
+  background-color: var(--ivory);
+  border: 3px solid var(--savoryblue);
+}
+
+.box {
+  padding: 5px;
+  margin: 10px;
+  
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--lavender);
+  border: 3px solid var(--savoryblue);
+  display: flex;
+  padding: 20px;
+  height: fit-content;
+}
+
+/*GENERAL STYLE OPTIONS*/
+#center_title {
+  font-size: 36px; 
+}
+
+/*MOBILE DROPDOWN MENU HIDING IN PC MODE*/
+
+#mobile-nav {
+  display: none;
+}
+
+#mobile-menu-link {
+  text-decoration: none;
+}
+
+/*MOBILE LAYOUT CHANGES*/
+
+@media ( max-width: 900px ) {
+  :root {
+    background-image: none;
+    background-color: var(--oxford);
+  }
+
+  /*STRUCTURAL LAYOUT CHANGES*/
+
+  body {
+    width: 95vw;
+    height: 100vh;
+    margin: auto;
+    display: block;
+  }
+
+  #container {
+    display: block;
+
+    padding: 10px;
+  }
+
+  /*CHANGES IN LAYOUT ELEMENTS*/
+
+  header {
+    display: block;
+
+    background-color: var(--savoryblue);
+  }
+
+  #center_column {
+    display: block;
+  }
+
+  footer {
+    display: block;
+  }
+
+  /*MOBILE DROPDOWN HAMBURGER MENU SETUP*/
+
+  #mobile-nav {
+    display: block;
+  }
+
+  .menu-show {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /*THINGS HIDING IN MOBILE LAYOUT*/
+
+  #left_column {
+    display: none;
+  }
+
+  #right_column {
+    display: none;
+  }
+
+  #header-image {
+    display: none;
+  }
+}

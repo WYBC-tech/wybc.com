@@ -1,0 +1,51 @@
+/*
+The styles used specifically for the logo block. Be sure to ensure that 
+background-color arguments are in the scope of page-specific CSS and not here;
+this is the file to organize structural elements that should be considered
+default across all instances of <logo-block>.
+*/
+
+#logo_blockdiv{
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+
+    color: var(--oxford);   
+}
+  
+#logodiv{
+    display: flex;
+    height: 100px;
+    margin: 0px;
+    padding: 5px;
+}
+  
+#titlediv{
+    display: inline-block;
+    margin-right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: fit-content;
+    height: fit-content; 
+}
+  
+#logo{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+  
+#title_heading{
+    display: block;
+    font-size: 19px;
+    margin-bottom: 0px;
+}
+  
+#subtitle_heading{
+    display: block;
+    font-size: 12px;
+    margin-top: 0px;
+}

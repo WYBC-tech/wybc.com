@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYBCx | Home</title>
+  <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
+	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>  
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
+
+  <!--Content Security Policy, allows embeddings and script
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://embed.radio.co https://chattable.neocities.org https://iframe.chat 'unsafe-inline';">
+-->
+
+  <script src="../components/logo_block.js" defer></script>
+  <script src="../components/navlist.js" defer></script>
+  <script src="../components/footer.js" defer></script>
+  <script src="../components/left-div.js" defer></script>
+
+  <script src="../components/mobile-menu.js" defer></script>
+
+  <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+</head>
+
+<body>
+<div id="container">
+  <header>
+    <div>
+      <!--<img id="header-image" src="../assets/images/chloeschiffman_800080_silviawang ver.0.png">-->
+    </div>  
+
+    <div id="mobile-nav">
+      <div class="icon">
+        <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
+        <logo-block></logo-block>
+        </a>
+      </div>
+      
+      <div class="menu" id="mobile-nav-menu">
+        <site-nav></site-nav>
+      </div>
+    </div>
+  </header>
+
+  <div id="left_column">
+    <left-div></left-div>
+  </div>
+
+  <div id="center_column">
+    <h1 id="center_title">Welcome to WYBCx!</h1>
+
+    <div class="content">
+        <h2>Listen to WYBCx, Yale's internet-based radio station!</h2>
+        <div id="webplayer">
+          <script src="https://embed.radio.co/player/95c2306.js"></script>
+        </div>
+    </div>
+
+    <div id="chatbox">
+      <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="none"></iframe>
+      <script>
+        chattable.initialize({
+          stylesheet : "./components/chattable.css"
+        });
+      </script>
+    </div>
+    
+  </div>
+
+  <div id="right_column">
+    <div id="under_construction_warning">
+      <h3>
+        WARNING: site under heavy construction
+      </h3>
+
+      <p>
+        Dear listeners and WYBC community, expect the website to change dramatically in the coming weeks.
+        Thank you for your patience as we update our look and digital content. For now, the stream is back up and shows are running as scheduled &lt;3
+      </p> 
+      <p>
+        The old website is still available <a href="https://wybc.creek.fm" target="_blank">here</a>, though the stream is only accessible from the new site.
+      </p> 
+    </div>
+  </div>
+
+  <footer>
+    <site-footer></site-footer>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WYBCx | Sports</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYBCx | Sports</title>
+  <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
+	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
+
+  <!--component script files: these .js files contain the code to create the 
+  logo block, navbar, and footer objects-->
+  <script src="../components/logo_block.js" defer></script>
+  <script src="../components/navlist.js" defer></script>
+  <script src="../components/footer.js" defer></script>
+  <script src="../components/left-div.js" defer></script>
+
+  <!--command script files: these .js files contain the code to implement the
+  hamburger menu open/close functions-->
+  <script src="../components/mobile-menu.js" defer></script>
+</head>
+  
 <body>
-  <header id="site-header">
-    <div class="headerdiv">
-      <div class="logo">WYBC x</div>
-      <div class="navdiv">
-        <nav class="navbar">
-          <ul class="navlist">
-            <li><a href="../">home</a></li>
-            <li><a href="../about">about</a></li>
-            <li><a href="../join">join</a></li>
-            <li><a href="../shows">shows</a></li>
-            <li><a href="#">sports</a></li>
-            <li><a href="#">podcast</a></li>
-            <li><a href="#">moon</a></li>
-            <li><a href="#">zine</a></li>
-            <li><a href="#">web</a></li>
-          </ul>
-        </nav>
+<div id="container">
+  <header>
+    <div id="header-image">
+      <!--header image for use in PC mode-->
+    </div>
+
+    <div id="mobile-nav">
+      <!--code to set up the dropdown menu in mobile mode, 
+      nothing here gets changed from page to page-->
+
+      <div class="icon">
+        <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
+        <logo-block></logo-block>
+        </a>
+      </div>
+      
+      <div class="menu" id="mobile-nav-menu">
+        <site-nav></site-nav>
       </div>
     </div>
-  <h1>WYBC - Yale Broadcasting Company</h1>
-  </header>
-    <p> Sports stream is currently down. Thank you for your patience while we work on getting it back up!</p>
+</header>
 
- <!-- <p>The Sports department calls most Bulldog home games for basketball, football and hockey. Broadcasts will be announced a few days in advance, and the stream will be accessible on our site in the listening side-bar.&nbsp;</p>-->
-  <br><h2>History</h2>
-        <p>The Sports Department has been calling Yale Athletic Events since the very early stages of WYBC. In the 1950s, the Department was even calling events such as Ivy League Swim Meets hosted at the historic Payne-Whitney Gymnasium. Today, the Sports Department is still strong as it calls most Bulldog home basketball, football, and hockey games. The department calls a fair amount of road games and in 2016 sent broadcasters to Providence, RI to call Yale Basketball’s historic first-ever NCAA Tournament win. Also in 2016, we conducted the first-ever Ivy League College Golf radio broadcast and is aiming to to cover some baseball games this year. Sports Department Broadcasts will be listed on the website’s programming schedule a few days in advance and when the stream is live, there will be a link to it on the website’s home page. You can also check the programming schedule to tune in to one of our weekly Sports talkshows. Long Live Radio, Long Live Sports!</p>
-
-  <div class="socials">
-      
-    <a href="https://www.instagram.com/wybcyale/" target="_blank">INSTAGRAM @WYBCYALE</a>
-      
+  <div id="left_column">
+    <left-div></left-div>
   </div>
+
+  <div id="center_column">
+    <h1 id="center_title">
+      WYBCx Sports
+    </h1>
+
+    <div class="content">
+        <p>
+            The Sports department calls most Bulldog home games for basketball, football and hockey. Broadcasts will be announced a few days in advance, and the stream is accessible below. Note that the link only works while the stream is live. 
+        </p>
+        <h2>Upcoming Games</h2>
+        <p>
+          Stay tuned! This page will be updated when information about games is available.
+          <!--Lets embed a gcal when its ready-->
+        </p>           
+        <div id="sports-stream-box">
+            <a target="_blank" href="https://wybcx-stream.creek.org/sports4.mp3">LISTEN TO SPORTS STREAM</a>
+        </div>
+        <h2>History</h2>
+            <p>
+              The Sports Department has been calling Yale Athletic Events since the very early stages of WYBC. In the 1950s, the Department was even calling events such as Ivy League Swim Meets hosted at the historic Payne-Whitney Gymnasium. Today, the Sports Department is still strong as it calls most Bulldog home basketball, football, and hockey games. The department calls a fair amount of road games and in 2016 sent broadcasters to Providence, RI to call Yale Basketball’s historic first-ever NCAA Tournament win. Also in 2016, we conducted the first-ever Ivy League College Golf radio broadcast. Sports Department Broadcasts will be listed on the website a few days in advance and when the stream is live, the link above will take you to the stream. You can also check the programming schedule to tune in to one of our weekly Sports talkshows. Long Live Radio, Long Live Sports!            </p>
+    </div>
+  </div>
+
+  <div id="right_column">
+
+  </div>
+
+  <footer>
+    <site-footer></site-footer>
+  </footer>
+</div>
 </body>
 </html>

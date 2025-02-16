@@ -1,0 +1,33 @@
+/*
+The styles used specifically for the footer. Be sure to ensure that 
+background-color arguments are in the scope of page-specific CSS and not here;
+this is the file to organize structural elements that should be considered
+default across all instances of <site-footer>. And also link color. 
+*/
+
+
+#socials {
+    flex: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.social {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.social_link{
+    color: var(--oxford);
+    text-decoration: none;
+}
+
+.social_icon {
+    width: 15px;
+    height: 15px;
+}

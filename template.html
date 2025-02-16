@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WYBCx | <!--Page subtitle-->></title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYBCx | page-title</title>
+  <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
+	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
+
+  <!--component script files: these .js files contain the code to create the 
+  logo block, navbar, and footer objects-->
+  <script src="../components/logo_block.js" defer></script>
+  <script src="../components/navlist.js" defer></script>
+  <script src="../components/footer.js" defer></script>
+  <script src="../components/left-div.js" defer></script>
+
+  <!--command script files: these .js files contain the code to implement the
+  hamburger menu open/close functions-->
+  <script src="../components/mobile-menu.js" defer></script>
+</head>
+  
 <body>
-  <header id="site-header">
-    <div class="headerdiv">
-      <div class="logo">WYBC x</div>
-      <div class="navdiv">
-        <nav class="navbar">
-          <ul class="navlist">
-            <li><a href="../">home</a></li>
-            <li><a href="../about">about</a></li>
-            <li><a href="../join">join</a></li>
-            <li><a href="../shows">shows</a></li>
-            <li><a href="../sports">sports</a></li>
-            <li><a href="#">podcast</a></li>
-            <li><a href="#">moon</a></li>
-            <li><a href="#">zine</a></li>
-            <li><a href="#">web</a></li>
-          </ul>
-        </nav>
+<div id="container">
+  <header>
+    <div id="header-image">
+      <!--header image for use in PC mode-->
+    </div>
+
+    <div id="mobile-nav">
+      <!--code to set up the dropdown menu in mobile mode, 
+      nothing here gets changed from page to page-->
+
+      <div class="icon">
+        <a id="mobile-menu-link" href="#" onclick="mobileMenu()">
+        <logo-block></logo-block>
+        </a>
+      </div>
+      
+      <div class="menu" id="mobile-nav-menu">
+        <site-nav></site-nav>
       </div>
     </div>
-  <h1>WYBC - Yale Broadcasting Company</h1>
   </header>
 
-
-<!--page content here!-->
-
-
-<footer>
-  <div class="socials">
-    <a href="https://www.instagram.com/wybcyale/" target="_blank">INSTAGRAM @WYBCYALE</a>
-    <!--youtube? twitter? facebook?-->
+  <div id="left_column">
+    <left-div></left-div>
   </div>
-</footer>
 
+  <div id="center_column">
+    <h1 id="center_title">
+      <!--title of the center column/page in general-->
+    </h1>
 
+    <div class="content">
+      <!--content of the center column-->
+    </div>
+  </div>
+
+  <div id="right_column">
+    <!--right column auxiliary content-->
+  </div>
+
+  <footer>
+    <site-footer></site-footer>
+  </footer>
+</div>
 </body>
 </html>
