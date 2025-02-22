@@ -107,11 +107,11 @@ color: #FF2D22;
 /*STRUCTURAL CONTAINERS*/
 
 body {
-  /*confinement to 5:3 aspect ratio*/
+  /*confinement to 5:3 aspect ratio
   width: 100vw;
   height: 60vw;
   max-height: 100vh;
-  max-width: 140vh;
+  max-width: 140vh;*/
   
   /*positioning in the top middle*/
   position: static;
@@ -124,7 +124,7 @@ body {
   /*holy grail layout setup*/
   display: grid;
   grid-template-columns: 180px 1fr 180px;
-  grid-template-rows: 200px 1fr 100px;
+  grid-template-rows: max-content 1fr 100px;
 
   grid-template-areas:
     "header header header"
@@ -132,8 +132,8 @@ body {
     "footer footer footer";
   
   /*spaces in the layout*/
-  padding: 10px;
-  gap: 10px;
+  padding: 5px;
+  gap: 5px;
 }
 
 /*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
@@ -142,10 +142,14 @@ header {
   grid-area: header;
 
   /*extras*/
-  background-color: var(--lavender);
-  border: 3px solid var(--savoryblue);
-  overflow: hidden;
+
+  
 }
+#headerBox {
+  stroke: #020122;
+  stroke-width: 0.3%;
+}
+foreignObject { overflow: visible; } 
 
 #header-image {
   /*KEEP THESE PARAMS ALWAYS*/
@@ -192,6 +196,10 @@ header {
   padding: 5px;
   margin: 10px;
   
+}
+SVG {
+  display: block;
+  width: 100%
 }
 
 footer {
@@ -246,7 +254,6 @@ footer {
   header {
     display: block;
 
-    background-color: var(--savoryblue);
   }
 
   #center_column {
