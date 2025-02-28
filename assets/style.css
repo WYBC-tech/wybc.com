@@ -15,13 +15,6 @@ html, body {
 }
 
 /*FONTS*/
-
-@font-face {
-  font-family: 'Cooper';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./fonts/COOPBL.woff');
-}
 /*Computer Modern Concrete*/
 /*normal text*/
 @font-face {

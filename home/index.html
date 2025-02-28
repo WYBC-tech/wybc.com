@@ -3,23 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WYBCx | page-title</title>
+  <title>WYBCx | Home</title>
   <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
 	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../style.css"> <!--Note this is linking to the global style.css in the base directory folder, NOT the stylesheet in the home folder-->
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
 </head>
 <body>
-    <header>
+  <div id="container">
 
+    <header id="header">
+        <h1>WYBC</h1>
     </header>
 
-    <main>
+    <div id="now-playing">
+      Now Playing
+    </div>
 
-    </main>
-    <footer>
-        <site-footer></site-footer>
+    <div id="player">
+      <div id="screen">
+          Player
+      </div>
+    </div>
+
+    <div id="chat">
+      Chat
+    </div>
+
+    <div id="navigation">
+      <h3>Navigation</h3>
+      <div class="card">
+        <nav id="info">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="../info/about">About</a></li>
+            <li><a href="../info/contact">Contact</a></li>
+            <li><a href="../info/staff">Staff</a></li>
+            <li><a href="../info/history">History</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="card">
+        <nav id="programming">
+          <h4>Programming</h4>
+          <ul>
+            <li><a href="../programming/schedule">Schedule</a></li>
+            <li><a href="../programming/programs">Programs</a></li>
+            <li><a href="../programming/djs">Student DJs</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="card">
+        <nav id="sports">
+          <h4>Sports</h4>
+          <ul>
+            <li><a href="../sports/stream">Stream</a></li>
+            <li><a href="../sports/schedule">Schedule</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="card">
+        <nav id="media">
+          <h4>Media</h4>
+          <ul>
+            <li><a href="../media/zine">Zine</a></li>
+            <li><a href="../media/moon">Moon</a></li>
+            <li><a href="../media/podcasts">Podcasts</a></li>
+            <li><a href="../media/photos">Photos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="card">
+        <nav id="web">
+          <h4>Web</h4>
+          <ul>
+            <li><a href="../web/log">Blog</a></li>
+            <li><a href="../web/library">Library</a></li>
+            <li><a href="../web/changelog">Changelog</a></li>
+            <li><a href="../web/meta">meta</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="feed">
+      Feed
+    </div>
+
+    <div id ="events">
+      Events
+    </div>
+
+    <footer id="footer">
+      Footer
     </footer>
+
+  </div>
 </body>
 </html>
