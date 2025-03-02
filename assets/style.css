@@ -15,7 +15,6 @@ html, body {
 }
 
 /*FONTS*/
-
 /*Computer Modern Concrete*/
 /*normal text*/
 @font-face {
@@ -25,18 +24,19 @@ html, body {
   src: url('./fonts/cmunorm-webfont.woff') format('woff');
 }
 
+
 /*italic*/
 @font-face {
   font-family: 'cmu_concreteitalic';
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
   src: url('./fonts/cmunoti-webfont.woff') format('woff');
 }
 
 /*bold*/
 @font-face {
   font-family: 'cmu_concretebold';
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   src: url('./fonts/cmunobx-webfont.woff') format('woff');
 }
@@ -44,8 +44,8 @@ html, body {
 /*bold italic*/
 @font-face {
   font-family: 'cmu_concretebolditalic';
-  font-weight: bold;
-  font-style: italic;
+  font-weight: normal;
+  font-style: normal;
   src: url('./fonts/cmunobi-webfont.woff') format('woff');
 }
 
@@ -68,72 +68,26 @@ html, body {
   --mindaro: #DBF4A7;
   --creamygreen: #E9F5C4;
 
-  /*SITE-WIDE BACKGROUND OPTIONS*/
-  /*background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;*/
-  background-image: url("./images/bg.png");
-  background-attachment: fixed;
-  background-size: 10%;
-
   /*GENERAL TEXT OPTIONS*/
   font-family: 'cmu_concreteroman';
   color: var(--oxford);
 }
 
-/*LINK STYLES */
-
-/* visited link 
-a:visited {
-  color: #2E801F;
-}
-
- mouse over link 
-a:hover {
-color: hotpink;
-}
-
- selected link 
-a:active {
-color: #FB6107;
-}
-
- unvisited link 
-a:link {
-color: #FF2D22;
-}
-*/
-
 /*STRUCTURAL CONTAINERS*/
 
 body {
-  /*confinement to 5:3 aspect ratio*/
-  width: 100vw;
-  height: 60vw;
-  max-height: 100vh;
-  max-width: 140vh;
-  
-  /*positioning in the top middle*/
-  position: static;
+  /*layout setup*/
+  grid-template-rows: 100px 1fr 180px;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: 
+    "header" "header"
+    "main" "main"
+    "footer" "footer";
+
+  gap: 10px;
 
   /*extras*/
   margin: auto;
-}
-
-#container {
-  /*holy grail layout setup*/
-  display: grid;
-  grid-template-columns: 180px 1fr 180px;
-  grid-template-rows: 100px 1fr 100px;
-
-  grid-template-areas:
-    "header header header"
-    "left center right"
-    "footer footer footer";
-  
-  /*spaces in the layout*/
-  padding: 10px;
-  gap: 10px;
 }
 
 /*STYLES FOR SPECIFIC LAYOUT ELEMENTS*/
@@ -143,31 +97,24 @@ header {
 
   /*extras*/
   background-color: var(--lavender);
-  border: 3px solid var(--savoryblue);
+  height: 100px;
+  border: 1px solid red;
   overflow: hidden;
 }
 
-#header-image {
-  /*KEEP THESE PARAMS ALWAYS*/
-  width: 100%;
-  height: auto;
-  object-fit: scale-down;
-
-  /*CHANGE THIS TO REPOSITION THE HEADER IMAGE*/
-  transform: translate(0, -100px)
-}
-
 #left_column {
-  grid-area: left;
+  grid-row-start: 1;
+  grid-row-end:   2;
+  grid-column: 1;
 
   background-color: var(--ivory);
-  border: 3px solid var(--savoryblue);
+  border: 1 solid green;
 }
 
 #center_column {
   grid-area: center;
 
-  min-height: 100vh;
+  min-height: 500px;
   padding: 5px 15px 5px 10px; /*IMPORTANT: behavior of the schedule object
                                 means that the 5px difference between left and
                                 right padding is necessary for the schedule to 
@@ -186,12 +133,6 @@ header {
 
   background-color: var(--ivory);
   border: 3px solid var(--savoryblue);
-}
-
-.box {
-  padding: 5px;
-  margin: 10px;
-  
 }
 
 footer {

@@ -16,24 +16,14 @@ class Footer extends HTMLElement {
         this.innerHTML = `
             <div id="socials">
                 <div class="social">
-                <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">
-                    <img src="../assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
-                    @WYBCYALE
-                </a>
+                <img src="../assets/images/icons/instagram.png" class="social_icon">
+                <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">@WYBCYALE</a>
                 </div>
 
                 <div class="social">
-                <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">
-                    <img src="../assets/images/icons/facebook.png" alt="facebook icon" class="social_icon">
-                    @YALERADIO
-                </a>
+                <img src="../assets/images/icons/facebook.png" class="social_icon">
+                <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">@YALERADIO</a>
                 </div>
-
-                <div class="social"
-                <a href="tel:+1(203)800-4620"> Call in at +1 (203) 800-4620</a>
-
-                <div class="social">
-                <a href="https://wybc.creek.fm">Old Website</a>
             </div>
         `;
     }

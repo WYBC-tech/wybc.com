@@ -17,8 +17,9 @@ class LeftDiv extends HTMLElement {
         <div id="leftDivStructure">
             <logo-block id="logo-block"></logo-block>
             
-           <!-- <div id="weatherframe">
-            </div>-->
+            <div id="weatherframe">
+                <iframe id="weather" src="https://widgets.commoninja.com/iframe/63d65a3e-e53e-4079-aa3e-075e6f21cb16" frameborder="0"></iframe>
+            </div>
 
             <div class="box">
                 <div id="navdiv">
@@ -34,7 +35,6 @@ class LeftDiv extends HTMLElement {
                 </div>
             </div>
         </div>
-
         `;
     }
 }

@@ -1,1 +1,235 @@
-@import url("./assets/style.css");
+
+* {
+    font-family: 'cmu_concreteroman';
+}
+
+/*Variables to play with color palette!*/
+:root{
+    --background:#9B9FB5;
+    --text:  #312F2F;
+    --div-color: #D4E4BC;
+    --border-color: #5603AD;
+    --screen-border-color: #5603AD;
+    --border-style: double; /*solid, double, dotted, dashed, groove, ridge, inset, outset*/ /*Note this variable is not set for the "screen" within the player div*/
+}
+
+/*STYLE + LAYOUT*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100vw;
+    color: var(--text);
+    background-color: var(--background);
+    }
+    
+#container {
+    display: grid;
+    max-width: 100%;
+    min-height: 100vh;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 100px auto auto /*auto*/ auto 50px;
+    grid-template-areas:
+    'header header header header header'
+    'now-playing player player player chat'
+    'navigation player player player chat'
+    'navigation feed feed feed events'
+    /*'. feed feed feed .'*/
+    'footer footer footer footer footer';
+    /* padding: 5px; */
+    margin: 5px;
+    gap: 5px;
+    overflow-y: scroll;
+}
+    
+#header {
+    grid-area: header;
+    background-color: var(--div-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: 5px var(--border-style) var(--border-color);
+    border-radius: 10px 50px 50px;
+}
+    
+#now-playing {
+    grid-area: now-playing;
+    background-color: var(--div-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 100px;
+    
+    border: 5px var(--border-style) var(--border-color);
+    border-radius: 10px;
+}
+    
+#player {
+    grid-area: player;
+    background-color: var(--div-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    
+    border: 5px var(--border-style) var(--border-color);
+    border-radius: 10px 10px 10px 50px;
+}
+    
+#screen {
+    background-color: lightgreen;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border: 2px ridge var(--screen-border-color);
+    border-radius: 50px;    
+}
+
+#chat {
+    grid-area: chat;
+    background-color: var(--div-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: 5px var(--border-style) var(--border-color);
+    border-radius: 10px 50px 10px;
+}
+    
+#navigation {
+    grid-area: navigation;
+    /* background-color: var(--div-color); */
+    padding: 10px;
+    /* margin-left: -20px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    
+    min-height: 200px;
+    
+    /* border: 5px var(--border-style) var(--border-color);
+    border-radius: 10px; */
+}
+
+.card {
+    padding: 10px;
+    height: auto;
+    background-color: var(--div-color);
+    /* margin: 5px; */
+    margin-bottom: -10px;
+    border: 5px var(--border-style) var(--border-color);
+    border-radius: 10px; 
+    display:flex;
+    flex-direction: row;
+}
+.tag{
+    border-right-style: ridge;
+    border-top-style: ridge;
+    border-radius: 3%;
+    width:10%;
+    padding: 10px;
+    height: 110%;
+    margin-right: -15px;
+    margin-top: -15px;
+    margin-left:auto;
+    margin-bottom: auto;
+}
+#infotag{
+background-color: red;
+
+}
+#programmingtag{
+background-color: blue;
+}
+#sportstag{
+    background-color: green;
+}
+#info{
+    position: relative;
+    left:0
+    }
+    
+#feed{
+        grid-area: feed;
+        background-color: var(--div-color);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        border: 5px var(--border-style) var(--border-color);
+        border-radius: 10px;
+
+}
+    
+    #events {
+        grid-area: events;
+        background-color: var(--div-color);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        min-height: 200px;
+    
+        border: 5px var(--border-style) var(--border-color);
+        border-radius: 10px;
+    }
+    
+    #footer {
+        grid-area: footer;
+        background-color: var(--div-color);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        border: 5px var(--border-style) var(--border-color);
+        border-radius: 10px;
+    }
+
+
+
+/*FONTS*/
+/*Computer Modern Concrete*/
+/*normal text*/
+@font-face {
+    font-family: 'cmu_concreteroman';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts/cmunorm-webfont.woff') format('woff');
+  }
+  
+  /*italic*/
+  @font-face {
+    font-family: 'cmu_concreteitalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts/cmunoti-webfont.woff') format('woff');
+  }
+  
+  /*bold*/
+  @font-face {
+    font-family: 'cmu_concretebold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts/cmunobx-webfont.woff') format('woff');
+  }
+  
+  /*bold italic*/
+  @font-face {
+    font-family: 'cmu_concretebolditalic';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts/cmunobi-webfont.woff') format('woff');
+  }
