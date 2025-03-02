@@ -5,18 +5,30 @@
 
 /*Variables to play with color palette!*/
 :root{
-    --background:#9B9FB5;
-    --text:  #312F2F;
-    --div-color: #D4E4BC;
-    --border-color: #5603AD;
-    --screen-border-color: #5603AD;
-    --border-style: double; /*solid, double, dotted, dashed, groove, ridge, inset, outset*/ /*Note this variable is not set for the "screen" within the player div*/
+    --background:#FBBA72;
+    --text:  #2D242B;
+    --div-color: #FFD899;
+    --player-color1: #9c4a21;
+    --player-color2: #89491B;
+    --screen-color: #A3A3A3;
+    --border-color: var(--text);
+    --border-size: 2px;
+    --screen-border-color: var(--text);
+    --border-style: solid; /*solid, double, dotted, dashed, groove, ridge, inset, outset*/ /*Note this variable is not set for the "screen" within the player div*/
+
+/*PAGE TAG COLORS*/
+--home: #FF1F2E;
+--info: #FF550C;
+--programming: #FFA600;
+--sports: #95E000;
+--media: #00D9FF;
+--web: #EA00FF;
+
 }
 
 /*STYLE + LAYOUT*/
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     width: 100vw;
     color: var(--text);
@@ -28,7 +40,7 @@ body {
     max-width: 100%;
     min-height: 100vh;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 100px auto auto /*auto*/ auto 50px;
+    grid-template-rows: auto auto auto /*auto*/ auto auto;
     grid-template-areas:
     'header header header header header'
     'now-playing player player player chat'
@@ -37,8 +49,10 @@ body {
     /*'. feed feed feed .'*/
     'footer footer footer footer footer';
     /* padding: 5px; */
-    margin: 5px;
-    gap: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: -20px;
+    gap: 7px;
     overflow-y: scroll;
 }
     
@@ -47,12 +61,22 @@ body {
     background-color: var(--div-color);
     padding: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+    min-height: 100px;
+    margin-top: -20px;
     
-    border: 5px var(--border-style) var(--border-color);
-    border-radius: 10px 50px 50px;
+    border: var(--border-size) var(--border-style) var(--border-color);
+    border-radius: 0px 0px 50px 50px;
 }
+
+/* #header::after{
+    content: "home";
+    background-color:var(--home);
+    color:var(--text);
+    font-weight: bold;;
+} */
     
 #now-playing {
     grid-area: now-playing;
@@ -64,32 +88,36 @@ body {
     
     min-height: 100px;
     
-    border: 5px var(--border-style) var(--border-color);
-    border-radius: 10px;
+    border: var(--border-size) var(--border-style) var(--border-color);
+    border-radius: 10px 50px;
 }
     
 #player {
     grid-area: player;
-    background-color: var(--div-color);
+    background-image: repeating-linear-gradient(30deg, var(--player-color1), var(--player-color2), var(--player-color1));
+    background-color: var(--player-color1);
     padding: 10px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    min-height: 200px;
+    min-height: 100px;
     
-    border: 5px var(--border-style) var(--border-color);
-    border-radius: 10px 10px 10px 50px;
+    border: var(--border-size) var(--border-style) var(--border-color);
+    border-radius: 50px/30px;
 }
     
 #screen {
-    background-color: lightgreen;
+    background-color: var(--screen-color);
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
-    border: 2px ridge var(--screen-border-color);
+    height: 80%;
+    width: 95%;
+
+    margin-top: 20px;
+
+    border: 2px solid var(--screen-border-color);
     border-radius: 50px;    
 }
 
@@ -101,21 +129,22 @@ body {
     align-items: center;
     justify-content: center;
     
-    border: 5px var(--border-style) var(--border-color);
-    border-radius: 10px 50px 10px;
+    border: var(--border-size) var(--border-style) var(--border-color);
+    border-radius: 50px 10px;
 }
     
 #navigation {
     grid-area: navigation;
     /* background-color: var(--div-color); */
-    padding: 10px;
+    /* padding: 10px; */
     /* margin-left: -20px; */
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: center; */
     
-    min-height: 200px;
+    /* min-height: 200px; */
     
     /* border: 5px var(--border-style) var(--border-color);
     border-radius: 10px; */
@@ -127,8 +156,9 @@ body {
     background-color: var(--div-color);
     /* margin: 5px; */
     margin-bottom: -10px;
-    border: 5px var(--border-style) var(--border-color);
-    border-radius: 10px; */
+
+    border: var(--border-size) var(--border-style) var(--border-color);
+    border-radius: 10px 50px; 
 }
     
 #feed{
@@ -139,9 +169,9 @@ body {
         align-items: center;
         justify-content: center;
         min-height: 300px;
-        border: 5px var(--border-style) var(--border-color);
-        border-radius: 10px;
 
+        border: var(--border-size) var(--border-style) var(--border-color);
+        border-radius: 50px 50px 10px 10px;
 }
     
     #events {
@@ -154,8 +184,8 @@ body {
     
         min-height: 200px;
     
-        border: 5px var(--border-style) var(--border-color);
-        border-radius: 10px;
+        border: var(--border-size) var(--border-style) var(--border-color);
+        border-radius: 50px 10px;
     }
     
     #footer {
@@ -166,8 +196,10 @@ body {
         align-items: center;
         justify-content: center;
     
-        border: 5px var(--border-style) var(--border-color);
-        border-radius: 10px;
+        /* margin-bottom: -30px; */
+
+        border: var(--border-size) var(--border-style) var(--border-color);
+        border-radius: 50px 50px 10px 10px;
     }
 
 
