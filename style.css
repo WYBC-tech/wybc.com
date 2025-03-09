@@ -1,239 +1,456 @@
 
 * {
-    font-family: 'cmu_concreteroman';
+    font-family: "cmu_concrete";
+    ::selection {
+    color: #d0d0d0;
+    background-color: var(--home);
+    }
 }
 
 /*Variables to play with color palette!*/
 :root{
+    --metal: linear-gradient(-60deg, #999 5%, #ccc 40%, #cdcdcd 50%, #ccc 60%, #999 95%);
     --background:#FBBA72;
-    --text:  #2D242B;
+    --text: #2D242B;
     --div-color: #FFD899;
+    --div-color2: #ceab74;
     --player-color1: #9c4a21;
     --player-color2: #89491B;
     --screen-color: #A3A3A3;
-    --border-color: var(--text);
-    --border-size: 2px;
-    --screen-border-color: var(--text);
+    --border-color: #8c8c8c;
+    --div-border-size: 2px;
+    --accent-border-size: 5px;
+    --accent-border-style: double;
+    --screen-border-color: #544325;
     --border-style: solid; /*solid, double, dotted, dashed, groove, ridge, inset, outset*/ /*Note this variable is not set for the "screen" within the player div*/
 
 /*PAGE TAG COLORS*/
---home: #FF1F2E;
---info: #FF550C;
---programming: #FFA600;
---sports: #95E000;
---media: #00D9FF;
---web: #EA00FF;
+--home: rgba(255, 31, 46, 0.8);
+--info: rgba(255, 85, 12, 0.8);
+--programming: rgba(255, 166, 0, 0.8);
+--sports: rgba(111, 201, 0, 0.8);
+--media: rgba(1, 120, 204, 0.9);
+--web: rgba(194, 0, 211, 0.9);
 
+--home-card: #E69097;
+--info-card: #E6A68A;
+--programming-card: #E6C785;
+--sports-card: #ACD485;
+--media-card: #80B7DE;
+--web-card: #D782E1;
+
+--home-line: #FF8F97;
+--info-line: #FFAA86;
+--programming-line: #FFD380;
+--sports-line: #CAF080;
+--media-line: #80ECFF;
+--web-line: #F580FF;
 }
 
-/*STYLE + LAYOUT*/
-
+/*LAYOUT + STYLE*/
 body {
     margin: 0;
     width: 100vw;
     color: var(--text);
-    background-color: var(--background);
-    }
-    
+    /*color: black;*/
+    background-image: url("./assets/images/background.png");
+    background-size: 250px;
+}
+
+/*LINKS*/
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link*/
+a:visited {
+color: white;
+}
+
 #container {
     display: grid;
     max-width: 100%;
     min-height: 100vh;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: auto auto auto /*auto*/ auto auto;
+    grid-template-columns: auto 3fr 1.5fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-    'header header header header header'
-    'now-playing player player player chat'
-    'navigation player player player chat'
-    'navigation feed feed feed events'
-    /*'. feed feed feed .'*/
-    'footer footer footer footer footer';
+    'header header header'
+    'left center right'
+    'footer footer footer';
     /* padding: 5px; */
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: -20px;
     gap: 7px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
-    
-#header {
+
+
+/*HEADER STYLE*/
+header {
     grid-area: header;
-    background-color: var(--div-color);
-    padding: 10px;
+    background: linear-gradient(to top, var(--div-color), var(--div-color), var(--div-color2), var(--div-color2)) repeat-y;
+    background-size: 100% 2px;
+    padding: 20px;
+    /*gap: 20px;*/
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
 
-    min-height: 100px;
-    margin-top: -20px;
-    
-    border: var(--border-size) var(--border-style) var(--border-color);
+    height: 10vh;
+
+    border: var(--div-border-size) var(--border-style) var(--border-color);
+    border-top: none;
     border-radius: 0px 0px 50px 50px;
+
+    /*box-shadow: 1px 1px 2px 2px white;*/
 }
 
-/* #header::after{
-    content: "home";
+#branding {
+display: flex;
+align-items: center;
+/*justify-content: space-between;*/
+
+
+}
+
+h1 {
+font-size: 40px;
+position: relative;
+left: 20px;
+text-shadow: 2px 2px 5px rgb(120, 120, 120);
+
+}
+
+#logo {
+width: auto;
+position: relative;
+left: 10px;
+}
+
+#banner{
+    /*background: linear-gradient(to top, var(--home),  var(--home), var(--home-line), var(--home-line)) repeat-y;*/
+    /*background-size: 100% 2px;*/
+
     background-color:var(--home);
-    color:var(--text);
-    font-weight: bold;;
-} */
-    
-#now-playing {
-    grid-area: now-playing;
-    background-color: var(--div-color);
-    padding: 10px;
+    color: white;
+    font-weight: bold;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    min-height: 100px;
-    
-    border: var(--border-size) var(--border-style) var(--border-color);
-    border-radius: 10px 50px;
+
+    min-width: 30%;
+    min-height: 100%;
+
+    border-radius: 50px;
+
+    box-shadow: 0px 0px 5px 1px var(--home-card), inset 0px 0px 5px 1px var(--home-card);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+
 }
-    
+/*END OF HEADER STYLE*/
+
+
+/*LEFT COLUMN STYLE*/
+#left-column {
+grid-area: left;
+display: flex;
+flex-direction: column;
+gap: 7px;
+
+}
+
+#navigation {
+    /*color: gray;*/
+
+    background-image: var(--metal);
+    background-color: gray;
+    padding: 10px;
+    gap: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: var(--div-border-size) var(--border-style) var(--border-color);
+    border-radius: 10px 50px;
+
+    width: fit-content;
+}
+
+.card {
+    display: flex;
+    background-color: rgba(240, 240, 240, 0.56);
+    color: white;
+
+    justify-content: center;
+    align-items: center;
+
+    border: var(--accent-border-size) var(--accent-border-style) var(--screen-border-color);
+    border-radius: 10px 50px;
+
+    min-width: 200px;
+    min-height: fit-content;
+
+    overflow: hidden;
+
+    nav {
+        width: 100%;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
+}
+
+#home {
+    background-color: var(--home-card);
+
+
+
+    thead {background-color: var(--home);}
+    border: var(--accent-border-size) var(--accent-border-style) var(--home);
+    box-shadow: 1px 1px 10px 2px var(--home-card);
+    a:hover {color: var(--home);}
+
+    tbody tr:hover {
+        filter: brightness(95%);
+        background-color: var(--home-card);
+        transition: filter 0.1s ease-in-out;
+    }
+}
+
+#info {
+    background-color: var(--info-card);
+    thead {background-color: var(--info);}
+    border: var(--accent-border-size) var(--accent-border-style) var(--info);
+    box-shadow: 1px 1px 10px 2px var(--info-card);
+    a:hover {color: var(--info);}
+
+    tbody tr:hover {
+        filter: brightness(95%);
+        background-color: var(--info-card);
+        transition: filter 0.1s ease-in-out;
+    }
+
+}
+
+#programming {
+    background-color: var(--programming-card);
+    thead {background-color: var(--programming);}
+    border: var(--accent-border-size) var(--accent-border-style) var(--programming);
+    box-shadow: 1px 1px 10px 2px var(--programming-card);
+    a:hover {color: var(--programming);}
+
+    tbody tr:hover {
+        filter: brightness(95%);
+        background-color: var(--programming-card);
+        transition: filter 0.1s ease-in-out;
+    }
+}
+
+#sports {
+    background-color: var(--sports-card);
+    thead {background-color: var(--sports);}
+    border: var(--accent-border-size) var(--accent-border-style) var(--sports);
+    box-shadow: 1px 1px 10px 2px var(--sports-card);
+    a:hover {color: var(--sports);}
+
+    tbody tr:hover {
+        filter: brightness(95%);
+        background-color: var(--sports-card);
+        transition: filter 0.1s ease-in-out;
+    }
+}
+
+#media {
+    background-color: var(--media-card);
+    thead {background-color: var(--media);}
+    border: var(--accent-border-size) var(--accent-border-style) var(--media);
+    box-shadow: 1px 1px 10px 2px var(--media-card);
+    a:hover {color: var(--media);}
+
+    tbody tr:hover {
+        filter: brightness(95%);
+        background-color: var(--media-card);
+        transition: filter 0.1s ease-in-out;
+    }
+}
+
+#web {
+    background-color: var(--web-card);
+    thead {background-color: var(--web);}
+    border: var(--accent-border-size) var(--accent-border-style) var(--web);
+    box-shadow: 1px 1px 10px 2px var(--web);
+    a:hover {color: var(--web);}
+
+    tbody tr:hover {
+        filter: brightness(95%);
+        background-color: var(--web-card);
+        transition: filter 0.1s ease-in-out;
+    }
+}
+/*END OF LEFT COLUMN STYLE*/
+
+/*CENTER COLUMN STYLE*/
+#center-column {
+grid-area: center;
+display: flex;
+flex-direction: column;
+gap: 7px;
+
+}
+
 #player {
-    grid-area: player;
-    background-image: repeating-linear-gradient(30deg, var(--player-color1), var(--player-color2), var(--player-color1));
     background-color: var(--player-color1);
+    background-image: url("./assets/images/wood.png");
+    background-size: auto 100%;
     padding: 10px;
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    min-height: 100px;
-    
-    border: var(--border-size) var(--border-style) var(--border-color);
+
+    max-height: 77vh;
+    aspect-ratio: 4 / 3;
+
+    border: var(--div-border-size) var(--border-style) var(--border-color);
     border-radius: 50px/30px;
 }
     
 #screen {
     background-color: var(--screen-color);
+    background-image: var(--metal);
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 80%;
-    width: 95%;
+    height: 75%;
+    width: 92%;
 
     margin-top: 20px;
 
-    border: 2px solid var(--screen-border-color);
+    border: var(--accent-border-size) double var(--screen-border-color);
     border-radius: 50px;    
 }
 
-#chat {
-    grid-area: chat;
+#feed{
+    grid-area: feed;
     background-color: var(--div-color);
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    border: var(--border-size) var(--border-style) var(--border-color);
+    min-height: 300px;
+
+    border: var(--div-border-size) var(--border-style) var(--border-color);
+    border-radius: 50px 50px 10px 10px;
+}
+
+/*END OF CENTER COLUMN STYLE*/
+
+
+/*RIGHT COLUMN STYLE*/
+#right-column {
+grid-area: right;
+display: flex;
+flex-direction: column;
+gap: 7px;
+
+}
+
+#chat {
+    background-color: var(--div-color);
+    background-image: var(--metal);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 300px;
+
+    border: var(--div-border-size) var(--border-style) var(--border-color);
     border-radius: 50px 10px;
 }
     
-#navigation {
-    grid-area: navigation;
-    /* background-color: var(--div-color); */
-    /* padding: 10px; */
-    /* margin-left: -20px; */
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    
-    /* min-height: 200px; */
-    
-    /* border: 5px var(--border-style) var(--border-color);
-    border-radius: 10px; */
-}
-
-.card {
-    padding: 10px;
-    height: auto;
+#events {
     background-color: var(--div-color);
-    /* margin: 5px; */
-    margin-bottom: -10px;
-
-    border: var(--border-size) var(--border-style) var(--border-color);
-    border-radius: 10px 50px; 
+    background-image: var(--metal);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 200px;
+    
+    border: var(--div-border-size) var(--border-style) var(--border-color);
+    border-radius: 50px 10px;
 }
-    
-#feed{
-        grid-area: feed;
-        background-color: var(--div-color);
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 300px;
 
-        border: var(--border-size) var(--border-style) var(--border-color);
-        border-radius: 50px 50px 10px 10px;
+/*END OF RIGHT COLUMN STYLE*/
+
+/*FOOTER STYLE*/
+footer {
+    grid-area: footer;
+    background: linear-gradient(to top, var(--div-color), var(--div-color), var(--div-color2), var(--div-color2)) repeat-y;
+    background-size: 100% 2px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* margin-bottom: -30px; */
+
+    border: var(--div-border-size) var(--border-style) var(--border-color);
+    border-radius: 50px 50px 10px 10px;
+    border-bottom: 0px;
 }
-    
-    #events {
-        grid-area: events;
-        background-color: var(--div-color);
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-        min-height: 200px;
-    
-        border: var(--border-size) var(--border-style) var(--border-color);
-        border-radius: 50px 10px;
-    }
-    
-    #footer {
-        grid-area: footer;
-        background-color: var(--div-color);
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-        /* margin-bottom: -30px; */
 
-        border: var(--border-size) var(--border-style) var(--border-color);
-        border-radius: 50px 50px 10px 10px;
-    }
-
+/*END OF FOOTER STYLE*/
+/*END OF LAYOUT STYLE*/
 
 
 /*FONTS*/
 /*Computer Modern Concrete*/
 /*normal text*/
 @font-face {
-    font-family: 'cmu_concreteroman';
+    font-family: 'cmu_concrete';
     font-weight: normal;
     font-style: normal;
-    src: url('./fonts/cmunorm-webfont.woff') format('woff');
-  }
-  
-  /*italic*/
-  @font-face {
-    font-family: 'cmu_concreteitalic';
+    src: url('./assets/fonts/cmunorm-webfont.woff') format('woff');
+}
+
+/*italic*/
+@font-face {
+    font-family: 'cmu_concrete';
     font-weight: normal;
+    font-style: italic;
+    src: url('./assets/fonts/cmunoti-webfont.woff') format('woff');
+}
+
+/*bold*/
+@font-face {
+    font-family: 'cmu_concrete';
+    font-weight: bold;
     font-style: normal;
-    src: url('./fonts/cmunoti-webfont.woff') format('woff');
-  }
-  
-  /*bold*/
-  @font-face {
-    font-family: 'cmu_concretebold';
-    font-weight: normal;
-    font-style: normal;
-    src: url('./fonts/cmunobx-webfont.woff') format('woff');
-  }
-  
-  /*bold italic*/
-  @font-face {
-    font-family: 'cmu_concretebolditalic';
-    font-weight: normal;
-    font-style: normal;
-    src: url('./fonts/cmunobi-webfont.woff') format('woff');
-  }
+    src: url('./assets/fonts/cmunobx-webfont.woff') format('woff');
+}
+
+/*bold italic*/
+@font-face {
+    font-family: 'cmu_concrete';
+    font-weight: bold;
+    font-style: italic;
+    src: url('./assets/fonts/cmunobi-webfont.woff') format('woff');
+}
+
