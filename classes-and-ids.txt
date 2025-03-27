@@ -113,3 +113,25 @@ COMPONENTS/NAVLIST.CSS (mobile navlist styles, currently kept consistent with th
     contains the navlist, needed to style mobile navlist differently
 
 -----------------------------------------
+
+
+--home: rgba(255, 31, 46);
+--info: rgba(255, 85, 12);
+--programming: rgba(255, 166, 0);
+--sports: rgba(111, 201, 0);
+--media: rgba(1, 120, 204);
+--web: rgba(194, 0, 211);
+
+--home-card: #E69097;
+--info-card: #E6A68A;
+--programming-card: #E6C785;
+--sports-card: #ACD485;
+--media-card: #80B7DE;
+--web-card: #D782E1;
+
+--home-line: #FF8F97;
+--info-line: #FFAA86;
+--programming-line: #FFD380;
+--sports-line: #CAF080;
+--media-line: #80ECFF;
+--web-line: #F580FF;

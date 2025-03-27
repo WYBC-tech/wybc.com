@@ -6,112 +6,107 @@
   <title>WYBC - Home</title>
   <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
 	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css"> <!--Note this is linking to the global style.css in the base directory folder, NOT the stylesheet in the home folder-->
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">  
 
 </head>
 <body>
+
 <div id="container">
-<header> <!--Contains two divs, branding and banner. This is so flexbox can easily align the banner on the right side of the header with space-between-->
-  <div id="branding">
-      <div id="logo">
-        <img src="../assets/images/favicon.ico" alt="WYBCx Radio" height="100" width="auto">
-      </div>
-      <h1>WYBC - Yale Broadcasting Company</h1>
+
+  <div id="local">
+    [DATE] [TIME]<br>
+    New Haven, CT<br>
+    [WEATHER]
   </div>
 
-  <div id="banner">
-    <h2>HOME</h2>
+  <div id="branding">
+      <p>Yale Broadcasting Company</p>
+      <!-- <div id="page-title">
+        <h2>HOME</h2>
+      </div> -->
   </div>
-</header>
+
+  <div id="searchbar">
+    <p>Search</p>
+  </div>
 
 <div id="left-column">
-  <div id="navigation">
-    <div class="card" id="home">
-      <nav>
+
+  <div class="card">
+    <nav id="home">
+      <div class="tab">On Air</div>
+      <table>
+        <!--Spinitron Integrations-->
+        <tr><td>Now Playing:</td></tr>
+        <tr><td>Up Next:</td></tr>
+      </table>
+    </nav>
+  </div>
+
+  <div class="card">
+    <nav id="info">
+      <div class="tab">Info</div>
+      <table>
+        <tr><td><a href="../info/contact">Contact</a></td></tr>
+        <tr><td><a href="../info/staff">Staff</a></td></tr>
+        <tr><td><a href="../info/about">About</a></td></tr>
+        <tr><td><a href="../info/history">History</a></td></tr>
+       </table>
+    </nav>
+  </div>
+
+    <div class="card">
+      <nav id="programming">
+        <div class="tab">Programming</div>
         <table>
-          <thead><tr><td>On Air</td></tr></thead>
-          <tbody>
-          <!--Spinitron Integrations-->
-          <tr><td> INTEGRATION</td></tr>
-          </tbody>
-        </table>
-      </nav>
-    </div>
-    <div class="card" id="info">
-      <nav>
-        <table>
-          <thead><tr><td>Info</td></tr></thead>
-          <tbody>
-            <tr><td><a href="../info/about">About</a></td></tr>
-            <tr><td><a href="../info/contact">Contact</a></td></tr>
-            <tr><td><a href="../info/staff">Staff</a></td></tr>
-            <tr><td><a href="../info/history">History</a></td></tr>
-          </tbody>
+          <tr><td><a href="../programming/schedule">Schedule</a></td></tr>
+          <tr><td><a href="../programming/programs">Programs</a></td></tr>
+          <tr><td><a href="../programming/djs">Student DJs</a></td></tr>
         </table>
       </nav>
     </div>
 
-    <div class="card"  id="programming">
-      <nav>
+    <div class="card">
+      <nav id="sports">
+        <div class="tab">Sports</div>
         <table>
-          <thead><tr><td>Programming</td></tr></thead>
-          <tbody>
-            <tr><td><a href="../programming/schedule">Schedule</a></td></tr>
-            <tr><td><a href="../programming/programs">Programs</a></td></tr>
-            <tr><td><a href="../programming/djs">Student DJs</a></td></tr>
-          </tbody>
+          <tr><td><a href="../sports/stream">Stream</a></td></tr>
+          <tr><td><a href="../sports/schedule">Schedule</a></td></tr>
         </table>
       </nav>
-    </div>
+  </div>
 
-    <div class="card"  id="sports">
-      <nav>
-        <table>
-          <thead><tr><td>Sports</td></tr></thead>
-          <tbody>
-            <tr><td><a href="../sports/stream">Stream</a></td></tr>
-            <tr><td><a href="../sports/schedule">Schedule</a></td></tr>
-          </tbody>
-        </table>
-      </nav>
-    </div>
+  <div class="card">
+    <nav id="media">
+      <div class="tab">Media</div>
+      <table>
+        <tr><td><a href="../media/zine">Zine</a></td></tr>
+        <tr><td><a href="../media/moon">Moon</a></td></tr>
+        <tr><td><a href="../media/podcasts">Podcasts</a></td></tr>
+        <tr><td><a href="../media/photos">Photos</a></td></tr>
+      </table>
+    </nav>
+  </div>
 
-    <div class="card"  id="media">
-      <nav>
-        <table>
-          <thead><tr><td>Media</td></tr></thead>
-          <tbody>
-            <tr><td><a href="../media/zine">Zine</a></td></tr>
-            <tr><td><a href="../media/moon">Moon</a></td></tr>
-            <tr><td><a href="../media/podcasts">Podcasts</a></td></tr>
-            <tr><td><a href="../media/photos">Photos</a></td></tr>
-          </tbody>
-        </table>
-      </nav>
-    </div>
+  <div class="card">
+    <nav id="web">
+      <div class="tab">Web</div>
+      <table>
+        <tr><td><a href="../web/log">Blog</a></td></tr>
+        <tr><td><a href="../web/library">Library</a></td></tr>
+       <tr><td><a href="../web/meta">Meta</a></td></tr>
+      </table>
+    </nav>
+  </div>
 
-    <div class="card"  id="web">
-      <nav>
-        <table>
-          <thead><tr><td>Web</td></tr></thead>
-          <tbody>
-           <tr><td><a href="../web/log">Blog</a></td></tr>
-            <tr><td><a href="../web/library">Library</a></td></tr>
-           <tr><td><a href="../web/changelog">Changelog</a></td></tr>
-           <tr><td><a href="../web/meta">Meta</a></td></tr>
-          </tbody>
-        </table>
-      </nav>
-    </div>
-   </div>
 </div>
 
 <div id="center-column">
+  CENTER
   <div id="player">
-    <div id="screen">
       Player
-    </div>
   </div>
 
   <div id="feed">
@@ -121,6 +116,7 @@
 </div>
 
 <div id="right-column">
+  RIGHT
   <div id="chat">
     CHAT <!--Minnit chat, chattable, spinitron, or build our own?-->
   </div>
@@ -131,7 +127,23 @@
 </div>
 
 <footer>
-  Footer
+  <div class="social">
+    <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">
+      <img src="../assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+      <strong>@WYBCYALE</strong>
+    </a>
+  </div>
+
+  <div class="social">
+    <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">
+      <img src="../assets/images/icons/facebook.png" alt="facebook icon" class="social_icon">
+     <strong>@YALERADIO</strong>
+    </a>
+  </div>
+
+  <div class="social">
+    <a class="social_link" href="tel:+1(203)800-4620"><!--It'd be nice to put a telephone icon here<--><strong>Call in live at +1 (203) 800-4620</strong></a>
+  </div>
 </footer>
 
 </div>
