@@ -14,9 +14,9 @@
 -->
 
   <script src="../components/logo_block.js" defer></script>
-  <script src="../components/navlist.js" defer></script>
+  <!-- <script src="../components/navlist.js" defer></script> -->
   <script src="../components/footer.js" defer></script>
-  <script src="../components/left-div.js" defer></script>
+  <!-- <script src="../components/left-div.js" defer></script> -->
 
   <script src="../components/mobile-menu.js" defer></script>
 
@@ -26,9 +26,7 @@
 <body>
 <div id="container">
   <header>
-    <div>
-      <!--<img id="header-image" src="../assets/images/chloeschiffman_800080_silviawang ver.0.png">-->
-    </div>  
+      <h1 style="text-align:center; font-size: 80px; margin: 0px; padding: 0px;">WYBC</h1>
 
     <div id="mobile-nav">
       <div class="icon">
@@ -44,17 +42,74 @@
   </header>
 
   <div id="left_column">
-    <left-div></left-div>
+
+    <div id="webplayer">
+          <script src="https://embed.radio.co/player/95c2306.js"></script>
+    </div>
+    <nav>
+      <div class="block">
+        <h3>about</h3>
+          <ul>
+              <li><a href="../home/">home</a></li>
+              <li><a href="../about/">about</a></li>
+          </ul>
+      </div>
+
+          <div class="block">
+            <h3>programming</h3>
+              <ul>
+                <li>schedule (no link)</li>
+                <li><a href="../programs/">programs</a></li>
+                <li>student djs (no link) </li>
+                <li><a href="../sports/">sports</a></li>
+              </ul>
+          </div>
+
+          <div class="block">
+            <h3>sports</h3>
+            <ul>
+              <li><a href="../sports/">sports</a></li>
+              <li>schedule (no link)</li>
+            </ul>
+          </div>
+        
+          <div class="block">
+            <h3>media</h3>
+            <ul>
+              <li><a href="../media/">media</a></li>
+              <li>zine (no link)</li>
+              <li>moon (no link)</li>
+              <li>podcasts (no link)</li>
+              <li>photo gallery (no link)</li>
+            </ul>
+          </div>
+      </nav>
   </div>
 
   <div id="center_column">
-    <h1 id="center_title">Welcome to WYBCx!</h1>
+    <!-- <h1 id="center_title">Welcome to WYBCx!</h1> -->
 
     <div class="content">
-        <h2>Listen to WYBCx, Yale's internet-based radio station!</h2>
-        <div id="webplayer">
-          <script src="https://embed.radio.co/player/95c2306.js"></script>
+        <div class="fake_player">
+            THE SLIDING MAIN THING WOULD BE HERE
         </div>
+    </div>
+
+    
+  </div>
+
+  <div id="right_column">
+    <div id="under_construction_warning">
+      <h3>
+        FAKE WEATHER
+      </h3>
+
+      <p>
+        it's sunny :) 
+      </p> 
+      <p>
+        The old website is still available <a href="https://wybc.creek.fm" target="_blank">here</a>, though the stream is only accessible from the new site.
+      </p> 
     </div>
 
     <div id="chatbox">
@@ -64,23 +119,6 @@
           stylesheet : "./components/chattable.css"
         });
       </script>
-    </div>
-    
-  </div>
-
-  <div id="right_column">
-    <div id="under_construction_warning">
-      <h3>
-        WARNING: site under heavy construction
-      </h3>
-
-      <p>
-        Dear listeners and WYBC community, expect the website to change dramatically in the coming weeks.
-        Thank you for your patience as we update our look and digital content. For now, the stream is back up and shows are running as scheduled &lt;3
-      </p> 
-      <p>
-        The old website is still available <a href="https://wybc.creek.fm" target="_blank">here</a>, though the stream is only accessible from the new site.
-      </p> 
     </div>
   </div>
 
