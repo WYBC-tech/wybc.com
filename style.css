@@ -1,1 +1,393 @@
-@import url("./assets/style.css");
+/*FONTS*/
+
+/*LT Wave*/
+/*proportional*/
+@font-face {
+  font-family: 'LTWaveText';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/LTWaveText-Regular.otf') format('opentype');
+}
+
+/*italic*/
+@font-face {
+  font-family: 'LTWaveText';
+  font-weight: normal;
+  font-style: italic;
+  src: url('./assets/fonts/LTWaveText-Italic.otf') format('opentype');
+}
+
+/*bold*/
+@font-face {
+  font-family: 'LTWaveText';
+  font-weight: bold;
+  font-style: normal;
+  src: url('./assets/fonts/LTWaveText-Bold.otf') format('opentype');
+}
+
+/*bold italic*/
+@font-face {
+  font-family: 'LTWaveText';
+  font-weight: bold;
+  font-style: italic;
+  src: url('./assets/fonts/LTWaveText-BoldItalic.otf') format('opentype');
+}
+
+/*monotype*/
+@font-face {
+  font-family: 'LTWaveMono';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/LTWaveMono-Regular.otf') format('opentype');
+}
+
+/*italic*/
+@font-face {
+  font-family: 'LTWaveMono';
+  font-weight: normal;
+  font-style: italic;
+  src: url('./assets/fonts/LTWaveMono-Italic.otf') format('opentype');
+}
+
+/*bold*/
+@font-face {
+  font-family: 'LTWaveMono';
+  font-weight: bold;
+  font-style: normal;
+  src: url('./assets/fonts/LTWaveMono-Bold.otf') format('opentype');
+}
+
+/*bold italic*/
+@font-face {
+  font-family: 'LTWaveMono';
+  font-weight: bold;
+  font-style: italic;
+  src: url('./assets/fonts/LTWaveMono-BoldItalic.otf') format('opentype');
+}
+
+/*Header*/
+@font-face {
+  font-family: 'LTWaveUI';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/LTWaveUI-Medium.otf') format('opentype');
+}
+:root {
+  /*COLOR VARIABLE DECLARATIONS*/
+  /*Color palette 1*/
+  --cinerous: #958487;
+  --oxford: #020122;
+
+  /*Color palette 2*/
+  --ultraviolet: #535B8D;
+  --savoryblue: #566DB3;
+  --lavender: #D9DBF1;
+  --ivory: #F9F9ED;
+  --mindaro: #DBF4A7;
+  --creamygreen: #E9F5C4;
+
+  --magenta: #D84091;
+  --periwinkle: #D68AB8;
+  --hotpink: #EB6D9A;
+  --cherry_blossom: #FBE5EF;
+  --lilac: #DDC0CD;
+  --mauve: #AE7F7E;
+  --lime: #C1D77F;
+  --verdant: #96C855;
+  --moss: #90A44D;
+
+  --left-sidebar-color: var(--ivory);
+  --nav-text-color: var(--magenta);
+  --nav-block-color: var(--cherry_blossom);
+
+  --center-col-color: var(--ivory);
+
+  --bg-color: var(--lime);
+
+
+
+  border-width: 0px;
+  --rounded-borders: 50px;
+
+  /*GENERAL TEXT OPTIONS*/
+  /* font-family: 'LTWaveMono'; */
+  font-family: 'LTWaveText';
+  color: var(--verdant);
+}
+
+/*LINK STYLES */
+
+/* visited link 
+a:visited {
+  color: #2E801F;
+}
+
+ mouse over link 
+a:hover {
+color: hotpink;
+}
+
+ selected link 
+a:active {
+color: #FB6107;
+}
+
+ unvisited link 
+a:link {
+color: #FF2D22;
+}
+*/
+
+/*debugging wand!*/
+/* *{
+  outline: 2px solid red;
+} */
+
+/*STRUCTURAL CONTAINERS*/
+html {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  height: 100%;
+
+    /*SITE-WIDE BACKGROUND OPTIONS*/
+  background-size: cover;
+  /* background-position: center center; */
+  background-image: url("/assets/images/tile.png");
+  background-attachment: fixed;
+  background-size: 3%;
+}
+
+body {
+  /* background-color: var(--bg-color); */
+  width: 100%;
+  min-height: 100%;
+  
+  /*positioning in the top middle*/
+  position: static;
+
+ margin: 0 auto;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 100px auto 50px;
+
+  grid-template-areas:
+    "header header header"
+    "left center right"
+    "footer footer footer";
+  
+  /*spaces in the layout*/
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+/*HEADER STYLES*/
+header {
+  grid-area: header;
+
+  background-color: var(--hotpink);
+  background: linear-gradient(to top, var(--cherry_blossom) 0%, var(--hotpink) 50%);
+  box-shadow: 0 1px 3px var(--periwinkle);
+
+  /*extras*/
+  background-color: var(--hotpink);
+  border: var(--border-width) solid var(--savoryblue);
+  border-radius: var(--rounded-borders);
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*LEFT COLUMN STYLES*/
+#left_column {
+  grid-area: left;
+
+  background-color: var(--left-sidebar-color);
+  border: var(--border-width) solid var(--savoryblue);
+  border-radius: var(--rounded-borders);
+}
+/*On Air*/
+/*Nav Cards*/
+
+
+/*CENTER COLUMN STYLES*/
+#center_column {
+  grid-area: center;
+
+  min-height: 100vh;
+  padding: 5px 15px 5px 10px; /*IMPORTANT: behavior of the schedule object
+                                means that the 5px difference between left and
+                                right padding is necessary for the schedule to 
+                                look centered on the column*/
+
+  background-color: var(--center-col-color);
+  border: var(--border-width) var(--savoryblue);
+  border-radius: var(--rounded-borders);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*RIGHT COLUMN STYLES*/
+#right_column {
+  grid-area: right;
+  padding: 5px;
+
+  background-color: var(--ivory);
+  border: var(--border-width) var(--savoryblue);
+  border-radius: var(--rounded-borders);
+}
+
+#weather{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+#chatbox{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#chattable {
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+}
+
+/*FOOTER STYLES*/
+footer {
+  grid-area: footer;
+  background-color: var(--hotpink);
+  background: linear-gradient(var(--cherry_blossom) 0%, var(--hotpink));
+  box-shadow: 0 1px 3px var(--periwinkle);
+  border: var(--border-width) solid var(--savoryblue);
+  border-radius: var(--rounded-borders);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.social {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.social_link{
+    color: var(--oxford);
+    text-decoration: none;
+}
+
+.social_icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+#telephone {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+
+/* ----LOTS OF RANDOM STUFF EXPERIMENTING---- */
+.fake_player {
+  background-color:#DBF4A7;
+  border-radius: var(--rounded-borders);
+  width: calc(100% - 20px);
+  aspect-ratio: 3/1.5;
+  margin: 10px;
+}
+
+/* nav */
+nav {
+    display: block;
+    margin: 10px;
+}
+  
+nav ul {
+  list-style: none;
+  user-select: none;
+  color: var(--nav-text-color);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  padding-left: 30px;
+}
+
+nav ul li {
+  padding: 0px;
+  color: var(--nav-text-color);
+}
+
+nav ul li a {
+  color: var(--nav-text-color);
+}
+
+nav h3 {
+  margin-top: 0px;
+  color: var(--nav-text-color);
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+/* nav ul li:before {
+  content: '';
+}  */
+
+nav > ul li > a,
+nav > ul li > strong {
+  text-decoration: none;
+  }
+
+nav .block {
+  display: block;
+  background-color: var(--nav-block-color);
+  margin-top: 0px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-bottom: 15px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+
+
+
+
+#schedule {
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#schedule iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}

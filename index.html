@@ -3,41 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WYBCx | Yale Radio</title>
+  <title>WYBC</title>
   <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
-	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Corporation, yale student radio, yale sports, awesome, cake"/>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Company, yale student radio, yale sports, awesome, cake"/>  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">  
 
-  <meta http-equiv="refresh" content="0; url=/home/">
+  <script src="https://iframe.chat/scripts/main.min.js"></script>
+  <script>
+    chattable.initialize({
+      stylesheet : "/assets/chattable.css",
+      });
+  </script>
+
 </head>
 
 <body>
 <div id="container">
   <header>
-    <!--left blank-->
+      <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px; margin: 0px; padding: 0px;">Yale Broadcasting Company</h1>
   </header>
 
   <div id="left_column">
-    <!--left blank-->
+
+  <nav>
+    <div class="block" id="on_air">
+      <h3>On Air</h3>
+      <!--Spinitron API Integrations, links to DJ/Show profiles-->
+      <ul>
+        <li>[Show Title]</li>
+        <li>[DJs]</li>
+        <li>[Time Slot]</li>
+      </ul>
+    </div>
+  </nav>
+
+    <nav>
+      <!--Note on the webpages. dont make them yet! Once we finish the homepage (this index.html) we will make a barebones/template version in /info/about/index.html and make sure all the files have the correct relative paths. then we'll copy that folder and rename it to make every other page. then we'll customize each one.-->
+    <div class="block" id="info">
+      <h3>INFO</h3>
+      <ul>
+        <li><a href="/info/about">about</a></li>
+        <li><a href="/info/history">history</a></li>
+        <li><a href="/info/staff">staff</a></li>
+        <li><a href="/info/join">join</a></li>
+      </ul>
+    </div>
+
+    <div class="block" id="programming">
+      <h3>PROGRAMMING</h3>
+      <ul>
+        <li><a href="/programming/about">schedule</a></li>
+        <li><a href="/programming/history">programs</a></li>
+        <li><a href="/programming/djs">student djs</a></li>
+      </ul>
+    </div>
+
+    <div class="block" id="sports">
+      <h3>SPORTS</h3>
+      <ul>
+        <li><a href="/sports/about">about</a></li>
+        <li><a href="/sports/schedule">schedule</a></li>
+        <li><a href="/sports/broadcasters">broadcasters</a></li>
+      </ul>
+    </div>
+
+    <div class="block" id="media">
+      <h3>MEDIA</h3>
+      <ul>
+        <li><a href="/media/zine">zine</a></li>
+        <li><a href="/media/moon">moon</a></li>
+        <li><a href="/media/podcast">podcast</a></li>
+        <li><a href="/media/photo">photo</a></li>
+        <li><a href="/media/design">design</a></li>
+      </ul>
+    </div>
+
+    <div class="block" id="web">
+      <h3>WEB</h3>
+      <ul>
+        <li><a href="/web/log">weblog</a></li>
+        <li><a href="/web/library">library</a></li>
+        <li><a href="/web/meta">meta</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
+
+
 
   <div id="center_column">
-    <h1 id="center_title">Welcome to WYBCx!</h1>
-    
+<!-- 
+    <div id="webplayer">
+          <script src="https://embed.radio.co/player/95c2306.js"></script>
+    </div> -->
+
     <div class="content">
-      Hello! If you're seeing this page, you should be redirected to the WYBC homepage shortly. If that doesn't happen in a second or two, try this link: 
-      <a href="./home/">wybc.com/home/</a>
+        <div class="fake_player">
+            THE SLIDING MAIN THING WOULD BE HERE
+        </div>
     </div>
+
+
   </div>
 
   <div id="right_column">
-    <!--left blank-->
+    <div id="weather">
+      <h3>
+        New Haven, CT
+      </h3>
+      <p>
+        it's sunny :) 
+      </p> 
+    </div>
+
+    <div id="chatbox">
+      <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="none"></iframe>
+
+    </div>
+
+      <div id="events">
+    <h3>Events</h3>
+  </div>
+
   </div>
 
   <footer>
+    <div class="social">
+      <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">
+        <img src="/assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+        @wybcyale
+      </a>
+    </div>
 
+    <div class="social">
+      <a class="social_link" href="https://www.instagram.com/yalesportsradio/" target="_blank">
+        <img src="/assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+        @yalesportsradio
+      </a>
+    </div>
+
+    <div class="social">
+      <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">
+        <img src="/assets/images/icons/facebook.png" alt="facebook icon" class="social_icon">
+        @yaleradio
+      </a>
+    </div>
+
+    <div id="telephone">
+      <a class="social_link" href="tel:+1(203)800-4620" target="_blank"> 
+        <img src="/assets/images/icons/phone.png" class="social_icon">  
+        +1 (203) 800-4620
+      </a>
+    </div>
   </footer>
+  
 </div>
 </body>
 </html>
