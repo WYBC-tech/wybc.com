@@ -26,7 +26,6 @@
 
   <div id="left_column">
 
-  <nav>
     <div class="block" id="on_air">
       <h3>On Air</h3>
       <!--Spinitron API Integrations, links to DJ/Show profiles-->
@@ -36,7 +35,6 @@
         <li>[Time Slot]</li>
       </ul>
     </div>
-  </nav>
 
     <nav>
       <!--Note on the webpages. dont make them yet! Once we finish the homepage (this index.html) we will make a barebones/template version in /info/about/index.html and make sure all the files have the correct relative paths. then we'll copy that folder and rename it to make every other page. then we'll customize each one.-->
@@ -79,14 +77,14 @@
       </ul>
     </div>
 
-    <div class="block" id="web">
+    <!-- <div class="block" id="web">
       <h3>WEB</h3>
       <ul>
         <li><a href="/web/log">weblog</a></li>
         <li><a href="/web/library">library</a></li>
         <li><a href="/web/meta">meta</a></li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
 
@@ -99,6 +97,15 @@
     </div> -->
 
     <div class="content">
+      <script src="https://embed.radio.co/player/d7092a9.js"></script>
+
+      <audio id="WYBCX" crossorigin="anonymous" controls autoplay>
+      <source src="https://s3.radio.co/s2af1cfe0c/listen" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+
+      <a href="https://s3.radio.co/s2af1cfe0c/listen" target="_blank">Listen Live!</a>
+
         <div class="fake_player">
             THE SLIDING MAIN THING WOULD BE HERE
         </div>

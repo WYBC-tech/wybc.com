@@ -106,7 +106,8 @@
 
 
 
-  border-width: 0px;
+  --border-width: 2px;
+  --border-style: outset;
   --rounded-borders: 50px;
 
   /*GENERAL TEXT OPTIONS*/
@@ -188,13 +189,13 @@ body {
 header {
   grid-area: header;
 
-  background-color: var(--hotpink);
-  background: linear-gradient(to top, var(--cherry_blossom) 0%, var(--hotpink) 50%);
-  box-shadow: 0 1px 3px var(--periwinkle);
+  /* background: linear-gradient(to top, var(--cherry_blossom) 0%, var(--hotpink) 50%); */
+  /* box-shadow: 0 1px 3px var(--periwinkle); */
 
   /*extras*/
-  background-color: var(--hotpink);
-  border: var(--border-width) solid var(--savoryblue);
+  background-color: var(--mindaro);
+  border: var(--border-width) solid var(--MINDARO);
+  border-style: var(--border-style);
   border-radius: var(--rounded-borders);
   overflow: hidden;
   
