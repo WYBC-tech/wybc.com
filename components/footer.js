@@ -18,14 +18,20 @@ class Footer extends HTMLElement {
                 <div class="social">
                 <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">
                     <img src="../assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
-                    @WYBCYALE
+                    @wybcyale
+                </a>
+                </div>
+                <div class="social">
+                <a class="social_link" href="https://www.instagram.com/yalesportsradio/" target="_blank">
+                    <img src="../assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+                    @yalesportsradio
                 </a>
                 </div>
 
                 <div class="social">
                 <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">
                     <img src="../assets/images/icons/facebook.png" alt="facebook icon" class="social_icon">
-                    @YALERADIO
+                    @yaleradio
                 </a>
                 </div>
 

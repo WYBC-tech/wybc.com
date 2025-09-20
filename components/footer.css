@@ -30,4 +30,7 @@ default across all instances of <site-footer>. And also link color.
 .social_icon {
     width: 15px;
     height: 15px;
+    border-radius: 20%;
 }
+
+
