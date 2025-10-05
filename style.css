@@ -1,3 +1,8 @@
+/*the debug wand!*/
+*{
+  /* outline: 2px solid red; */
+}
+
 /*FONTS*/
 
 /*LT Wave*/
@@ -72,39 +77,25 @@
   font-style: normal;
   src: url('./assets/fonts/LTWaveUI-Medium.otf') format('opentype');
 }
+
 :root {
-  /*COLOR VARIABLE DECLARATIONS*/
-  /*Color palette 1*/
-  --cinerous: #958487;
-  --oxford: #020122;
+  --purple: #8000AF;
+  --white: #F0FDFD;
+  --orange: #F69220;
+  --red: #F01824;
+  --magneta: #F21587;
+  --pink: #FFBBD8;
+  --green: #c1ea76;
+  --blue: #72D2F8;
+  --black: #1F1300;
 
-  /*Color palette 2*/
-  --ultraviolet: #535B8D;
-  --savoryblue: #566DB3;
-  --lavender: #D9DBF1;
-  --ivory: #F9F9ED;
-  --mindaro: #DBF4A7;
-  --creamygreen: #E9F5C4;
-
-  --magenta: #D84091;
-  --periwinkle: #D68AB8;
-  --hotpink: #EB6D9A;
-  --cherry_blossom: #FBE5EF;
-  --lilac: #DDC0CD;
-  --mauve: #AE7F7E;
-  --lime: #C1D77F;
-  --verdant: #96C855;
-  --moss: #90A44D;
-
-  --left-sidebar-color: var(--ivory);
-  --nav-text-color: var(--magenta);
-  --nav-block-color: var(--cherry_blossom);
-
-  --center-col-color: var(--ivory);
-
-  --bg-color: var(--lime);
-
-
+  --transpurple: #8000AF72;
+  --transorange: #F6922072;
+  --transred: #F0182472;
+  --transmagneta: #F2158772;
+  --transpink: #FFBBD872;
+  --transgreen: #c1ea7672;
+  --transblue: #72d2f872;
 
   --border-width: 2px;
   --border-style: outset;
@@ -113,61 +104,25 @@
   /*GENERAL TEXT OPTIONS*/
   /* font-family: 'LTWaveMono'; */
   font-family: 'LTWaveText';
-  color: var(--verdant);
+  color: var(--purple);
 }
 
-
-/*LINK STYLES */
-
-/* visited link 
-a:visited {
-  color: #2E801F;
-}
-
- mouse over link 
-a:hover {
-color: hotpink;
-}
-
- selected link 
-a:active {
-color: #FB6107;
-}
-
- unvisited link 
-a:link {
-color: #FF2D22;
-}
-*/
-
-/*debugging wand!*/
-*{
-  outline: 2px solid red;
-}
-
-/*STRUCTURAL CONTAINERS*/
 html {
   margin: 0;
   padding: 0;
   gap: 0;
   height: 100%;
-
-    /*SITE-WIDE BACKGROUND OPTIONS*/
-  background-size: cover;
-  /* background-position: center center; */
-  background-image: url("/assets/images/tile.png");
-  background-attachment: fixed;
-  background-size: 3%;
-
+  background-color: var(--white);
+  box-sizing: border-box;
 }
 
 body {
-  /* background-color: var(--bg-color); */
+  color: var(--purple);
+  background-color: var(--white);
   width: 100%;
   min-height: 100%;
   
-  /*positioning in the top middle*/
-  position: static;
+  /* position: static; */
 
  margin: 0 auto;
 }
@@ -175,113 +130,186 @@ body {
 #container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 100px auto 50px;
+  grid-template-rows: 8vh auto auto auto 5vh;
 
   grid-template-areas:
     "header header header"
-    "left center right"
+    "on-air center weather"
+    "nav center chat"
+    "nav center events"
     "footer footer footer";
   
   /*spaces in the layout*/
-  padding: 10px 20px;
+  padding: 10px 30px;
   gap: 10px;
 }
+
+#screen::before {
+    width: 100%;
+    height: 100%;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 10;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
 
 /*HEADER STYLES*/
 header {
   grid-area: header;
 
+  color: var(--black);
   /* background: linear-gradient(to top, var(--cherry_blossom) 0%, var(--hotpink) 50%); */
-  /* box-shadow: 0 1px 3px var(--periwinkle); */
+  /* box-shadow: 0 0px 5px var(--); */
 
-  /*extras*/
-  background-color: var(--mindaro);
-  border: var(--border-width) solid var(--MINDARO);
-  border-style: var(--border-style);
+  background-color: var(--charcoal);
+
+  border: 6px double var(--neon);
   border-radius: 50px;
   overflow: hidden;
   
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
+
+/*BLOCK*/
+.block{
+  width: auto;
+  background-color: #8000af2d;
+  border: 0.5rem double var(--purple);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
 
 /*LEFT COLUMN STYLES*/
-#left_column {
-  grid-area: left;
-
-  background-color: var(--left-sidebar-color);
-  border: var(--border-width) solid var(--savoryblue);
-  border-radius: var(--rounded-borders);
+#on-air{
+  grid-area: on-air;
+  height: fit-content;
+  color: var(--red);
+  border-color: var(--red);
+  background-color: var(--transred);
+  padding-left: 10px;
 }
-/*On Air*/
-/*Nav Cards*/
+#on-air h3{
+  color:var(--neon)
+}
+
+
+/* nav */
+#navbar{
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* text-align: center; */
+}
+  
+nav ul {
+  list-style: disc inside;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+nav ul li {
+  padding: 0px;
+  color: var(--nav-text-color);
+}
+
+nav ul li a {
+  color: var(--nav-text-color);
+}
+
+h3 {
+  margin-top: 0px;
+  color: var(--persimmon);
+  margin-bottom: -5px;
+  padding: 5px;
+  font-family: 'LTWaveUI';
+}
+
+/* nav ul li:before {
+  content: '';
+}  */
+
+nav > ul li > a,
+nav > ul li > strong {
+  text-decoration: none;
+  }
+
 
 
 /*CENTER COLUMN STYLES*/
-#center_column {
+#center {
   grid-area: center;
-
-  min-height: 100vh;
-  padding: 5px 15px 5px 10px; /*IMPORTANT: behavior of the schedule object
-                                means that the 5px difference between left and
-                                right padding is necessary for the schedule to 
-                                look centered on the column*/
-
-  background-color: var(--center-col-color);
-  border: var(--border-width) var(--savoryblue);
-  border-radius: var(--rounded-borders);
-
   display: flex;
   flex-direction: column;
+}
+.fake_player {
+  background-color:var(--steel);
+  border-radius: var(--rounded-borders);
+  width: calc(100% - 20px);
+  aspect-ratio: 3/1.5;
+  margin: 10px;
 }
 
 /*RIGHT COLUMN STYLES*/
-#right_column {
-  grid-area: right;
-  padding: 5px;
-
-  background-color: var(--ivory);
-  border: var(--border-width) var(--savoryblue);
-  border-radius: var(--rounded-borders);
-}
-
 #weather{
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  grid-area: weather;
   width: 100%;
-  height: fit-content;
+  height: auto;
+  border-radius: 30px;
+
 }
 
-#chatbox{
-    display: flex;
+#chat{
+  grid-area: chat;
     width: 100%;
     height: fit-content;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border-radius: 30px 30px 1px 30px;
+    overflow: hidden;
+  padding: 0;
 }
 
 #chattable {
-    display: flex;
-    width: 100%;
-    min-height: 300px;
+  width: 100%;
+  min-height: 300px;
+}
+
+#events {
+  grid-area: events;
+  height: 100%;
+
 }
 
 /*FOOTER STYLES*/
 footer {
   grid-area: footer;
-  background-color: var(--hotpink);
-  background: linear-gradient(var(--cherry_blossom) 0%, var(--hotpink));
-  box-shadow: 0 1px 3px var(--periwinkle);
-  border: var(--border-width) solid var(--savoryblue);
-  border-radius: var(--rounded-borders);
+  /* background-color: var(--charcoal); */
+  /* box-shadow: 0px 1px 3px rgba(233,77,71,0.5); */
+  
+  /* border: 2px solid var(--neon); */
+  /* border-radius: var(--rounded-borders); */
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  justify-content: end;
+  padding:0;
   gap: 20px;
 }
 
@@ -290,12 +318,15 @@ footer {
     display: flex;
     align-items: center;
     gap: 5px;
-
 }
 
 .social_link{
-    color: var(--oxford);
     text-decoration: none;
+    /* text-shadow: 0 1px 3px rgba(233,77,71,0.75); */
+}
+
+.social_tag{
+    text-decoration: underline;
 }
 
 .social_icon {
@@ -310,84 +341,24 @@ footer {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
-
-/* ----LOTS OF RANDOM STUFF EXPERIMENTING---- */
-.fake_player {
-  background-color:#DBF4A7;
-  border-radius: var(--rounded-borders);
-  width: calc(100% - 20px);
-  aspect-ratio: 3/1.5;
-  margin: 10px;
+/*LINK STYLES */
+ /* mouse over link  */
+a {
+  color: var(--neon)
+}
+a:hover {
+color: magenta;
 }
 
-/* nav */
-nav {
-    display: block;
-    margin: 10px;
-}
-  
-nav ul {
-  list-style: none;
-  user-select: none;
-  color: var(--nav-text-color);
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-  padding-left: 30px;
+ /* selected link  */
+a:active {
+color: blue;
 }
 
-nav ul li {
-  padding: 0px;
-  color: var(--nav-text-color);
-}
-
-nav ul li a {
-  color: var(--nav-text-color);
-}
-
-nav h3 {
-  margin-top: 0px;
-  color: var(--nav-text-color);
-  margin-bottom: 0px;
-  padding: 5px;
-}
-
-/* nav ul li:before {
-  content: '';
-}  */
-
-nav > ul li > a,
-nav > ul li > strong {
-  text-decoration: none;
-  }
-
-nav .block {
-  display: block;
-  background-color: var(--nav-block-color);
-  margin-top: 0px;
-  border-radius: 30px;
-  margin-bottom: 10px;
-  padding: 10px;
-  padding-bottom: 15px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-}
-
-#schedule {
-    flex-grow: 1;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-#schedule iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
+ /* unvisited link  */
+/* a:link {
+color: var(--neon);
+} */
