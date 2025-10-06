@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">  
 
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
   <script src="https://iframe.chat/scripts/main.min.js"></script>
   <script>
     chattable.initialize({
@@ -19,14 +20,16 @@
 </head>
 
 <body>
-<div id="container">
-  <!-- <div id="screen"></div> -->
-  <header>
+  <script id="matrix" src="sketch.js"></script>
+  
+    <header id="header">
       <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px; margin: 0px; padding: 0px;">Yale Broadcasting Co.</h1>
   </header>
 
+  <main id="container">
+  <div class="card">
+  <h3 id="on-air-tab">On Air</h3>
   <div class="block" id="on-air">
-    <h3>On Air</h3>
       <!--Spinitron API Integrations, links to DJ/Show profiles-->
     <ul>
       <li>[Show Title]</li>
@@ -34,11 +37,12 @@
       <li>[Time Slot]</li>
     </ul>
   </div>
+  </div>
 
     <nav id="navbar">
-      <!--Note on the webpages. dont make them yet! Once we finish the homepage (this index.html) we will make a barebones/template version in /info/about/index.html and make sure all the files have the correct relative paths. then we'll copy that folder and rename it to make every other page. then we'll customize each one.-->
-    <div class="block" id="info">
-      <h3>INFO</h3>
+    <div class="card">
+      <h3 id="info-tab">INFO</h3>
+      <div class="block" id="info">
       <ul>
         <li><a href="/info/about">about</a></li>
         <li><a href="/info/history">history</a></li>
@@ -46,26 +50,32 @@
         <li><a href="/info/join">join</a></li>
       </ul>
     </div>
-
-    <div class="block" id="programming">
-      <h3>PROGRAMMING</h3>
-      <ul>
-        <li><a href="/programming/program">program</a></li>
-        <li><a href="/programming/djs">student djs</a></li>
-      </ul>
     </div>
 
+    <div class="card">
+    <h3 id="program-tab">PROGRAM</h3>
+    <div class="block" id="program">
+      <ul>
+        <li><a href="/program/program">programming</a></li>
+        <li><a href="/program/djs">student djs</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="card">
+    <h3 id="sports-tab">SPORTS</h3>
     <div class="block" id="sports">
-      <h3>SPORTS</h3>
       <ul>
         <li><a href="/sports/about">about</a></li>
         <li><a href="/sports/schedule">schedule</a></li>
         <li><a href="/sports/broadcasters">broadcasters</a></li>
       </ul>
     </div>
+    </div>
 
+    <div class="card">
+    <h3 id="media-tab">MEDIA</h3>
     <div class="block" id="media">
-      <h3>MEDIA</h3>
       <ul>
         <li><a href="/media/zine">zine</a></li>
         <li><a href="/media/moon">moon</a></li>
@@ -74,15 +84,7 @@
         <li><a href="/media/design">design</a></li>
       </ul>
     </div>
-
-    <!-- <div class="block" id="web">
-      <h3>WEB</h3>
-      <ul>
-        <li><a href="/web/log">weblog</a></li>
-        <li><a href="/web/library">library</a></li>
-        <li><a href="/web/meta">meta</a></li>
-      </ul>
-    </div> -->
+    </div>
     </nav>
 
   <div id="center">
@@ -90,25 +92,27 @@
         </div>
   </div>
 
-  <div class="block" id="weather">
-      <!-- <h3>
-        New Haven, CT
-      </h3> -->
-      <!-- <p>
-        it's sunny :
-      </p>  -->
-  </div>
+  <!-- <div class="block" id="weather">
+  </div> -->
 
+  <div class="card" id="chat-card">
+  <h3 id="chat-tab">CHAT</h3>
   <div class="block" id="chat">
-      <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="none"></iframe>
-    </div>
-
-  <div class="block" id="events">
-    <h3>Calendar</h3>
+    <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="none"></iframe>
+  </div>
   </div>
 
+  <div class="card">
+    <h3 id="bulletin-tab">BULLETIN</h3>
+    <div class="block" id="bulletin">
 
-  <footer>
+    </div>
+  </div>
+
+<!--End of container -->
+</main>
+
+  <footer id="footer">
     <div class="social">
       <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">
         <img src="/assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
@@ -137,7 +141,5 @@
       </a>
     </div>
   </footer>
-  
-</div>
 </body>
 </html>
