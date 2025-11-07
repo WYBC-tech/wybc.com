@@ -106,6 +106,11 @@
   color: var(--purple);
 }
 
+.spinitron-js-widget {
+  width: 100%;
+  max-width: 100%;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -126,6 +131,7 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
 #matrix{
   z-index: -1;
   position: fixed;
@@ -149,13 +155,14 @@ header {
 }
 
 #container {
-  margin: 2% 3%;
-  padding: 20px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
   align-self: center;
-  width: auto;
+  width: 90%;
 
   display: grid;
-  grid-template-columns: auto 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: auto auto 1fr;
 
   grid-template-areas:
