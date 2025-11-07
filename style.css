@@ -11,7 +11,7 @@
   font-family: 'LTWaveText';
   font-weight: normal;
   font-style: normal;
-  src: url('./assets/fonts/LTWaveText-Regular.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveText-Regular.otf') format('opentype');
 }
 
 /*italic*/
@@ -19,7 +19,7 @@
   font-family: 'LTWaveText';
   font-weight: normal;
   font-style: italic;
-  src: url('./assets/fonts/LTWaveText-Italic.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveText-Italic.otf') format('opentype');
 }
 
 /*bold*/
@@ -27,7 +27,7 @@
   font-family: 'LTWaveText';
   font-weight: bold;
   font-style: normal;
-  src: url('./assets/fonts/LTWaveText-Bold.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveText-Bold.otf') format('opentype');
 }
 
 /*bold italic*/
@@ -35,7 +35,7 @@
   font-family: 'LTWaveText';
   font-weight: bold;
   font-style: italic;
-  src: url('./assets/fonts/LTWaveText-BoldItalic.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveText-BoldItalic.otf') format('opentype');
 }
 
 /*monotype*/
@@ -43,7 +43,7 @@
   font-family: 'LTWaveMono';
   font-weight: normal;
   font-style: normal;
-  src: url('./assets/fonts/LTWaveMono-Regular.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveMono-Regular.otf') format('opentype');
 }
 
 /*italic*/
@@ -51,7 +51,7 @@
   font-family: 'LTWaveMono';
   font-weight: normal;
   font-style: italic;
-  src: url('./assets/fonts/LTWaveMono-Italic.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveMono-Italic.otf') format('opentype');
 }
 
 /*bold*/
@@ -59,7 +59,7 @@
   font-family: 'LTWaveMono';
   font-weight: bold;
   font-style: normal;
-  src: url('./assets/fonts/LTWaveMono-Bold.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveMono-Bold.otf') format('opentype');
 }
 
 /*bold italic*/
@@ -67,7 +67,7 @@
   font-family: 'LTWaveMono';
   font-weight: bold;
   font-style: italic;
-  src: url('./assets/fonts/LTWaveMono-BoldItalic.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveMono-BoldItalic.otf') format('opentype');
 }
 
 /*Header*/
@@ -75,7 +75,7 @@
   font-family: 'LTWaveUI';
   font-weight: normal;
   font-style: normal;
-  src: url('./assets/fonts/LTWaveUI-Medium.otf') format('opentype');
+  src: url('./_assets/fonts/LTWaveUI-Medium.otf') format('opentype');
 }
 
 :root {
