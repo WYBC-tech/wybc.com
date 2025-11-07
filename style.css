@@ -122,11 +122,12 @@ html {
 
 body {
   color: var(--white);
-  background: none;
+  background-image: url('/_assets/images/dots.jpg');
+  background-size: 100%;
   margin: 0;
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -140,17 +141,19 @@ body {
 
 /*HEADER STYLES*/
 header {
-  margin-bottom: auto;
-  margin-right: auto;
+  margin: 0 auto auto 0;
 
   padding: 10px 0 0 10px;
 
+  border-radius: 0 0 20px;
+
   width: fit-content;
-  color: var(--purple);
+  background-color: var(--purple);
+  color: var(--white);
 
   display: flex;
   align-items: center;
-  text-align: center;
+  text-align:center;
   justify-content: start;
 }
 
@@ -181,6 +184,8 @@ header {
   gap: 0;
   width: auto;
   color: var(--white);
+  background-color: var(--white);
+  border-radius: 20px;
 }
 
 h3 {
@@ -382,18 +387,23 @@ footer {
   width: auto;
   height: fit-content;
 
-  color: var(--black);
+  border-radius: 20px 0 0;
+
+  background-color: var(--purple);
+  color: var(--white);
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 10px 10px 0;
+  padding: 0 20px 20px 0;
   gap: 30px;
+
+
 }
 footer a{
-  color: var(--black);
+  color: var(--white);
 }
 .social {
     width: fit-content;
