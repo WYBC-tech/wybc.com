@@ -6,9 +6,10 @@
   <title>WYBC</title>
   <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
 	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Company, yale student radio, yale sports, awesome, cake"/>  
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/_assets/images/favicon.ico">  
 
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
   <script src="https://iframe.chat/scripts/main.min.js"></script>
   <script>
     chattable.initialize({
@@ -18,20 +19,23 @@
 
 </head>
 
-<body>  
+<body>
+  <script id="matrix" src="sketch.js"></script>
+  
     <header id="header">
-      <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px;">Yale Broadcasting Company</h1>
+      <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px; margin: 0px; padding: 0px;">Yale Broadcasting Co.</h1>
   </header>
 
   <main id="container">
   <div class="card">
   <h3 id="on-air-tab">On Air</h3>
   <div class="block" id="on-air">
-     <!--Spinitron API Integrations, links to DJ/Show profiles-->
-      <div class="spinitron-js-widget" data-action="now-playing-v2" data-station="wybc"></div>
-        <script src="./_components/spinitron_int.js"></script>
-      <div data-station="wybc" data-count="5" data-action="upcoming-shows" class="spinitron-js-widget"></div>
-        <script async src="./_components/spinitron_int.js"></script>
+      <!--Spinitron API Integrations, links to DJ/Show profiles-->
+    <ul>
+      <li>[Show Title]</li>
+      <li>[DJs]</li>
+      <li>[Time Slot]</li>
+    </ul>
   </div>
   </div>
 
