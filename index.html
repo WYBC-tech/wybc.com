@@ -7,8 +7,9 @@
   <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
 	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Company, yale student radio, yale sports, awesome, cake"/>  
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/x-icon" href="/_assets/images/favicon.ico">  
+  <link rel="icon" type="image/x-icon" href="./_assets/images/favicon.ico">  
 
+  <!--Chattable-->
   <script src="https://iframe.chat/scripts/main.min.js"></script>
   <script>
     chattable.initialize({
@@ -20,24 +21,29 @@
 
 <body>  
     <header id="header">
-      <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px;">Yale Broadcasting Company</h1>
+      <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px;"><a href=".">Yale Broadcasting Company</a></h1>
   </header>
 
   <main id="container">
   <div class="card">
-  <h3 id="on-air-tab">On Air</h3>
+  <h3 id="on-air-tab">⋆ On Air ⋆</h3>
   <div class="block" id="on-air">
      <!--Spinitron API Integrations, links to DJ/Show profiles-->
-      <div class="spinitron-js-widget" data-action="now-playing-v2" data-station="wybc"></div>
-        <script src="./_components/spinitron_int.js"></script>
-      <div data-station="wybc" data-count="5" data-action="upcoming-shows" class="spinitron-js-widget"></div>
+
+     <!--Links to current or upcoming show, as well as DJ profiles-->
+      <div data-station="wybc" data-count="1" data-current="1" data-action="upcoming-shows" class="spinitron-js-widget"></div>
         <script async src="./_components/spinitron_int.js"></script>
+
+    <!--links to most recent spin. currently disabled because the css renders wierdly, overfilling the div. also people dont really do a good job logging their shows-->
+              <!-- <div class="spinitron-js-widget" data-action="now-playing-v2" data-station="wybc" data-player="0" data-cover="0" data-num="1" data-merch="0" data-sharing="0"></div>
+        <script src="./_components/spinitron_int.js"></script> -->
+
   </div>
   </div>
 
     <nav id="navbar">
     <div class="card">
-      <h3 id="info-tab">INFO</h3>
+      <h3 id="info-tab">• INFO •</h3>
       <div class="block" id="info">
       <ul>
         <li><a href="/info/about">about</a></li>
@@ -49,28 +55,29 @@
     </div>
 
     <div class="card">
-    <h3 id="program-tab">PROGRAM</h3>
+    <h3 id="program-tab">• PROGRAM •</h3>
     <div class="block" id="program">
       <ul>
-        <li><a href="/program/program">programming</a></li>
+        <li><a href="/program/schedule">schedule</a></li>
         <li><a href="/program/djs">student djs</a></li>
+        <li><a href="/program/formats">formats</a></li>
       </ul>
     </div>
     </div>
 
     <div class="card">
-    <h3 id="sports-tab">SPORTS</h3>
+    <h3 id="sports-tab">• SPORTS •</h3>
     <div class="block" id="sports">
       <ul>
-        <li><a href="/sports/about">about</a></li>
-        <li><a href="/sports/schedule">schedule</a></li>
+        <li><a href="/sports/stream">stream</a></li>
         <li><a href="/sports/broadcasters">broadcasters</a></li>
+        <li><a href="/sports/about">about</a></li>
       </ul>
     </div>
     </div>
 
     <div class="card">
-    <h3 id="media-tab">MEDIA</h3>
+    <h3 id="media-tab">• MEDIA •</h3>
     <div class="block" id="media">
       <ul>
         <li><a href="/media/zine">zine</a></li>
@@ -92,14 +99,14 @@
   </div> -->
 
   <div class="card" id="chat-card">
-  <h3 id="chat-tab">CHAT</h3>
+  <h3 id="chat-tab">• WYBCHAT •</h3>
   <div class="block" id="chat">
-    <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="none"></iframe>
+    <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="0"></iframe>
   </div>
   </div>
 
-  <div class="card">
-    <h3 id="bulletin-tab">BULLETIN</h3>
+  <div class="card" id="bulletin-card">
+    <h3 id="bulletin-tab">• BULLETIN •</h3>
     <div class="block" id="bulletin">
 
     </div>

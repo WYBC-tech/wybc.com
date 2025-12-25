@@ -1,11 +1,9 @@
-:root {
-    --notification-sfx: //xobyte.org/files/WinXPNotify.mp3;
- }
   *::selection {
-    color: #EEE;
-    background-color: #55E;
+    color: #E82B8D;
+    background-color: #F0FDFD;
     opacity: 1;
  }
+
 /*font wouldn't work with relative path so I used catbox :3*/
   @font-face {
     font-family: 'LTWaveMono';
@@ -16,17 +14,21 @@
 
 
  body {
-   background-color: rgb(236, 233, 216);
+   background: transparent;
  }
+ 
   .allMessages {
-    background: transparent;
-    border: 1px solid rgb(208, 208, 191);
+    background-color: #EC94C5;
+    border: 1px solid #EA60A9;
+    border-radius: 10px;
     font-family: 'LTWaveMono', sans-serif;
-    border-radius: 3px;
-    margin: 10px;
+    margin: 10px 15px 10px 5px;
     line-height: 12px;
     position: relative;
+
+    color: #F0FDFD;
  }
+
   .allMessages:hover:after {
     content: ' ';
     position: absolute;
@@ -38,47 +40,53 @@
     background-color: rgba(0, 0, 0, 0.05);
     pointer-events: none;
  }
-  .sent {
+  /* .sent {
  }
   .recieved {
- }
+ } */
+
   #background {
-    scrollbar-color: #CCF #FFF;
+    scrollbar-color: #E82B8Da0 #F0FDFD;
  }
   .msgBody {
     cursor: text;
  }
+
   #input {
-    background-color: #FFF;
-    border: inset 2px rgb(208, 208, 191);
+    background-color: #F0FDFD;
+    border-radius: 0;
     font-family: 'LTWaveMono', Tahoma, sans-serif;
     padding: 5px;
     width: calc(100% - 14px);
-    border-radius: 0;
  }
+
   #input::placeholder {
     font-family: 'LTWaveMono', Tahoma, sans-serif;
  }
-  #input:focus {
-    outline: dotted 1px #000;
- }
+
+  /* #input:focus {
+    outline: dotted 1px #EA60A9;
+ } */
+
   a {
     font-family: inherit;
     color: inherit !important;
  }
+
   #timestamp {
-    color: #555;
+    color: #eadf04;
     font-size: 10pt;
  }
   #top_banner {
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255);
     font-weight: bolder;
     background: rgb(0, 85, 234);
     border-radius: 2px 2px 0px 0px;
     box-shadow: rgb(43, 144, 255) 0px 2px 2px inset, rgb(51, 51, 51) 0px -1px 2px inset;
-    font-family: 'LTWaveMono';
+    font-family: 'LTWaveMono'; */
+    display: none;
  }
-  #top_banner:before {
+  /* #top_banner:before {
     display: inline-block;
     width: 12pt;
     height: 12pt;
@@ -86,14 +94,18 @@
     background-image: url('https://xobyte.neocities.org/files/win-min.png');
     background-size: 100% 100%;
     margin-right: 5px;
- }
+ } */
+
   #settings {
     filter: invert(100%);
-    opacity: 0.75;
+    opacity: 0.9;
  }
+
   #textInput {
-    background-color: rgb(236, 233, 216);
+      background-color: #F0FDFD;
+    border-top: solid 3px #E82B8D;
  }
+
   blockquote {
     border: 1px solid rgb(208, 208, 191);
     font-family: 'LTWaveMono', sans-serif;
@@ -101,6 +113,7 @@
     line-height: 12px;
     position: relative;
  }
+
  .mod, .owner {
    background-color: transparent;
    background-image: url('/media/crown.png');
@@ -114,8 +127,8 @@
     filter: hue-rotate(-180deg);
  }
  #emojiTray {
-   background-color: rgb(236, 233, 216);
-   color: #222;
+   background-color: #F0FDFD;
+   color: #E82B8D;
  }
  #settingsMenu {
    padding: 0;
@@ -124,13 +137,14 @@
  #settingsMenu p {
    padding: 3px 10px 3px 10px;
  }
+
  #settingsMenu h2 {
    margin: 0;
    color: rgb(255, 255, 255);
    font-weight: bolder;
-   background: rgb(0, 85, 234);
+   background: #E82B8D;
    border-radius: 2px 2px 0px 0px;
-   box-shadow: rgb(43, 144, 255) 0px 2px 2px inset, rgb(51, 51, 51) 0px -1px 2px inset;
+   /* box-shadow: #E82B8D 0px 2px 2px inset, rgb(51, 51, 51) 0px -1px 2px inset; */
    font-family: 'LTWaveMono';
  }
  #save {
@@ -162,21 +176,22 @@
  #save:hover {
    border-color: #C50;
  }
+ 
  #is_typing {
-   display: block;
-   background-color: transparent;
+   display: hidden;
+   /* background-color: transparent;
    border-radius: 0;
    overflow: visible;
-   width: auto;
+   width: auto; */
  }
- #is_typing:before {
+ /* #is_typing:before {
    font-family: MS Gothic, 'LTWaveMono', monospace;
    content: "Typing";
    font-size: 8pt;
- }
- #is_typing > span {
+ } */
+ /* #is_typing > span {
     background-color: #000;
     height: 2px;
     width: 2px;
     border-radius: 0;
- }
+ } */

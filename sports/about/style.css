@@ -1,0 +1,49 @@
+@import url("../../style.css");
+  *::selection {
+    color: var(--green);
+    background-color: var(--white);
+    opacity: 1;
+ }
+ 
+html{
+  background-image: url('../../_assets/images/backgrounds/sports_bg.jpg');
+}
+
+header {
+background: linear-gradient(
+    -5deg,
+    var(--green2) 0%,
+    var(--green1) 30%,
+    var(--green) 100%
+  );
+}
+
+#container {
+  grid-template-columns: 1fr 7fr;
+
+  grid-template-areas:
+    "on-air center"
+    "nav center"
+    "nav center";
+}
+
+#center {
+  background-color: var(--green1);
+  color: var(--white);
+  border: 0.5rem double var(--green);
+  border-radius: 20px;
+  padding:10px;
+  height: auto;
+}
+p {
+    margin-bottom: 5px;
+}
+
+footer {
+    background: linear-gradient(
+    170deg,
+    var(--green2) 0%,
+    var(--green1) 20%,
+    var(--green) 100%
+  );
+}

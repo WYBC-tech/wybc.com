@@ -1,0 +1,80 @@
+@import url("../../style.css");
+  *::selection {
+    color: var(--green);
+    background-color: var(--white);
+    opacity: 1;
+ }
+ 
+html{
+  background-image: url('../../_assets/images/backgrounds/sports_bg.jpg');
+}
+
+header {
+background: linear-gradient(
+    -5deg,
+    var(--green2) 0%,
+    var(--green1) 30%,
+    var(--green) 100%
+  );
+}
+#container {
+  margin: 10px;
+  padding: 0px;
+  align-self: center;
+  /* width: 100%; */
+
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto auto 1fr;
+
+  grid-template-areas:
+    "on-air stream center"
+    "nav stream center"
+    "nav chat center";
+
+  gap: 10px;
+}
+
+#center {
+  background-color: var(--green1);
+  color: var(--white);
+  border: 0.5rem double var(--green);
+  border-radius: 20px;
+  padding:10px;
+  height: auto;
+}
+p {
+    margin-bottom: 5px;
+}
+#stream-card{
+grid-area: stream;
+height: auto;
+}
+
+#stream-tab{
+  border: none;
+  padding-top: 5px;
+    background: linear-gradient(
+    to bottom,
+    var(--green2) 0%,
+    var(--green1) 40%,
+    var(--green) 100%
+  );
+}
+
+#stream {
+  background-color: var(--green2);
+  border-color: var(--green);
+  height: 100%;
+  width: auto;
+}
+
+
+footer {
+    background: linear-gradient(
+    170deg,
+    var(--green2) 0%,
+    var(--green1) 20%,
+    var(--green) 100%
+  );
+}
