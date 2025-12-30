@@ -4,16 +4,17 @@
     background-color: var(--white);
     opacity: 1;
  }
-
+ 
 html{
   background-image: url('../../_assets/images/backgrounds/program_bg.jpg');
 }
+
 header {
 background: linear-gradient(
     -5deg,
-    var(--pink2) 0%,
-    var(--pink1) 30%,
-    var(--pink) 100%
+    var(--magenta2) 0%,
+    var(--magenta1) 30%,
+    var(--magenta) 100%
   );
 }
 
@@ -27,9 +28,9 @@ background: linear-gradient(
 }
 
 #center {
-  background-color: var(--pink1);
+  background-color: var(--magenta1);
   color: var(--white);
-  border: 0.5rem double var(--pink);
+  border: 0.5rem double var(--magenta);
   border-radius: 20px;
   padding:10px;
   height: auto;
@@ -41,8 +42,8 @@ p {
 footer {
     background: linear-gradient(
     170deg,
-    var(--pink2) 0%,
-    var(--pink1) 20%,
-    var(--pink) 100%
+    var(--magenta2) 0%,
+    var(--magenta1) 20%,
+    var(--magenta) 100%
   );
 }
