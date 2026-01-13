@@ -1,4 +1,3 @@
-@import url("../../style.css");
   *::selection {
     color: var(--pink);
     background-color: var(--white);
