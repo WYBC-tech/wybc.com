@@ -348,11 +348,11 @@ ul li.location #location::after{
 }
 
 /* not working */
-/* #current-show::selection {
+#on-air *::selection {
     color: var(--red);
     background-color: var(--white);
     opacity: 1;
- } */
+ }
 
 
 
@@ -596,7 +596,7 @@ grid-area: bulletin;
   height: 100%;
   width: auto;
 }
-#bulletin::selection {
+#bulletin *::selection {
     color: var(--orange);
     background-color: var(--white);
     opacity: 1;
