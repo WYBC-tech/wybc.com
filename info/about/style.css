@@ -1,11 +1,11 @@
-@import url("../../style.css");
+@import url("/style.css");
   *::selection {
     color: var(--purple);
     background-color: var(--white);
     opacity: 1;
  }
 html{
-  background-image: url('../../assets/images/backgrounds/info_bg.jpg');
+  background-image: url('/assets/images/backgrounds/info_bg.jpg');
 }
 
 header {
@@ -28,7 +28,7 @@ background: linear-gradient(
 
 #center {
   background-color: var(--purple1);
-  background-image: url('../../assets/images/backgrounds/purple.jpg');
+  background-image: url('/assets/images/backgrounds/purple.jpg');
   background-position: right top;
   background-size: 75%;
   background-repeat: no-repeat;
