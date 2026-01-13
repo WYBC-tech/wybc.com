@@ -1,0 +1,77 @@
+@import url("../../style.css");
+  *::selection {
+    color: var(--purple);
+    background-color: var(--white);
+    opacity: 1;
+ }
+html{
+  background-image: url('../../assets/images/backgrounds/info_bg.jpg');
+}
+header {
+background: linear-gradient(
+    -5deg,
+    var(--purple2) 0%,
+    var(--purple1) 30%,
+    var(--purple) 100%
+  );
+}
+
+#container {
+  grid-template-columns: 1fr 7fr;
+
+  grid-template-areas:
+    "on-air center"
+    "nav center"
+    "nav center";
+}
+
+
+#center {
+  background-color: var(--purple1);
+  background-image: url('../../assets/images/backgrounds/purple.jpg');
+  background-position: right top;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  color: var(--white);
+  border: 0.5rem double var(--purple);
+  border-radius: var(--border_radius);
+  padding:10px;
+  height: auto;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+footer {
+    background: linear-gradient(
+    170deg,
+    var(--purple2) 0%,
+    var(--purple1) 20%,
+    var(--purple) 100%
+  );
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "on-air"
+      "nav";
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "center"
+      "on-air"
+      "nav";
+  }
+}

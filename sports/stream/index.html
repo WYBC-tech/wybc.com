@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYBC</title>
+  <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
+	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Company, yale student radio, yale sports, awesome, cake"/>  
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">  
+
+  <!--Chattable-->
+  <script src="https://iframe.chat/scripts/main.min.js"></script>
+  <script>
+    chattable.initialize({
+      stylesheet : "/assets/chattable.css",
+      });
+  </script>
+
+</head>
+
+<body>  
+    <header id="header">
+      <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px;"><a href="../../">Yale Broadcasting Company</a></h1>
+  </header>
+
+  <main id="container">
+  <div class="card">
+  <h3 id="on-air-tab">⋆ On Air ⋆</h3>
+  <div class="block" id="on-air">
+     <!--Spinitron API Integrations, links to DJ/Show profiles-->
+
+     <!--Links to current or upcoming show, as well as DJ profiles-->
+      <div data-station="wybc" data-count="1" data-current="1" data-action="upcoming-shows" class="spinitron-js-widget"></div>
+        <script id="current-show" async src="../../_components/spinitron_int.js"></script>
+
+    <!--links to most recent spin. currently disabled because the css renders wierdly, overfilling the div. also people dont really do a good job logging their shows-->
+              <!-- <div class="spinitron-js-widget" data-action="now-playing-v2" data-station="wybc" data-player="0" data-cover="0" data-num="1" data-merch="0" data-sharing="0"></div>
+        <script src="./_components/spinitron_int.js"></script> -->
+
+  </div>
+  </div>
+
+  <nav id="navbar">
+    <details class="card nav-card" open>
+      <summary>
+      <h3 id="info-tab">• INFO •</h3>
+      </summary>
+      <div class="block" id="info">
+      <ul>
+        <li><a href="/info/about">about</a></li>
+        <li><a href="/info/history">history</a></li>
+        <li><a href="/info/staff"><b>staff</b></a></li>
+        <li><a href="/info/join">join</a></li>
+      </ul>
+    </div>
+  </details>
+
+    <details class="card nav-card" open>
+      <summary>
+    <h3 id="program-tab">• PROGRAM •</h3>
+      </summary>
+    <div class="block" id="program">
+      <ul>
+        <li><a href="/program/schedule">schedule</a></li>
+        <li><a href="/program/djs">student djs</a></li>
+        <!-- <li><a href="/program/formats">formats</a></li>-->
+      </ul>
+    </div>
+  </details>
+
+    <details class="card nav-card" open>
+      <summary>
+    <h3 id="sports-tab">⋆ SPORTS ⋆</h3>
+      </summary>
+    <div class="block" id="sports">
+      <ul>
+        <li class="location"><span id="location"><a href="/sports/stream"><b>stream</b></a></span></li>
+        <li><a href="/sports/about">about</a></li>
+
+      </ul>
+    </div>
+  </details>
+
+    <details class="card nav-card" open>
+      <summary>
+    <h3 id="media-tab">• MEDIA •</h3>
+      </summary>
+    <div class="block" id="media">
+      <ul>
+        <li class="location"><span id="location"><a href="/media/zine">zine</a></span></li>
+        <li><a href="/media/moon">moon</a></li>
+<li><a href="/media/podcast">podcast</a></li>
+<li><a href="/media/photo">photo</a></li><!--<li><a href="/media/design">design</a></li>-->
+      </ul>
+    </div>
+  </details>
+    </nav>
+
+  <div id="center">
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=dGVjaEB3eWJjLmNvbQ&color=%23039be5" style="border:none; border-radius: var(--border_radius);" width="800" height="600" frameborder="0" scrolling="no"></iframe> 
+</div>
+
+  <!-- <div class="block" id="weather">
+  </div> -->
+
+  <div class="card" id="chat-card">
+  <h3 id="chat-tab">• SPORTS CHAT •</h3>
+  <div class="block" id="chat">
+    <iframe src="https://iframe.chat/embed?chat=WYBC_sports_chat" id="chattable" frameborder="0"></iframe>
+  </div>
+  </div>
+
+  <div class="card" id="stream-card">
+    <h3 id="stream-tab">• STREAM •</h3>
+    <div class="block" id="stream">
+      <a target="_blank" href="https://wybcx-stream.creek.org/sports4.mp3" style="text-align: center">
+        <span style="text-decoration: underline;">LISTEN HERE</span><br>
+        <pre id="ascii">
+        </pre></a>
+    </div>
+  </div>
+
+<!--End of container -->
+</main>
+
+  <footer id="footer">
+    <div class="social">
+      <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">
+        <img src="/assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+        <span class="social_tag">@wybcyale</span>
+      </a>
+    </div>
+
+    <div class="social">
+      <a class="social_link" href="https://www.instagram.com/yalesportsradio/" target="_blank">
+        <img src="/assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+        <span class="social_tag">@yalesportsradio</span>
+      </a>
+    </div>
+
+    <div class="social">
+      <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">
+        <img src="/assets/images/icons/facebook.png" alt="facebook icon" class="social_icon">
+        <span class="social_tag">@yaleradio</span>
+      </a>
+    </div>
+
+    <div id="telephone">
+      <a class="social_link" href="tel:+1(203)800-4620" target="_blank"> 
+        <img src="/assets/images/icons/phone.png" class="social_icon">  
+        <span class="social_tag">+1 (203) 800-4620</span>
+      </a>
+    </div>
+  </footer>
+
+<script>
+const W = 52;
+const H = 15;
+const ascii = document.getElementById("ascii");
+
+let time = 0;
+
+function emptyGrid() {
+  return Array.from({ length: H }, () =>
+    Array.from({ length: W }, () => " ")
+  );
+}
+
+function drawYardLines(g) {
+  for (let step = 0; step <= W; step += 4) {
+    let x = W-step;
+    let y = H-2;
+    while (y >= 3) {
+      g[y][x] = "\\";
+      x--;
+      y--;
+    }
+  }
+}
+
+function drawKicker(g, phase) {
+  const x0 = 1;
+  const y0 = H - 8;
+
+  g[y0][x0] = "o";
+  g[y0 + 1][x0 - 1] = "/";
+  g[y0 + 1][x0] = "|";
+  g[y0 + 1][x0 + 1] = "\\";
+  g[y0 + 2][x0 + 1] = "\\";
+
+  if (0.25 < phase < 0.75){
+    g[y0+2][x0-1]="\\";
+  }
+  else{
+        g[y0+2][x0-1]="/";
+  }
+}
+
+function drawGoal(g) {
+  const x0 = W-4;
+  const y0 = H - 8;
+
+  g[y0][x0] = "|";
+  g[y0-1][x0] = "\\";
+  g[y0-1][x0+1] = "|";
+  g[y0-2][x0+1] = "|";
+  g[y0-2][x0-1] = "|";
+  g[y0-3][x0-1] = "|";
+}
+
+function drawBall(g, t) {
+  const x0 = 3;
+  const y0 = H - 6;
+
+  const vx = 40;
+  const vy = -30;
+  const gravity = 24;
+
+  const x = x0 + vx * t;
+  const y = y0 + vy * t + gravity * t * t;
+
+  const ix = Math.round(x);
+  const iy = Math.round(y);
+
+  if (ix >= 0 && ix < W && iy >= 0 && iy < H) {
+    g[iy][ix] = "o";
+  }
+}
+
+function render() {
+  const g = emptyGrid();
+
+  drawYardLines(g); 
+  drawGoal(g);
+
+  if (time < 0.25) {
+    drawKicker(g, time);
+  } else if (time < 1.5) {
+    drawKicker(g, 1);
+    drawBall(g, time - 0.25);
+  } else {
+    drawKicker(g, 1);
+    const msg = "GOAL!";
+    for (let i = 0; i < msg.length; i++) {
+      g[H - 13][W - 3 + i] = msg[i];
+    }
+  }
+
+  ascii.textContent = g.map(r => r.join("")).join("\n");
+
+  time += 0.04;
+  if (time > 2) time = 0;
+}
+
+setInterval(render, 50);
+</script>
+
+<script>
+if (window.innerWidth <= 1024) {
+  document.querySelectorAll('.nav-card').forEach(card => {
+    card.removeAttribute('open');
+  });
+}
+</script>
+
+<script>
+if (window.matchMedia("(max-width: 1024px)").matches) {
+  document.querySelectorAll(".nav-card").forEach(card => {
+    card.addEventListener("toggle", () => {
+      if (card.open) {
+        document.querySelectorAll(".nav-card").forEach(other => {
+          if (other !== card) other.removeAttribute("open");
+        });
+      }
+    });
+  });
+}
+</script>
+
+
+</body>
+</html>

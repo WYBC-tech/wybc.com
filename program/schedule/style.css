@@ -1,0 +1,88 @@
+@import url("../../style.css");
+  *::selection {
+    color: var(--pink);
+    background-color: var(--white);
+    opacity: 1;
+ }
+ 
+html{
+  background-image: url('../../assets/images/backgrounds/program_bg.jpg');
+}
+
+header {
+background: linear-gradient(
+    -5deg,
+    var(--magenta2) 0%,
+    var(--magenta1) 30%,
+    var(--magenta) 100%
+  );
+}
+
+#container {
+  grid-template-columns: 1fr 7fr;
+
+  grid-template-areas:
+    "on-air center"
+    "nav center"
+    "nav center";
+}
+
+
+#center {
+  background-color: var(--magenta1);
+  background-image: url('../../assets/images/backgrounds/magenta.jpg');
+  background-position: right top;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  color: var(--white);
+  border: 0.5rem double var(--magenta);
+  border-radius: var(--border_radius);
+  padding:10px;
+  min-height: 200px;
+  height: auto;
+}
+
+#center iframe{
+  min-height: 300px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+footer {
+    background: linear-gradient(
+    170deg,
+    var(--magenta2) 0%,
+    var(--magenta1) 20%,
+    var(--magenta) 100%
+  );
+}
+
+#schedule{
+  width: 100%;
+  height: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "on-air"
+      "nav";
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "center"
+      "on-air"
+      "nav";
+  }
+}

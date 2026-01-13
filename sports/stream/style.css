@@ -1,0 +1,136 @@
+@import url("../../style.css");
+  *::selection {
+    color: var(--green);
+    background-color: var(--white);
+    opacity: 1;
+ }
+ 
+html{
+  background-image: url('../../assets/images/backgrounds/sports_bg.jpg');
+}
+
+header {
+background: linear-gradient(
+    -5deg,
+    var(--green2) 0%,
+    var(--green1) 30%,
+    var(--green) 100%
+  );
+}
+#container {
+  margin: 10px;
+  padding: 0px;
+  align-self: center;
+  /* width: 100%; */
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 3fr;
+  grid-template-rows: auto auto 1fr;
+
+  grid-template-areas:
+    "on-air center chat"
+    "nav center chat"
+    "nav center stream";
+
+  gap: 10px;
+}
+
+/* #chat-card{
+  height: 100%;
+}
+#chat{
+  height: 100%;
+} */
+
+#center {
+  background-color: var(--green1);
+  color: var(--white);
+  border: 0.5rem double var(--green);
+  border-radius: var(--border_radius);
+  padding:10px;
+  height: auto;
+}
+
+#center iframe{
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+p {
+    margin-bottom: 5px;
+}
+#stream-card{
+grid-area: stream;
+width: 100%;
+height: auto;
+}
+
+#stream-tab{
+  border: none;
+  padding-top: 5px;
+    background: linear-gradient(
+    to bottom,
+    var(--green2) 0%,
+    var(--green1) 40%,
+    var(--green) 100%
+  );
+}
+
+#stream {
+  background-color: var(--green1);
+  border-color: var(--green);
+  height: 100%;
+  width: auto;
+  padding: 10px;
+}
+
+#ascii{
+  /* width: 400px; */
+  /* height: 200px; */
+  font-family: monospace;
+  font-size: 10px;
+  line-height: 10px;
+  white-space: pre;
+  display: inline-block;
+  }
+
+#stream a {
+  text-decoration: none;
+}
+
+footer {
+    background: linear-gradient(
+    170deg,
+    var(--green2) 0%,
+    var(--green1) 20%,
+    var(--green) 100%
+  );
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "stream"
+      "chat"
+      "center"
+      "on-air"
+      "nav";
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "stream"
+    "chat"  
+    "center"
+      "on-air"
+      "nav";
+  }
+}
