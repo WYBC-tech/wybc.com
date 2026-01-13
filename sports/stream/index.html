@@ -9,7 +9,14 @@
 <link rel="stylesheet" href="/style.css"> 
 <link rel="stylesheet" href="/sports/stream/style.css">  
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">  
+  
+      <!--Chattable-->
   <script src="https://iframe.chat/scripts/main.min.js"></script>
+  <script>
+    chattable.initialize({
+      stylesheet : "/assets/chattable.css",
+      });
+  </script>
 
 </head>
 
@@ -272,12 +279,7 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
 }
 </script>
 
-  <!--Chattable-->
-  <script>
-    chattable.initialize({
-      stylesheet : "/assets/chattable.css",
-      });
-  </script>
+
 
 </body>
 </html>
