@@ -3,6 +3,7 @@
     background-color: var(--white);
     opacity: 1;
  }
+ 
 html{
   background-image: url('/assets/images/backgrounds/info_bg.jpg');
 }
