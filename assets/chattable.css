@@ -2,16 +2,13 @@
 
 :root {
   --pink: #F68FBB;
-  --pink1:#F5ABCC;
-  --pink2:#F3C6DC;
-    --magenta: #E82B8D;
-  --magenta1:#EA60A9;
-  --magenta2:#EC94C5;
+  --pink1:#F7ABC9;
+  --pink2:#F8C6D6;
 }
 
   *::selection {
     color: var(--pink);
-    background-color: #F0FDFD;
+    background-color: #FAFCF0;
     opacity: 1;
  }
 
@@ -39,7 +36,7 @@
     line-height: 12px;
     position: relative;
 
-    color: #F0FDFD;
+    color: #FAFCF0;
  }
 
   .allMessages:hover:after {
@@ -59,14 +56,14 @@
  } */
 
   #background {
-    scrollbar-color: #F68FBBa0 #F0FDFD;
+    scrollbar-color: #F68FBBa0 #FAFCF0;
  }
   .msgBody {
     cursor: text;
  }
 
   #input {
-    background-color: #F0FDFD;
+    background-color: #FAFCF0;
     border-radius: 0;
     font-family: 'LTWaveMono', Tahoma, sans-serif;
     padding: 5px;
@@ -115,7 +112,7 @@
  }
 
   #textInput {
-      background-color: #F0FDFD;
+      background-color: #FAFCF0;
     border-top: solid 3px var(--pink);
  }
 
@@ -140,7 +137,7 @@
     filter: hue-rotate(-180deg);
  }
  #emojiTray {
-   background-color: #F0FDFD;
+   background-color: #FAFCF0;
    color: var(--pink);
  }
  #settingsMenu {

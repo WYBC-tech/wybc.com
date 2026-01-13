@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WYBC</title>
+  <meta name="description" content="WYBC Yale Radio, Yale University's radio station operated and owned by students in New Haven, Connecticut and broadcasting online at wybc.com"/>
+	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Company, yale student radio, yale sports, awesome, cake"/>  
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">  
+</head>
+
+<body>  
+    <header id="header">
+      <h1 style="text-align:center; font-family: 'LTWaveUI'; font-size: 40px;"><a href="../../">Yale Broadcasting Company</a></h1>
+  </header>
+
+  <main id="container">
+  <div class="card">
+  <h3 id="on-air-tab">• On Air •</h3>
+  <div class="block" id="on-air">
+     <!--Spinitron API Integrations, links to DJ/Show profiles-->
+
+     <!--Links to current or upcoming show, as well as DJ profiles-->
+      <div data-station="wybc" data-count="1" data-current="1" data-action="upcoming-shows" class="spinitron-js-widget"></div>
+        <script async src="../../_components/spinitron_int.js"></script>
+
+    <!--links to most recent spin. currently disabled because the css renders wierdly, overfilling the div. also people dont really do a good job logging their shows-->
+              <!-- <div class="spinitron-js-widget" data-action="now-playing-v2" data-station="wybc" data-player="0" data-cover="0" data-num="1" data-merch="0" data-sharing="0"></div>
+        <script src="./_components/spinitron_int.js"></script> -->
+
+  </div>
+  </div>
+
+    <nav id="navbar">
+    <details class="card nav-card" open>
+      <summary>
+      <h3 id="info-tab">• INFO •</h3>
+      </summary>
+      <div class="block" id="info">
+      <ul>
+        <li><a href="/info/about">about</a></li>
+        <li><a href="/info/history">history</a></li>
+        <li><a href="/info/staff"><b>staff</b></a></li>
+        <li><a href="/info/join">join</a></li>
+      </ul>
+    </div>
+  </details>
+
+    <details class="card nav-card" open>
+      <summary>
+    <h3 id="program-tab">• PROGRAM •</h3>
+      </summary>
+    <div class="block" id="program">
+      <ul>
+        <li><a href="/program/schedule">schedule</a></li>
+        <li><a href="/program/djs">student djs</a></li>
+        <!-- <li><a href="/program/formats">formats</a></li>-->
+      </ul>
+    </div>
+  </details>
+
+    <details class="card nav-card" open>
+      <summary>
+    <h3 id="sports-tab">• SPORTS •</h3>
+      </summary>
+    <div class="block" id="sports">
+      <ul>
+        <li><a href="/sports/stream">stream</a></li>
+        <li><a href="/sports/about">about</a></li>
+      </ul>
+    </div>
+  </details>
+
+    <details class="card nav-card" open>
+      <summary>
+    <h3 id="media-tab">⋆ MEDIA ⋆</h3>
+
+      </summary>
+    <div class="block" id="media">
+      <ul>
+                <li><a href="/media/zine">zine</a></li>
+        <li class="location"><span id="location"><a href="/media/moon">moon</a></span></li>
+<li><a href="/media/podcast">podcast</a></li>
+<li><a href="/media/photo">photo</a></li><!--<li><a href="/media/design">design</a></li>-->
+      </ul>
+    </div>
+  </details>
+    </nav>
+
+  <div id="center">
+<h1>The Moon</h1>
+<p>Stay tuned...</p>
+ </div>
+<!--End of container -->
+</main>
+
+  <footer id="footer">
+    <div class="social">
+      <a class="social_link" href="https://www.instagram.com/wybcyale/" target="_blank">
+        <img src="/assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+        <span class="social_tag">@wybcyale</span>
+      </a>
+    </div>
+
+    <div class="social">
+      <a class="social_link" href="https://www.instagram.com/yalesportsradio/" target="_blank">
+        <img src="/assets/images/icons/instagram.png" alt="instagram icon" class="social_icon">
+        <span class="social_tag">@yalesportsradio</span>
+      </a>
+    </div>
+
+    <div class="social">
+      <a class="social_link" href="https://www.facebook.com/yaleradio/" target="_blank">
+        <img src="/assets/images/icons/facebook.png" alt="facebook icon" class="social_icon">
+        <span class="social_tag">@yaleradio</span>
+      </a>
+    </div>
+
+    <div id="telephone">
+      <a class="social_link" href="tel:+1(203)800-4620" target="_blank"> 
+        <img src="/assets/images/icons/phone.png" class="social_icon">  
+        <span class="social_tag">+1 (203) 800-4620</span>
+      </a>
+    </div>
+  </footer>
+
+
+<!--mobile navcards-->
+<script>
+if (window.innerWidth <= 1024) {
+  document.querySelectorAll('.nav-card').forEach(card => {
+    card.removeAttribute('open');
+  });
+}
+</script>
+
+<script>
+if (window.matchMedia("(max-width: 1024px)").matches) {
+  document.querySelectorAll(".nav-card").forEach(card => {
+    card.addEventListener("toggle", () => {
+      if (card.open) {
+        document.querySelectorAll(".nav-card").forEach(other => {
+          if (other !== card) other.removeAttribute("open");
+        });
+      }
+    });
+  });
+}
+</script>
+
+</body>
+</html>

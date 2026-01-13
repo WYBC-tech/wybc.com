@@ -61,7 +61,6 @@
     <div class="block" id="sports">
       <ul>
         <li><a href="/sports/stream">stream</a></li>
-        <li><a href="/sports/broadcasters">broadcasters</a></li>
         <li><a href="/sports/about">about</a></li>
       </ul>
     </div>
@@ -73,9 +72,8 @@
       <ul>
         <li><a href="/media/zine">zine</a></li>
         <li><a href="/media/moon">moon</a></li>
-        <li><a href="/media/podcast">podcast</a></li>
-        <li><a href="/media/photo">photo</a></li>
-        <li><a href="/media/design">design</a></li>
+<li><a href="/media/podcast">podcast</a></li>
+<li><a href="/media/photo">photo</a></li><!--<li><a href="/media/design">design</a></li>-->
       </ul>
     </div>
     </div>
@@ -117,5 +115,29 @@
       </a>
     </div>
   </footer>
+
+  <!--mobile navcards-->
+<script>
+if (window.innerWidth <= 1024) {
+  document.querySelectorAll('.nav-card').forEach(card => {
+    card.removeAttribute('open');
+  });
+}
+</script>
+
+<script>
+if (window.matchMedia("(max-width: 1024px)").matches) {
+  document.querySelectorAll(".nav-card").forEach(card => {
+    card.addEventListener("toggle", () => {
+      if (card.open) {
+        document.querySelectorAll(".nav-card").forEach(other => {
+          if (other !== card) other.removeAttribute("open");
+        });
+      }
+    });
+  });
+}
+</script>
+
 </body>
 </html>

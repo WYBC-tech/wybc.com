@@ -32,55 +32,62 @@
   </div>
   </div>
 
-    <nav id="navbar">
-    <div class="card">
+  <nav id="navbar">
+    <details class="card nav-card" open>
+      <summary>
       <h3 id="info-tab">• INFO •</h3>
+      </summary>
       <div class="block" id="info">
       <ul>
         <li><a href="/info/about">about</a></li>
         <li><a href="/info/history">history</a></li>
-        <li><a href="/info/staff">staff</a></li>
+        <li><a href="/info/staff"><b>staff</b></a></li>
         <li><a href="/info/join">join</a></li>
       </ul>
     </div>
-    </div>
+  </details>
 
-    <div class="card">
+    <details class="card nav-card" open>
+      <summary>
     <h3 id="program-tab">⋆ PROGRAM ⋆</h3>
+      </summary>
     <div class="block" id="program">
       <ul>
-                <li class="location"><span id="location"><a href="/program/schedule"><b>schedule</b></a></span></li>
-                <li><a href="/program/djs">student djs</a></li>
-                <li><a href="/program/formats">formats</a></li>
-
+        <li class="location"><span id="location"><a href="/program/schedule"><b>schedule</b></a></span></li>
+        <li><a href="/program/djs">student djs</a></li>
+        <!-- <li><a href="/program/formats">formats</a></li>-->
       </ul>
     </div>
-    </div>
+  </details>
 
-    <div class="card">
+    <details class="card nav-card" open>
+      <summary>
     <h3 id="sports-tab">• SPORTS •</h3>
+      </summary>
     <div class="block" id="sports">
       <ul>
         <li><a href="/sports/stream">stream</a></li>
-        <li><a href="/sports/broadcasters">broadcasters</a></li>
         <li><a href="/sports/about">about</a></li>
+
       </ul>
     </div>
-    </div>
+  </details>
 
-    <div class="card">
+    <details class="card nav-card" open>
+      <summary>
     <h3 id="media-tab">• MEDIA •</h3>
+      </summary>
     <div class="block" id="media">
       <ul>
-        <li><a href="/media/zine">zine</a></li>
+        <li class="location"><span id="location"><a href="/media/zine">zine</a></span></li>
         <li><a href="/media/moon">moon</a></li>
-        <li><a href="/media/podcast">podcast</a></li>
-        <li><a href="/media/photo">photo</a></li>
-        <li><a href="/media/design">design</a></li>
+<li><a href="/media/podcast">podcast</a></li>
+<li><a href="/media/photo">photo</a></li><!--<li><a href="/media/design">design</a></li>-->
       </ul>
     </div>
-    </div>
+  </details>
     </nav>
+
 
   <div id="center">
     <h1>Program Schedule</h1>
@@ -120,5 +127,30 @@
       </a>
     </div>
   </footer>
+
+  <!--mobile navcards-->
+<script>
+if (window.innerWidth <= 1024) {
+  document.querySelectorAll('.nav-card').forEach(card => {
+    card.removeAttribute('open');
+  });
+}
+</script>
+
+<script>
+if (window.matchMedia("(max-width: 1024px)").matches) {
+  document.querySelectorAll(".nav-card").forEach(card => {
+    card.addEventListener("toggle", () => {
+      if (card.open) {
+        document.querySelectorAll(".nav-card").forEach(other => {
+          if (other !== card) other.removeAttribute("open");
+        });
+      }
+    });
+  });
+}
+</script>
+
+
 </body>
 </html>

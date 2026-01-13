@@ -41,10 +41,12 @@
   </div>
   </div>
 
-    <nav id="navbar">
-    <div class="card">
+  <nav id="navbar">
+  <details class="card nav-card" open>
+    <summary>
       <h3 id="info-tab">• INFO •</h3>
-      <div class="block" id="info">
+    </summary>
+    <div class="block" id="info">
       <ul>
         <li><a href="/info/about">about</a></li>
         <li><a href="/info/history">history</a></li>
@@ -52,46 +54,53 @@
         <li><a href="/info/join">join</a></li>
       </ul>
     </div>
-    </div>
+  </details>
 
-    <div class="card">
-    <h3 id="program-tab">• PROGRAM •</h3>
+  <details class="card nav-card" open>
+    <summary>
+      <h3 id="program-tab">• PROGRAM •</h3>
+    </summary>
     <div class="block" id="program">
       <ul>
         <li><a href="/program/schedule">schedule</a></li>
         <li><a href="/program/djs">student djs</a></li>
-        <li><a href="/program/formats">formats</a></li>
+        <!-- <li><a href="/program/formats">formats</a></li>-->
       </ul>
     </div>
-    </div>
+  </details>
 
-    <div class="card">
+<details class="card nav-card" open>
+  <summary>
     <h3 id="sports-tab">• SPORTS •</h3>
-    <div class="block" id="sports">
+    </summary>
+   <div class="block" id="sports">
       <ul>
         <li><a href="/sports/stream">stream</a></li>
-        <li><a href="/sports/broadcasters">broadcasters</a></li>
         <li><a href="/sports/about">about</a></li>
       </ul>
     </div>
-    </div>
+  </details>
 
-    <div class="card">
+<details class="card nav-card" open>
+  <summary>
     <h3 id="media-tab">• MEDIA •</h3>
-    <div class="block" id="media">
+  </summary>
+  <div class="block" id="media">
       <ul>
-        <li><a href="/media/zine">zine</a></li>
-        <li><a href="/media/moon">moon</a></li>
-        <li><a href="/media/podcast">podcast</a></li>
-        <li><a href="/media/photo">photo</a></li>
-        <li><a href="/media/design">design</a></li>
-      </ul>
-    </div>
-    </div>
+  <li><a href="/media/zine">zine</a></li>
+   <li><a href="/media/moon">moon</a></li>
+<li><a href="/media/podcast">podcast</a></li>
+<li><a href="/media/photo">photo</a></li>
+<!--<li><a href="/media/design">design</a></li>-->
+    </ul>
+  </div>
+  </details>
     </nav>
 
   <div id="center">
-        <div class="fake_player">
+        <div id="player">
+          <button id="PlayPause"></button>
+          <audio id="wybcx" src="https://s3.radio.co/s2af1cfe0c/listen"></audio>
         </div>
   </div>
 
@@ -144,5 +153,74 @@
       </a>
     </div>
   </footer>
+
+<!--web player button-->
+<script>
+const audio = document.getElementById('wybcx');
+const button = document.getElementById('PlayPause');
+const player = document.getElementById('player');
+
+let isMouseInside = false;
+
+button.style.opacity = 1;
+
+function updateButtonVisibility() {
+  if (audio.paused) {
+    button.style.opacity = 1;
+  } else {
+    button.style.opacity = isMouseInside ? 1 : 0;
+  }
+}
+
+button.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    button.classList.add('paused');
+  } else {
+    audio.pause();
+    button.classList.remove('paused');
+  }
+  updateButtonVisibility();
+});
+
+player.addEventListener('mouseenter', () => {
+  isMouseInside = true;
+  updateButtonVisibility();
+});
+
+player.addEventListener('mouseleave', () => {
+  isMouseInside = false;
+  updateButtonVisibility();
+});
+
+audio.addEventListener('play', updateButtonVisibility);
+audio.addEventListener('pause', updateButtonVisibility);
+</script>
+
+<!--mobile navcards-->
+<script>
+if (window.innerWidth <= 1024) {
+  document.querySelectorAll('.nav-card').forEach(card => {
+    card.removeAttribute('open');
+  });
+}
+</script>
+
+<script>
+if (window.matchMedia("(max-width: 1024px)").matches) {
+  document.querySelectorAll(".nav-card").forEach(card => {
+    card.addEventListener("toggle", () => {
+      if (card.open) {
+        document.querySelectorAll(".nav-card").forEach(other => {
+          if (other !== card) other.removeAttribute("open");
+        });
+      }
+    });
+  });
+}
+</script>
+
+
+
 </body>
 </html>
