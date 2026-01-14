@@ -3,12 +3,12 @@
 Source code for www.wybc.com. 
 
 ## information
-Frontend: HTML, CSS, JavaScript
-Backend: none
-Domain: GoDaddy
-Hosting: GitHub pages
-Streaming: Radio.co
-Program data: Spinitron
+Frontend: HTML, CSS, JavaScript <br>
+Backend: none <br>
+Domain: GoDaddy <br>
+Hosting: GitHub pages <br>
+Streaming: Radio.co <br>
+Program data: Spinitron <br>
 
 ## site structure
 ```
