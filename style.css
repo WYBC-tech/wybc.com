@@ -270,7 +270,7 @@ h3 {
 }
 
 
-ul {
+nav ul {
   /* list-style: disc inside; */
   user-select: none;
   margin: 0;
@@ -280,14 +280,14 @@ ul {
   /* padding-left: 0; */
 }
 
-ul li::before {
+nav ul li::before {
   content: "→";
   color: var(--white);
   font-size: 16px;
   padding-right: 0.2rem;
   line-height: inherit;
 }
-ul li::after {
+nav ul li::after {
   content: "←";
   color: var(--white);
   font-size: 16px;
@@ -295,15 +295,15 @@ ul li::after {
   line-height: inherit;
 }
 
-ul li.location::before{
+nav ul li.location::before{
     content: "";
 }
 
-ul li.location::after{
+nav ul li.location::after{
     content: "";
 }
 
-ul li.location #location::before{
+nav ul li.location #location::before{
     content: "←";
   color: var(--white);
   font-size: 16px;
@@ -311,7 +311,8 @@ ul li.location #location::before{
   padding-right: 0.2rem;
   line-height: inherit;
 }
-ul li.location #location::after{
+
+nav ul li.location #location::after{
     content: "→";
   color: var(--white);
   font-size: 16px;
@@ -552,8 +553,9 @@ grid-area: chat;
  }
 
 #chat{
-  width: auto;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
+  /* height: fit-content; */
   overflow: hidden;
   padding: 0;
   border: 0.5rem double var(--pink);
@@ -600,6 +602,10 @@ grid-area: bulletin;
     color: var(--orange);
     background-color: var(--white);
     opacity: 1;
+ }
+
+ #bulletin li {
+padding: 0;
  }
 
 /*FOOTER STYLES*/

@@ -8,19 +8,6 @@
 	<meta name="keywords" content="WYBC, Yale, Radio, music, college, yale radio, 216 Dwight, 21 Broadway, New Haven, 94.3, yale radio 1340, 1340 am, 94.3 fm, the X, WYBC X, WYBCX, 1340, Yale Broadcasting Company, yale student radio, yale sports, awesome, cake"/>  
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-  
-    <!--Chattable-->
-        <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
-        
-  <script>
-    chattable.initialize({
-      stylesheet: "/assets/chattable.css"
-    }
-      // {
-      // stylesheet : "/assets/chattable.css",
-      // }
-    );
-  </script>
 </head>
 
 <body>  
@@ -36,11 +23,9 @@
 
      <!--Links to current or upcoming show, as well as DJ profiles-->
       <div data-station="wybc" data-count="1" data-current="1" data-action="upcoming-shows" class="spinitron-js-widget"></div>
-        <script async src="/components/spinitron_int.js"></script>
+        <script async src="/components/spinitron_int.js"></script><br>
+<script src="https://embed.radio.co/embed/s2af1cfe0c/song.js"></script>
 
-    <!--links to most recent spin. currently disabled because the css renders wierdly, overfilling the div. also people dont really do a good job logging their shows-->
-              <!-- <div class="spinitron-js-widget" data-action="now-playing-v2" data-station="wybc" data-player="0" data-cover="0" data-num="1" data-merch="0" data-sharing="0"></div>
-        <script src="./components/spinitron_int.js"></script> -->
 
   </div>
   </div>
@@ -114,17 +99,24 @@
   <div class="card" id="chat-card">
   <h3 id="chat-tab">• WYBCHAT •</h3>
   <div class="block" id="chat">
-    <iframe src="https://iframe.chat/embed?chat=WYBC_chat" id="chattable" frameborder="0" style="width: 100%; height: 100%;"></iframe>
-  </div>
+<!-- <span style="display: none;" class="minnit-chat-sembed" id="minnit-chat" data-chatname="https://organizations.minnit.chat/565789453698576/c/Main?embed" data-style="width:100%; height:500px; max-height:90vh;" data-version="1.55">Chat</span> -->
+</div>
   </div>
 
   <div class="card" id="bulletin-card">
     <h3 id="bulletin-tab">• BULLETIN •</h3>
     <div class="block" id="bulletin">
-      <article>
-        New website! We will continue to populate pages with content as the semester progresses.<br>
-        The service we relied on for our live chat has unfortunately been discontinued. We are currently working on an alternative which will be live by the end of this week.
-      </article>
+      <ul>
+        <li>01/22/26: Need to borrow a drumkit or speakers for your backyard show/underground rave/party of the year? 
+          WYBC has equipment available to rent! 
+          Live sound mixing also available - reach out to <a href="mailto:soohoo@wybc.com">soohoo@wybc.com and <a href="mailto:sophiaw@wybc.com">sophiaw@wybc.com</a>.</li>
+        <li>01/22/26: We are working on a new chat feature which should be online shortly!
+</li>
+<li>
+        01/22/26: New website! We will continue to populate pages with content as the semester progresses.
+</li>
+      </ul>
+
     </div>
   </div>
 
@@ -160,6 +152,8 @@
       </a>
     </div>
   </footer>
+
+
 
 <!--web player button-->
 <script>
@@ -204,6 +198,8 @@ audio.addEventListener('play', updateButtonVisibility);
 audio.addEventListener('pause', updateButtonVisibility);
 </script>
 
+<!--chat-->
+<!-- <script src="https://minnit.chat/js/embed.js?c=1758971289" defer></script> -->
 
 
 <!--mobile navcards-->
