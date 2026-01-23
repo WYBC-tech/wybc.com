@@ -1,5 +1,60 @@
 # wybc.com
 ---------------
-Hello! This is the source code for wybc.com! As we work on it, do not push your code straight to the main branch please. Instead make  a separate branch under dev for each feature/project you're working on! Then when its done we'll push it to the dev branch and then review and push it to main, which is what gets automatically fed to digitalocean where we host wybc.com.
+Source code for www.wybc.com. 
 
-This will get updated with better info soon. - Finn december 2024
+## information
+Frontend: HTML, CSS, JavaScript <br>
+Backend: none <br>
+Domain: GoDaddy <br>
+Hosting: GitHub pages <br>
+Streaming: Radio.co <br>
+Program data: Spinitron <br>
+
+## site structure
+```
+├── assets
+│   ├── fonts
+│   └── images
+├── components (used for spinitron stylesheets and javascript)
+├── info
+│   ├── about
+│   │   ├── index.html
+│   │   └── style.css
+│   ├── history
+│   │   ├── index.html
+│   │   └── style.css
+│   ├── join
+│   │   ├── index.html
+│   │   └── style.css
+│   └── staff
+│       ├── index.html
+│       └── style.css
+├── media
+│   ├── moon
+│   │   ├── index.html
+│   │   └── style.css
+│   ├── photo
+│   │   ├── index.html
+│   │   └── style.css
+│   ├── podcast
+│   │   ├── index.html
+│   │   └── style.css
+│   └── zine
+│       ├── index.html
+│       └── style.css
+├── program
+│   ├── djs
+│   │   ├── index.html
+│   │   └── style.css
+│   └── schedule
+│       ├── index.html
+│       └── style.css
+├── sports
+│   ├── about
+│   │   ├── index.html
+│   │   └── style.css
+│   └── stream
+│       ├── index.html
+│       └── style.css
+├── index.html  (homepage)
+└── style.css  (global stylesheet)
