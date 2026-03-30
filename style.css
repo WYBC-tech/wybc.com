@@ -534,7 +534,7 @@ align-items: center;
 /*RIGHT COLUMN STYLES*/
 #chat-card{
 grid-area: chat;
-min-height: 500px;
+/* min-height: 500px; */
 }
 
 #chat-tab{
