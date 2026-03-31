@@ -1,0 +1,159 @@
+  *::selection {
+    color: var(--blue);
+    background-color: var(--white);
+    opacity: 1;
+ }
+html{
+  background-image: url('../../../assets/images/backgrounds/media_bg.jpg');
+}
+header {
+background: linear-gradient(
+    -5deg,
+    var(--blue2) 0%,
+    var(--blue1) 30%,
+    var(--blue) 100%
+  );
+}
+
+#container {
+  grid-template-columns: 1fr 7fr;
+
+  grid-template-areas:
+    "on-air center"
+    "nav center"
+    "nav center";
+}
+
+/* grid stuff */
+
+.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid img {
+  transition: transform 0.2s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  position: relative;
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox.active {
+  display: flex;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* end grid stuff */
+
+#center {
+  background-color: var(--blue1);
+  background-image: url('../../assets/images/backgrounds/blue.jpg');
+  background-position: right top;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  color: var(--white);
+  border: 0.5rem double var(--blue);
+  border-radius: var(--border_radius);
+  padding:10px;
+  height: auto;
+}
+p {
+    margin-bottom: 5px;
+}
+#center div{
+  background-color: var(--blue2);
+  padding: 10px;
+  border-radius: 20px;
+  border: dashed 2px;
+}
+#eboard{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+   flex-wrap: wrap;
+
+}
+#xboard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 10px;
+}
+
+footer {
+    background: linear-gradient(
+    170deg,
+    var(--blue2) 0%,
+    var(--blue1) 20%,
+    var(--blue) 100%
+  );
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "on-air"
+      "nav";
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "center"
+      "on-air"
+      "nav";
+  }
+}
