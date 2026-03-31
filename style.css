@@ -131,6 +131,62 @@ img, iframe {
   color: var(--white);
 }
 
+/* start ticker */
+
+:root {
+  --duration: 12s;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ticker-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 3rem;
+  overflow: hidden;
+  background: #87D4F0;
+  z-index: 9999;
+  border-bottom-left-radius: 8px;
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  min-width: max-content;
+  padding-left: 100%;
+  line-height: 3rem;
+
+  animation: ticker var(--duration) linear infinite;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  color: white;
+  font-size: 1rem;
+}
+
+/* going mobile */
+@media (max-width: 600px) {
+  .ticker-wrap {
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
+}
+
+/*end ticker*/
+
 .spinitron-js-widget {
   width: 100%;
   max-width: 100%;
