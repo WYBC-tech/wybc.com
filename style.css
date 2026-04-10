@@ -131,7 +131,7 @@ img, iframe {
   color: var(--white);
 }
 
-/* start ticker */
+/* start ticker
 
 :root {
   --duration: 12s;
@@ -175,7 +175,7 @@ img, iframe {
   font-size: 1rem;
 }
 
-/* going mobile */
+
 @media (max-width: 600px) {
   .ticker-wrap {
     width: 100%;
@@ -185,7 +185,7 @@ img, iframe {
   }
 }
 
-/*end ticker*/
+end ticker*/
 
 .spinitron-js-widget {
   width: 100%;
