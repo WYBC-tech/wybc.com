@@ -609,17 +609,24 @@ grid-area: chat;
     opacity: 1;
  }
 
-#chat{
+
+#chat {
+  display: block;       
+  position: relative;
   width: 100%;
-  height: 40vh;
+  height: 400px;
   min-height: 400px;
-  /* height: fit-content; */
-  overflow: hidden;
   padding: 0;
+  /* overflow: hidden; */
   border: 0.5rem double var(--pink);
   border-radius: 0 0 var(--border_radius) var(--border_radius);
   background-color: var(--pink2);
 }
+
+/* #chat > * {
+  width: 100% !important;
+  height: 100% !important;
+} */
 
 #bulletin-card{
 grid-area: bulletin;
